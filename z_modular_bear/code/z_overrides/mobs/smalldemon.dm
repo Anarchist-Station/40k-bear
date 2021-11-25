@@ -89,9 +89,6 @@
 		var/mob/living/L = target_mob
 		L.adjustBruteLoss(damage)
 		return L
-
-	faction = "Nurgle"
-	faction = "Slaanesh"
 	faction = "Khorne"
 
 
@@ -109,13 +106,15 @@
 	health = 150
 	see_in_dark = 6
 	speed = 6
+	faction = "Khorne"
+
 
 /mob/living/simple_animal/hostile/smalldemon/bubblingmass/AttackingTarget()
 	if(!Adjacent(target_mob))
 		return
 	custom_emote(1, pick( list("bites [target_mob]", "crushes [target_mob]") ) ) // attack emotes
 
-	var/damage = rand(20,25) // Damage Value
+	var/damage = rand(25,30) // Damage Value
 
 	if(ishuman(target_mob))
 		var/mob/living/carbon/human/H = target_mob

@@ -8,8 +8,8 @@
 	icon_state = "ripper"
 	icon_living = "ripper"
 	icon_dead = "ripper_dead"
-	maxHealth = 3
-	health = 3
+	maxHealth = 17
+	health = 17
 	meat_type = null
 	universal_speak = 1
 	speak_emote = list("harks")
@@ -110,7 +110,7 @@
 		return
 	custom_emote(1, pick( list("chomps on [target_mob]", "gnaws [target_mob]") ) )
 
-	var/damage = rand(10,12)
+	var/damage = rand(12,15)
 
 	if(ishuman(target_mob))
 		var/mob/living/carbon/human/H = target_mob

@@ -82,7 +82,7 @@
 		if(affected.status & ORGAN_ARTERY_CUT)//Fix arteries first,
 			user.visible_message("<span class='notice'>[user] begins to suture [H]'s arteries.")
 			playsound(src, 'sound/weapons/suture.ogg', 70, FALSE)
-			if(do_mob(user, H, (backwards_skill_scale(user.SKILL_LEVEL(medical)) * 5)))
+			if(do_mob(user, H, (backwards_skill_scale(user.SKILL_LEVEL(medical)) * 25))) //NONMODULAR BEARHAMMER EDIT: * 5 to *25
 				user.visible_message("<span class='notice'>[user] has patched the [affected.artery_name] in [H]'s [affected.name] with \the [src.name].</span>", \
 				"<span class='notice'>You have patched the [affected.artery_name] in [H]'s [affected.name] with \the [src.name].</span>")
 				affected.status &= ~ORGAN_ARTERY_CUT
@@ -93,7 +93,7 @@
 					user.visible_message("<span class='notice'>[user] begins to suture up [H]'s wounds.")
 					playsound(src, 'sound/weapons/suture.ogg', 40, FALSE)
 					H.custom_pain("The pain in your [affected.name] is unbearable!",rand(50, 65),affecting = affected)
-					if(do_mob(user, H, (backwards_skill_scale(user.SKILL_LEVEL(medical)) * 5)))
+					if(do_mob(user, H, (backwards_skill_scale(user.SKILL_LEVEL(medical)) * 50))) //NONMODULAR BEARHAMMER EDIT: *5 to *50
 						// Close it up to a point that it can be bandaged and heal naturally!
 						W.heal_damage(rand(5,10)+10)
 						if(W.damage >= W.autoheal_cutoff)

@@ -268,7 +268,7 @@ meteor_act
 
 	//Ok this block of text handles cutting arteries, tendons, and limbs off.
 	//First we cut an artery, the reason for that, is that arteries are funninly enough, not that lethal, and don't have the biggest impact. They'll still make you bleed out, but they're less immediately lethal.
-	if(I.sharp && prob(I.sharpness * 2) && !(affecting.status & ORGAN_ARTERY_CUT))
+	if(I.sharp && prob(I.sharpness * 2) && !(affecting.status & ORGAN_ARTERY_CUT) && (effective_force >= 20)) // NONMODULAR BEARHAMMER EDIT: additional check to make sure it DOES DAMAGE above 20 before slicing ur artery
 		affecting.sever_artery()
 		if(affecting.artery_name == "carotid artery")
 			src.visible_message("<span class='danger'>[user] slices [src]'s throat!</span>")

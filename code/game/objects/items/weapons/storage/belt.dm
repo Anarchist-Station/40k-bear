@@ -141,18 +141,17 @@
 	/obj/item/reagent_containers/food/snacks,
 	/obj/item/reagent_containers/food/snacks/bearmeat,
 	)
-
+//start NONMODULAR Bearhammer edit - changing contents!
 /obj/item/storage/belt/medical/full/New()
 	..()
 	new /obj/item/reagent_containers/hypospray/autoinjector/blood(src)
-	new /obj/item/reagent_containers/hypospray/autoinjector/revive(src)
-	new /obj/item/reagent_containers/hypospray/autoinjector/revive(src)
 	new /obj/item/reagent_containers/hypospray/autoinjector/morphine(src)
 	new /obj/item/reagent_containers/glass/ampule/morphine(src)
-	new /obj/item/suture(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/wirecutters(src)
 	new /obj/item/device/healthanalyzer(src)
-
+//end NONMODULAR Bearhammer edit - removed suture
 /obj/item/storage/belt/medical/emt
 	name = "EMT utility belt"
 	desc = "A sturdy black webbing belt with attached pouches."

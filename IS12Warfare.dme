@@ -2524,6 +2524,7 @@
 #include "z_modular_bear\code\modules\mob\new_player\sprite_accesories.dm"
 #include "z_modular_bear\code\modules\paperwork\paper.dm"
 #include "z_modular_bear\code\modules\power\lighting.dm"
+#include "z_modular_bear\code\modules\reagents\bear-reagents.dm"
 #include "z_modular_bear\code\z_overrides\amogi.dm"
 #include "z_modular_bear\code\z_overrides\lore_armor.dm"
 #include "z_modular_bear\code\z_overrides\lore_jobs_adeptus_mechanicus.dm"
@@ -2541,6 +2542,7 @@
 #include "z_modular_bear\code\z_overrides\mobs\rippers.dm"
 #include "z_modular_bear\code\z_overrides\mobs\smalldemon.dm"
 #include "z_modular_bear\game\objects\auras\spell_light.dm"
+#include "z_modular_bear\game\objects\items\weapons\storage\belt.dm"
 #include "z_modular_bear\modules\mob\living\simple_animal\hostile\mining.dm"
 #include "~code\global_init.dm"
 // END_INCLUDE

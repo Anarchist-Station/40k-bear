@@ -1,4 +1,4 @@
-/spell/targeted/equip_item/witchknife
+/spell/targeted/equip_item/witchknife //for some reason this and other witch equips damage people and do absurd damage. find out why this is, TODO
 	name = "Conjure Spirit Blade"
 	desc = "Summons a knife made out of your own soul and spirit. Let them taste your wrath, witch."
 	feedback = "SD"
@@ -25,11 +25,9 @@
 	icon_state = "chaos_knife"
 	item_state = "EB-knife"//"knife"
 	attack_verb = list("slashed", "stabbed")
-	force = 9
-	force = 9 //HUH??
+	force = 9 //HUH?? for some reason this defaults to '35', a la default item/material/sword, regardless of what i put in
 	block_chance = 15
 	w_class = ITEM_SIZE_SMALL
-	force_divider = 1
 	grab_sound_is_loud = TRUE
 	grab_sound = 'sound/items/unholster_knife.ogg'
 	equipsound = 'sound/items/holster_knife.ogg'

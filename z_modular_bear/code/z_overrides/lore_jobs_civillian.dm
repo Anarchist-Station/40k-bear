@@ -36,6 +36,7 @@
 		H.bowels = -INFINITY
 		to_chat(H, "<span class='notice'><b><font size=3>You are a witch, one of the few in the world who still remember the old ways of magic. You are... (pick your flavor in the 'witch' tab!).</font></b></span>")
 
+
 		H.verbs += list(
 			/mob/living/carbon/human/proc/witchclass,
 		)
@@ -43,7 +44,7 @@
 
 /mob/living/carbon/human/proc/witchclass()
 	set name = "School"
-	set category = "Pilgrim"
+	set category = "Witch"
 	set desc = "Remember what school of magic you specialized in."
 	if(!ishuman(src))
 		to_chat(src, "<span class='notice'>How are you seeing this?! Ping Bear immediately!</span>")
@@ -55,8 +56,10 @@
 
 	var/mob/living/carbon/human/U = src
 	var/fates = list() //lists all possible fates
-	fates += pick("Blood Witch", "Alchemist", "Arcanist",) //adds a fate randomly to essentially give rng pick
-	mind.store_memory("[fates]") //should stop people from closing client and rerolling fates
+
+	fates += list("Blood Witch", "Alchemist", "Arcanist") //subclasses.
+
+	mind.store_memory("[fates]") //ALSO DOESN'T WORK WITHOUT THIS LOL
 
 	var/classchoice = input("Choose your fate", "Available fates") as anything in fates
 
@@ -69,20 +72,20 @@
 			U.add_spell(new /spell/targeted/dark_heal)
 			U.add_spell(new /spell/messa_shroud)
 			equip_to_slot_or_del(new /obj/item/material/sword/chaosknife/lament, slot_l_hand)
-			U.add_skills(rand(3,5),0,0,0,3)
+			U.add_skills(rand(4,7),0,0,0,7)
 			to_chat(U, "<span class='notice'><b><font size=3>You are a Blood Witch, someone who, even before the Conflict, was an outcast to society. You specialize in sacrificial rites and rituals. Unlike others who practice the arcane, you are not afraid to...get your hands dirty, so to speak, either with suturing wounds or using violence. Your source of power is your signature weapon in your hand. Use it to kill those who are beneath you.</font></b></span>")
 		if("Alchemist")
 			U.add_spell(new /spell/aoe_turf/conjure/grove/sanctuary)
+			U.add_spell(new /spell/radiant_aura/light)
 			U.add_spell(new /spell/targeted/equip_item/seed)
-			U.add_spell(new /spell/targeted/heal_target)
 			U.add_spell(new /spell/aoe_turf/disable_tech)
 			U.add_spell(new /spell/noclothes)
-			equip_to_slot_or_del(new /obj/item/material/sword/chaosknife/lament, slot_l_hand)
-			equip_to_slot_or_del(new /obj/item/material/sword/chaosknife/lament, slot_l_hand)
+			equip_to_slot_or_del(new /obj/item/reagent_containers/glass/jar/healingdraught, slot_l_hand)
 			to_chat(U, "<span class='notice'><b><font size=3>You are an alchemist, and what one might consider a...'druidess', of sorts. Although you do not explicitly commune with nature, you use your magic to mix potions and create plants that are advantageous to creating draughts of healing.</font></b></span>")
 		if("Arcanist")
 			U.add_spell(new /spell/noclothes)
 			U.add_spell(new /spell/targeted/ethereal_jaunt)
+			U.add_spell(new /spell/radiant_aura/light)
 			U.add_spell(new /spell/targeted/projectile/magic_missile)
 			U.add_spell(new /spell/targeted/projectile/dumbfire/fireball)
 			U.add_spell(new /spell/aoe_turf/knock)

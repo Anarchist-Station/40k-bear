@@ -5,12 +5,14 @@
 	invocation_type = SpI_SHOUT
 	range = 7
 	level_max = list(Sp_TOTAL = 0, Sp_SPEED = 0, Sp_POWER = 0)
+	spell_flags = CONSTRUCT_CHECK
 	cooldown_min = 90 //15 deciseconds reduction per rank
 	max_targets = 0
 	proj_type = /obj/item/projectile/spell_projectile/seeking/blooddrain
 	duration = 10
 	proj_step_delay = 8
 	amt_dam_brute = 3
+	hud_state = "wiz_mm"
 //	spell_base = "const"
 
 /spell/targeted/projectile/blooddrain/prox_cast(var/list/targets, atom/spell_holder)

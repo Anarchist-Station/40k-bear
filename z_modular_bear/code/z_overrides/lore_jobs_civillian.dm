@@ -6,8 +6,8 @@
 	title = "Witch"
 	department_flag = PIL
 	social_class = SOCIAL_CLASS_MIN
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	latejoin_at_spawnpoints = TRUE
 	open_when_dead = 1
 	supervisors = "Every Imperial Citizen"
@@ -81,6 +81,13 @@
 			equip_to_slot_or_del(new /obj/item/material/sword/chaosknife/lament, slot_l_hand)
 			to_chat(U, "<span class='notice'><b><font size=3>You are an alchemist, and what one might consider a...'druidess', of sorts. Although you do not explicitly commune with nature, you use your magic to mix potions and create plants that are advantageous to creating draughts of healing.</font></b></span>")
 		if("Arcanist")
+			U.add_spell(new /spell/noclothes)
+			U.add_spell(new /spell/targeted/ethereal_jaunt)
+			U.add_spell(new /spell/targeted/projectile/magic_missile)
+			U.add_spell(new /spell/targeted/dumbfire/fireball)
+			U.add_spell(new /spell/aoe_turf/knock)
+			U.add_spell(new /spell/targeted/projectile/dumbfire/stuncuff)
+			U.add_spell(new /spell/targeted/swap)
 			to_chat(U, "<span class='notice'><b><font size=3>You are an Arcanist, a sorceress, a peak master of wizardry, master of all arcane. Your mastery of spells is unmatched, by natural talent or by years of study. Though you are not the physically strongest person, you more than make up for it with your fearsome arsenal. </font></b></span>")
 
 

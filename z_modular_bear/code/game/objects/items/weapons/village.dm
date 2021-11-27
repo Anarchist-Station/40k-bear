@@ -36,7 +36,7 @@
 
 
 /obj/item/material/sword/chaosknife/lament
-	name = "lamenting knife"
+	name = "blooded knife"
 	desc = "A knife made of solid tears and mourning. Just holding it in your hand makes you feel so heavy, but ready to lash out with rage."
 	icon = 'icons/obj/weapons/melee/misc.dmi'
 	icon_state = "chaos_knife"

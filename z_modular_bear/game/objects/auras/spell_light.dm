@@ -9,7 +9,7 @@
 /obj/aura/radiant_aura/New()
 	..()
 	to_chat(user,"<span class='notice'>A faint bubble of light begins orbiting around you.</span>")
-	set_light(2,4, "#d6d65c")
+	set_light(6,2, "#d6d65c")
 
 /obj/aura/radiant_aura/Destroy()
 	to_chat(user, "<span class='warning'>The light around you flickers and abruptly fades, leaving you alone.</span>")

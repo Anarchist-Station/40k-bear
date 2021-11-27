@@ -1,11 +1,10 @@
 //Food && these jobs are outpost support staff
 
-// Bar Servitor
+// WITCH TIME BABYYYYYYY
 
 /datum/job/bartender
-	title = "Bar Servitor"
-	department = "Service"
-	department_flag = CIV
+	title = "Witch"
+	department_flag = PIL
 	social_class = SOCIAL_CLASS_MIN
 	total_positions = 0
 	spawn_positions = 0
@@ -13,8 +12,8 @@
 	open_when_dead = 1
 	supervisors = "Every Imperial Citizen"
 	selection_color = "#337C81"
-	access = list(access_hydroponics, access_bar, access_kitchen)
-	minimal_access = list(access_bar)
+	access = null
+	minimal_access = null
 	outfit_type = /decl/hierarchy/outfit/job/service/bartender
 	announced = FALSE
 	auto_rifle_skill = 1
@@ -23,26 +22,71 @@
 	shotgun_skill = 1
 	lmg_skill = 1
 	smg_skill = 1
-	melee_skill = 4
-	ranged_skill = 1
-	medical_skill = 4
+	melee_skill = 5
+	ranged_skill = 3
+	medical_skill = 5
 	engineering_skill = 2
 	surgery_skill = 1
 
-
 	equip(var/mob/living/carbon/human/H)
-		var/servitor_number = rand(1,1000)
-		var/servitor_name = "abel"
-		..()
-		H.fully_replace_character_name("[servitor_name] [servitor_number]")
-		H.add_stats(rand(10,10), rand(8,11), rand(16,17), rand(8,10)) //extremely simple minded
+		H.add_stats(rand(7,8), rand(8,13), rand(12,15), rand(18,20)) //smart, physically fragile
 		H.warfare_language_shit(LANGUAGE_LOW_GOTHIC)
 		H.warfare_faction = IMPERIUM
-		H.bladder = 0
-		H.bowels = 0 //until someone tells me that servitors eat and shit this shall be it
-		H.thirst = INFINITY
-		H.nutrition = INFINITY
-		to_chat(H, "<span class='notice'><b><font size=3>You are a servitor, specifically one designed for managing a bar and serving drinks. You are to obey Imperial citizens and serve their every need. You are nearly mindless and will follow any order given to you by a superior.</font></b></span>")
+		H.bladder = -INFINITY
+		H.bowels = -INFINITY
+		to_chat(H, "<span class='notice'><b><font size=3>You are a witch, one of the few in the world who still remember the old ways of magic. You are... (pick your flavor in the 'witch' tab!).</font></b></span>")
+
+		H.verbs += list(
+			/mob/living/carbon/human/proc/witchclass,
+		)
+
+
+/mob/living/carbon/human/proc/witchclass()
+	set name = "School"
+	set category = "Pilgrim"
+	set desc = "Remember what school of magic you specialized in."
+	if(!ishuman(src))
+		to_chat(src, "<span class='notice'>How are you seeing this?! Ping Bear immediately!</span>")
+		return
+	if(src.stat == DEAD)
+		to_chat(src, "<span class='notice'>You can't choose a class when you're dead.</span>")
+		return
+	src.verbs -= list(/mob/living/carbon/human/proc/witchclass)
+
+	var/mob/living/carbon/human/U = src
+	var/fates = list() //lists all possible fates
+	fates += pick("Blood Witch", "Alchemist", "Arcanist",) //adds a fate randomly to essentially give rng pick
+	mind.store_memory("[fates]") //should stop people from closing client and rerolling fates
+
+	var/classchoice = input("Choose your fate", "Available fates") as anything in fates
+
+
+	switch(classchoice)
+		if("Blood Witch")
+			U.add_spell(new /spell/radiant_aura/light)
+			U.add_spell(new /spell/noclothes)
+			U.add_spell(new /spell/targeted/projectile/blooddrain)
+			U.add_spell(new /spell/targeted/dark_heal)
+			U.add_spell(new /spell/messa_shroud)
+			equip_to_slot_or_del(new /obj/item/material/sword/chaosknife/lament, slot_l_hand)
+			U.add_skills(rand(3,5),0,0,0,3)
+			to_chat(U, "<span class='notice'><b><font size=3>You are a Blood Witch, someone who, even before the Conflict, was an outcast to society. You specialize in sacrificial rites and rituals. Unlike others who practice the arcane, you are not afraid to...get your hands dirty, so to speak, either with suturing wounds or using violence. Your source of power is your signature weapon in your hand. Use it to kill those who are beneath you.</font></b></span>")
+		if("Alchemist")
+			U.add_spell(new /spell/aoe_turf/conjure/grove/sanctuary)
+			U.add_spell(new /spell/targeted/equip_item/seed)
+			U.add_spell(new /spell/targeted/heal_target)
+			U.add_spell(new /spell/aoe_turf/disable_tech)
+			U.add_spell(new /spell/noclothes)
+			equip_to_slot_or_del(new /obj/item/material/sword/chaosknife/lament, slot_l_hand)
+			equip_to_slot_or_del(new /obj/item/material/sword/chaosknife/lament, slot_l_hand)
+			to_chat(U, "<span class='notice'><b><font size=3>You are an alchemist, and what one might consider a...'druidess', of sorts. Although you do not explicitly commune with nature, you use your magic to mix potions and create plants that are advantageous to creating draughts of healing.</font></b></span>")
+		if("Arcanist")
+			to_chat(U, "<span class='notice'><b><font size=3>You are an Arcanist, a sorceress, a peak master of wizardry, master of all arcane. Your mastery of spells is unmatched, by natural talent or by years of study. Though you are not the physically strongest person, you more than make up for it with your fearsome arsenal. </font></b></span>")
+
+
+
+
+
 
 
 // Cook
@@ -179,3 +223,23 @@
 		to_chat(H, "<span class='notice'><b><font size=3>You are a servitor, specifically one designed for cleaning and maintaining the outpost. You are to obey Imperial citizens and serve their every need. You are nearly mindless and will follow any order given to you by a superior.</font></b></span>")
 
 
+
+
+
+/decl/hierarchy/outfit/job/witch
+	name = OUTFIT_JOB_NAME("Witch")
+	uniform = /obj/item/clothing/under/rank/consort/adept
+	head = /obj/item/clothing/head/commissar/adept
+	mask = /obj/item/clothing/mask/gas/prac_mask
+	shoes = /obj/item/clothing/shoes/sandal
+	gloves = null
+	back = /obj/item/storage/backpack/satchel/warfare
+	neck = /obj/item/reagent_containers/food/drinks/canteen
+	id_type = /obj/item/card/id/ring/administrator
+	belt = /obj/item/device/flashlight/lantern
+	pda_slot = null
+	backpack_contents = list(
+	/obj/item/stack/thrones = 2,
+	/obj/item/stack/thrones2/five = 1,
+	/obj/item/stack/thrones3/twenty = 1,
+	)

@@ -2527,6 +2527,7 @@
 #include "z_modular_bear\code\modules\power\lighting.dm"
 #include "z_modular_bear\code\modules\reagents\bear-reagents.dm"
 #include "z_modular_bear\code\modules\spells\blooddrain.dm"
+#include "z_modular_bear\code\modules\spells\darkexchange.dm"
 #include "z_modular_bear\code\modules\spells\magic_missile.dm"
 #include "z_modular_bear\code\z_overrides\amogi.dm"
 #include "z_modular_bear\code\z_overrides\lore_armor.dm"

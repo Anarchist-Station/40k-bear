@@ -53,4 +53,5 @@
 
 	proj_trail = 1
 	proj_trail_lifespan = 5
+//	proj_trail_icon = need an icon aa!!
 	proj_trail_icon_state = "magicmd"

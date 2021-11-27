@@ -9,8 +9,9 @@
 	max_targets = 0
 	proj_type = /obj/item/projectile/spell_projectile/seeking/blooddrain
 	duration = 10
-	proj_step_delay = 10
+	proj_step_delay = 8
 	amt_dam_brute = 3
+//	spell_base = "const"
 
 /spell/targeted/projectile/blooddrain/prox_cast(var/list/targets, atom/spell_holder)
 	spell_holder.visible_message("<span class='danger'>\The [spell_holder] hisses as it slams into its target!</span>")

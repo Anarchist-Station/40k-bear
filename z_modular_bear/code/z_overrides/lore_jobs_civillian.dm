@@ -84,7 +84,7 @@
 			U.add_spell(new /spell/noclothes)
 			U.add_spell(new /spell/targeted/ethereal_jaunt)
 			U.add_spell(new /spell/targeted/projectile/magic_missile)
-			U.add_spell(new /spell/targeted/dumbfire/fireball)
+			U.add_spell(new /spell/targeted/projectile/dumbfire/fireball)
 			U.add_spell(new /spell/aoe_turf/knock)
 			U.add_spell(new /spell/targeted/projectile/dumbfire/stuncuff)
 			U.add_spell(new /spell/targeted/swap)

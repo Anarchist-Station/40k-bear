@@ -2518,6 +2518,7 @@
 #include "z_modular_bear\code\maps\bear_areas.dm"
 #include "z_modular_bear\code\maps\warhammer_define.dm"
 #include "z_modular_bear\code\modules\client\preferences.dm"
+#include "z_modular_bear\code\modules\clothing\under.dm"
 #include "z_modular_bear\code\modules\clothing\suits\armor.dm"
 #include "z_modular_bear\code\modules\language\furry.dm"
 #include "z_modular_bear\code\modules\mob\living\carbon\human\species\station\furry.dm"

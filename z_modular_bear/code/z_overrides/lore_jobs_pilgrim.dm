@@ -63,8 +63,8 @@ Pilgrim Fate System
 	var/mob/living/carbon/human/U = src
 	var/fates = list() //lists all possible fates
 
-	fates += pick("Merchant","Bounty Hunter","Penitent",) //adds a fate randomly to essentially give rng pick
-	fates += pick("Sherpa","Musician","Witch",) //adds a fate randomly to essentially give rng pick
+	fates += list("Merchant","Bounty Hunter","Penitent","Laborer","Musician","Stalker","Scum","Miner") //adds a fate randomly to essentially give rng pick
+	fates += pick("Laborer","Musician","Witch",) //adds a fate randomly to essentially give rng pick
 	fates += pick("Stalker","Scum","Miner",) //adds a fate randomly to essentially give rng pick
 
 	mind.store_memory("[fates]") //should stop people from closing client and rerolling fates
@@ -74,7 +74,7 @@ Pilgrim Fate System
 
 
 	switch(classchoice)
-		if("Sherpa")
+		if("Laborer")
 			equip_to_slot_or_del(new /obj/item/clothing/suit/sherpa, slot_wear_suit)
 			equip_to_slot_or_del(new /obj/item/clothing/head/ushanka2, slot_head)
 			equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/warfare, slot_back)
@@ -173,10 +173,10 @@ Pilgrim Fate System
 			if (prob(100))
 				to_chat(U,"<span class='notice'><b><font size=2>Additionally...you've come across a lucky windfall, recently. Through theft, or your connections, or maybe even dumb luck, you found a key to the nobility's mansion and vault. All you need is a plan, maybe a crew or a disguise, and you'll be set to pull off the greatest heist of your life... (Your key should be in your backpack. If it isn't, tell Bear!)</font></b></span>")
 				var/obj/item/card/id/nobility/IN = new
-				equip_to_slot_or_del(IN, slot_in_backpack) //look into getting this spawning in your pocket, somehow...?
+				equip_to_slot_or_del(IN, slot_r_store)
 
-
-		if("Witch")
+/*
+		if("Witch") //oh shit what do i do with this now??
 			U.add_skills(0,0,rand(5,9),0,rand(5,9))
 			equip_to_slot_or_del(new /obj/item/clothing/mask/gas/prac_mask, slot_wear_mask)
 			equip_to_slot_or_del(new /obj/item/clothing/suit/prac_arpon, slot_wear_suit)
@@ -200,7 +200,7 @@ Pilgrim Fate System
 			W.update_label()
 			equip_to_slot_or_del(W, slot_wear_id)
 			U.verbs -= list(/mob/living/carbon/human/proc/penitentclass,)
-
+*/
 
 
 /datum/job/innkeeper

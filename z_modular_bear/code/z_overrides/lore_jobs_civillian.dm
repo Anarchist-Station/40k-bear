@@ -29,7 +29,6 @@
 	surgery_skill = 1
 
 	equip(var/mob/living/carbon/human/H)
-		H.add_stats(rand(7,8), rand(8,13), rand(12,15), rand(18,20)) //smart, physically fragile
 		H.warfare_language_shit(LANGUAGE_LOW_GOTHIC)
 		H.warfare_faction = IMPERIUM
 		H.bladder = -INFINITY
@@ -72,7 +71,13 @@
 			U.add_spell(new /spell/targeted/dark_heal)
 			U.add_spell(new /spell/messa_shroud)
 			equip_to_slot_or_del(new /obj/item/material/sword/chaosknife/lament, slot_l_hand)
-			U.add_skills(rand(4,7),0,0,0,7)
+			equip_to_slot_or_del(new /obj/item/clothing/under/darkwitch, slot_w_uniform)
+			equip_to_slot_or_del(new /obj/item/storage/belt/medical/alchemist, slot_belt)
+			equip_to_slot_or_del(new /obj/item/clothing/suit/prac_arpon, slot_wear_suit)
+			equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/warfare/kroot, slot_back)
+			equip_to_slot_or_del(new /obj/item/clothing/mask/gas/prac_mask, slot_wear_mask)
+			U.add_skills(rand(4,7),rand(1,2),rand(0,3),rand(0,3),6) //average cqc, low ranged, competent doctor but not foolproof
+			U.add_stats(rand(6,8),rand(12,18),rand(8,10),rand(14,17)) //physically weak, but good dex, low endurance, semi-high int
 			to_chat(U, "<span class='notice'><b><font size=3>You are a Blood Witch, someone who, even before the Conflict, was an outcast to society. You specialize in sacrificial rites and rituals. Unlike others who practice the arcane, you are not afraid to...get your hands dirty, so to speak, either with suturing wounds or using violence. Your source of power is your signature weapon in your hand. Use it to kill those who are beneath you.</font></b></span>")
 		if("Alchemist")
 			U.add_spell(new /spell/aoe_turf/conjure/grove/sanctuary)
@@ -81,7 +86,16 @@
 			U.add_spell(new /spell/aoe_turf/disable_tech)
 			U.add_spell(new /spell/noclothes)
 			equip_to_slot_or_del(new /obj/item/reagent_containers/glass/jar/healingdraught, slot_l_hand)
-			to_chat(U, "<span class='notice'><b><font size=3>You are an alchemist, and what one might consider a...'druidess', of sorts. Although you do not explicitly commune with nature, you use your magic to mix potions and create plants that are advantageous to creating draughts of healing.</font></b></span>")
+			equip_to_slot_or_del(new /obj/item/gun/launcher/crossbow, slot_r_hand)
+			equip_to_slot_or_del(new /obj/item/clothing/under/villagegarb, slot_w_uniform)
+			equip_to_slot_or_del(new /obj/item/storage/belt/medical/alchemist, slot_belt)
+			equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/warfare/kroot, slot_back)
+			equip_to_slot_or_del(new /obj/item/clothing/suit/storage/toggle/labcoat/alchemist, slot_w_uniform)
+			equip_to_slot_or_del(new /obj/item/device/flashlight/lantern, slot_r_store)
+			equip_to_slot_or_del(new /obj/item/clothing/under/villagegarb, slot_w_uniform)
+			U.add_skills(rand(4,7),rand(1,2),rand(4,7),rand(0,3),6)
+			U.add_stats(rand(6,8),rand(8,10),rand(12,18),rand(14,17))
+			to_chat(U, "<span class='notice'><b><font size=3>You are an alchemist, and what one might consider a...'doctor', of sorts. Although you are not explicitly trained in opening people up, you use your magic to mix potions and create plants that are advantageous to creating draughts of healing. You are well-versed in using your crossbow to defend yourself.</font></b></span>")
 		if("Arcanist")
 			U.add_spell(new /spell/noclothes)
 			U.add_spell(new /spell/targeted/ethereal_jaunt)
@@ -91,8 +105,11 @@
 			U.add_spell(new /spell/aoe_turf/knock)
 			U.add_spell(new /spell/targeted/projectile/dumbfire/stuncuff)
 			U.add_spell(new /spell/targeted/swap)
-			to_chat(U, "<span class='notice'><b><font size=3>You are an Arcanist, a sorceress, a peak master of wizardry, master of all arcane. Your mastery of spells is unmatched, by natural talent or by years of study. Though you are not the physically strongest person, you more than make up for it with your fearsome arsenal. </font></b></span>")
-
+			equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/scrubs/black, slot_w_uniform)
+			equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/warfare/kroot, slot_back)
+			U.add_skills(rand(0,1),rand(0,2),rand(1,4),rand(0,3),7)
+			U.add_stats(rand(5,7), rand(8,10), rand(8,12), rand(16,20)) //incredibly smart, physically fragile to compensate for her powerful spell abilities
+			to_chat(U, "<span class='notice'><b><font size=3>You are an Arcanist, a warlock, a peak master of wizardry, master of all arcane. Your mastery of spells is unmatched, by natural talent or by years of study. Though you are not the physically strongest person, you more than make up for it with your fearsome arsenal. You are also quite skilled in medicine from your studies, and can stand in for a doctor, should the need arise.</font></b></span>")
 
 
 
@@ -238,10 +255,10 @@
 
 /decl/hierarchy/outfit/job/witch
 	name = OUTFIT_JOB_NAME("Witch")
-	uniform = /obj/item/clothing/under/rank/consort/adept
-	head = /obj/item/clothing/head/commissar/adept
-	mask = /obj/item/clothing/mask/gas/prac_mask
-	shoes = /obj/item/clothing/shoes/sandal
+	uniform = null
+	head = null
+	mask = null
+	shoes = null
 	gloves = null
 	back = /obj/item/storage/backpack/satchel/warfare
 	neck = /obj/item/reagent_containers/food/drinks/canteen

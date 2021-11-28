@@ -268,7 +268,7 @@ meteor_act
 
 	//Ok this block of text handles cutting arteries, tendons, and limbs off.
 	//First we cut an artery, the reason for that, is that arteries are funninly enough, not that lethal, and don't have the biggest impact. They'll still make you bleed out, but they're less immediately lethal.
-	if(I.sharp && prob(I.sharpness * 2) && !(affecting.status & ORGAN_ARTERY_CUT) && (effective_force >= 20)) // NONMODULAR BEARHAMMER EDIT: additional check to make sure it DOES DAMAGE above 20 before slicing ur artery
+	if(I.sharp && prob(I.sharpness * 2) && !(affecting.status & ORGAN_ARTERY_CUT) && (effective_force >= 18 && prob(15))) // NONMODULAR BEARHAMMER EDIT: additional check to make sure it DOES DAMAGE above 20 before slicing ur artery
 		affecting.sever_artery()
 		if(affecting.artery_name == "carotid artery")
 			src.visible_message("<span class='danger'>[user] slices [src]'s throat!</span>")
@@ -276,7 +276,7 @@ meteor_act
 			src.visible_message("<span class='danger'>[user] slices open [src]'s [affecting.artery_name] artery!</span>")
 
 	//Next tendon, which disables the limb, but does not remove it, making it easier to fix, and less lethal, than losing it.
-	else if(I.sharp && (I.sharpness * 2) && !(affecting.status & ORGAN_TENDON_CUT) && affecting.has_tendon)//Yes this is the same exactly probability again. But I'm running it seperate because I don't want the two to be exclusive.
+	else if(I.sharp && (I.sharpness * 2) && !(affecting.status & ORGAN_TENDON_CUT) && affecting.has_tendon && (effective_force >= 18) && prob(15)) // NONMODULAR BEARHAMMER EDIT: also adding above check to this and making a 50% chance
 		affecting.sever_tendon()
 		src.visible_message("<span class='danger'>[user] slices open [src]'s [affecting.tendon_name] tendon!</span>")
 
@@ -290,7 +290,7 @@ meteor_act
 	if(I.damtype == BRUTE && !I.edge && prob(I.force * (hit_zone == BP_MOUTH ? 6 : 0)) && O)//Knocking out teeth.
 		if(O.knock_out_teeth(get_dir(user, src), round(rand(28, 38) * ((I.force*1.5)/100))))
 			src.visible_message("<span class='danger'>[src]'s teeth sail off in an arc!</span>", \
-								"<span class='userdanger'>[src]'s teeth sail off in an arc!</span>")
+								"<span class='aaaauserdanger'>[src]'s teeth sail off in an arc!</span>")
 
 	else if((I.damtype == BRUTE || I.damtype == PAIN) && prob(25 + (effective_force * 2)))//Knocking them out.
 		if(!stat)

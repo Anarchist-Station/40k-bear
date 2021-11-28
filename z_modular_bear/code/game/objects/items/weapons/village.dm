@@ -44,6 +44,7 @@
 	attack_verb = list("slashed", "stabbed")
 	force_divisor = 0.6
 	block_chance = 15
+	force = -20
 	w_class = ITEM_SIZE_SMALL
 	grab_sound_is_loud = TRUE
 	grab_sound = 'sound/items/unholster_knife.ogg'

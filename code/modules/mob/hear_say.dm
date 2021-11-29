@@ -219,10 +219,10 @@
 		track = "[speaker_name] ([ghost_follow_link(speaker, src)])"
 
 	var/formatted
-	if((copytext(message,-1) != "!") && (copytext(message,-1) != ".") && (copytext(message,-1) != "?"))
+	if((copytext(message,-1) != "!") && (copytext(message,-1) != ".") && (copytext(message,-1) != "?") && (copytext(message,-1) != "-")) //nonmodular bearhammer / bearstation edit. now counts - as a valid end of sentence thing.
 		message = "[message]."
 	message = replacetext(message, "/", "")//None of this.
-	message = replacetext(message, "~", "")//Or this.
+//	message = replacetext(message, "~", "")//Or this. //modular bearhammer edit: lol
 	message = replacetext(message, "@", "")//I keep doing this and it annoys me.
 	message = replacetext(message, " i ", " I ")//FUCKING USE CAPITAL LETTERS JAMES YOU FUCK!
 	message = replacetext(message, " ive ", " I've ")//I'M SO FUCKING SICK OF SEEING IVE YOU FUCKS

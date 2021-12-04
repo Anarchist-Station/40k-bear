@@ -25,13 +25,13 @@
 			if(istype(src.l_hand, /obj/item/reagent_containers/pill/happy))
 				qdel(usr.l_hand)
 				to_chat(src, "You crack open the obscura instead of taking it orally, you snort the contents all at once. Sheer bliss courses through your neurons. Your mind has been opened to unfathomable depths of ecstasy. You feel xer call for more. You have taken the first step on the path of the Cloven Lust. You are not yet visibly corrupted but avoid detailed investigation. ")
-				playsound(src, 'sound/effects/slaanesh1.ogg', 50, 0, -1)
+				playsound(src, 'sound/effects/updated.ogg', 50, 0, -1)
 				src.update_inv_l_hand()
 				src.lust++
 			else if(istype(src.r_hand, /obj/item/reagent_containers/pill/happy))
 				qdel(usr.r_hand)
 				to_chat(src, "You crack open the obscura instead of taking it orally, you snort the contents all at once. Sheer bliss courses through your neurons. Your mind has been opened to unfathomable depths of ecstasy. You feel xer call for more. You have taken the first step on the path of the Cloven Lust. You are not yet visibly corrupted but avoid detailed investigation. ")
-				playsound(src, 'sound/effects/slaanesh1.ogg', 50, 0, -1)
+				playsound(src, 'sound/effects/updated.ogg', 50, 0, -1)
 				src.update_inv_r_hand()
 				src.lust++
 			else

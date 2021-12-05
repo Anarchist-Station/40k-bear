@@ -38,7 +38,7 @@
 				to_chat(src, "A soft giggle enters your mind. <font color='#ffb7c5'>Oh my, a new plaything wants in to my parlor?~ It's been so long! I would love to have you, darling, if you are witty enough to find us. Here is my first riddle- when you have the thing closest to pure bliss in your hands, think of me and what I would do.~</font>")
 				return
 		if(1)
-			to_chat(src, "Your body is flooded with the knowledge of pleasure. The Cloven Lust's voice has trailed out into a tiny giggle and a whispered order. Every fiber in your body is flooded with pleasure that fades as fast as it arrives. You want more, you need more.")
+			to_chat(src, "Your body is flooded with the knowledge of pleasure. The Cloven Lust's voice has trailed out into a tiny giggle and a whispered order. You are entranced by beauty, temptation, and the knowledge of things you should not know.")
 			STAT_LEVEL(dex)+=1
 			src.lust++
 			src.verbs -= list(/mob/living/carbon/human/proc/nurgle, /mob/living/carbon/human/proc/khorne, /mob/living/carbon/human/proc/tzeentch)
@@ -67,11 +67,11 @@
 				new /obj/item/material/sword/skinning_knife(src.loc)
 				return
 			else
-				to_chat(src, "You feel the parlor door remain firmly closed. <font color='#ffb7c5'>Oh, darling, but the fee of entrance is a riddle in itself! Tell me...how would you dress to appease me?~ </font>")
+				to_chat(src, "You feel the parlor door remain firmly closed. <font color='#ffb7c5'>Oh, darling, but that outfit is so drab! Tell me...how would you dress to please me?~ </font>")
 				return
 
 		if(5)
-			to_chat(src, "<font color='#ffb7c5'>The party is a masquerade! That means you need a mask and not just any will do! You require a mask made from human skin! Take my gift and harvest your materials from a dead body...</font> <font color='#b60c00'> The voice switches genders between words effortlessly and leaves you with some final advice.</font><font color='#800080'> Do build a tanning rack, you should be able to whittle one out of the logs strewn about this world. No one wants a soggy mask... When you have the tanned hide, try my knife on it and carve yourself a new face so that the world may never find you...</font> ")
+			to_chat(src, "<font color='#ffb7c5'>Why...what with that winter outside, I've hardly any good food and drink to offer my guests. How awful!</font> Xe purses xer lips at you, smiling coyly. <font color='#ffb7c5'>Do me a favor, won't you, darling? Take my that knife and harvest yourself a mask from a dead body...</font> Xe lets out a soft giggle. <font color='#800080'> Oh, don't worry. I'm not asking you to kill anyone, am I, darling? Do build a tanning rack, you should be able to whittle one out of the logs strewn about this world. When you have the tanned hide, try my knife on it and carve yourself a new face so that the world may never find you...</font> ")
 			src.lust++
 			return
 		if(6)
@@ -79,16 +79,14 @@
 				if(X.slan == 1)
 					playsound(usr, 'sound/effects/updated.ogg', 80, 0, -1)
 					src.lust++
-					to_chat(src, "<font color='#800080'> Brilliant! That looks marvelous. My child, I never did tell you what sort of party this is... You will need a toy of sorts, something to entertain my many guests!</font>")
+					to_chat(src, "<font color='#ffb7c5'> Brilliant! That looks marvelous. Darling..I think you will do great. Buut, you will need a toy of sorts, something to entertain my many guests!~</font>")
 					STAT_LEVEL(dex) += 2
 					return
 				else
 					to_chat(src, "If it's a masquerade, I'll need a mask...")
 					return
-
-			to_chat(src, "If it's a masquerade, I'll need a mask...")
 		if(7)
-			to_chat(src, "<font color='#800080'>A lash should spice things up! Get some more tanned skin and a handle. How about an arm? That would certainly be macabre! Perfect for the theme! Wrap that hide around an arm, I'll take care of the rest.</font>")
+			to_chat(src, "<font color='#ffb7c5'>A lash should spice things up! Get some more tanned skin and a handle. How about an arm? That would certainly be macabre! Perfect for the theme! Wrap that hide around an arm, I'll take care of the rest.</font>")
 			src.lust++
 		if(8)
 			for(var/obj/item/melee/whip/lashoftorment/X in src.contents)
@@ -96,7 +94,7 @@
 					playsound(usr, 'sound/effects/updated.ogg', 80, 0, -1)
 					src.lust++
 					STAT_LEVEL(dex) += 1
-					to_chat(src, "<font color='#800080'>Just a moment... How wonderful! That lash is an extension of myself, I can feed off of the suffering it brings. It's sure to be a hit! </font>")
+					to_chat(src, "<font color='#ffb7c5'>Just a moment... How wonderful! That lash is an extension of myself, I can feed off of the suffering it brings. It's sure to be a hit! </font>")
 
 			to_chat(src, "Tanned skin and an arm... Combine the two and I'll be one step closer to the party. How fun!")
 		if(9)

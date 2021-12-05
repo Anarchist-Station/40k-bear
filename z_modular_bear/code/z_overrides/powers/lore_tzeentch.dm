@@ -29,7 +29,7 @@
 				src.intrigue++
 				playsound(usr, 'sound/misc/nymphchirp.ogg', 80, 0, -1)
 				to_chat(src, "<font color='#436b47'>...you're so persistent.</font>")
-			to_chat(src, "<font color='#0400ff'>Can't worship dead Gods.</font>")
+			to_chat(src, "Can't worship dead Gods.")
 		if(1)
 			var/obj/structure/flora/ausbushes/ywflowers/X = locate() in src.loc
 			if(X)
@@ -43,17 +43,21 @@
 		if(2)
 			src.intrigue++
 			to_chat(src, "<font color='#436b47'>..here. I do not have much to give, any more. But...I want you to have this.</font>")
+			playsound(usr, 'sound/misc/nymphchirp.ogg', 80, 0, -1)
 		if(3)
 			src.intrigue++
+			playsound(usr, 'sound/misc/nymphchirp.ogg', 80, 0, -1)
 			src.add_spell(new /spell/aoe_turf/conjure/grove/sanctuary)
 			to_chat(src, "<font color='#436b47'>Flowers are so beautiful in the winter. All life is a gift that should be cherished. Even when the darkest days are here, one can always find beauty.</font>")
 		if(4)
 			src.intrigue++
 			to_chat(src, "<font color='#436b47'>...grief is not a bad feeling. The more you grieve, the more you love what you lost. It is love from beyond the grave. And love...is what holds us together.</font>")
 			src.add_spell(new /spell/targeted/equip_item/seed)
+			playsound(usr, 'sound/misc/nymphchirp.ogg', 80, 0, -1)
 		if(5)
 			to_chat(src, "<font color='#436b47'>...it was so fun to talk to a mortal again. Maybe, one day, we'll speak again. I'm tired. Good-night, precious little-life.</font>")
 			src.intrigue++
+			playsound(usr, 'sound/misc/nymphchirp.ogg', 80, 0, -1)
 		if(6)
 			to_chat(src, "...")
 			return

@@ -629,7 +629,7 @@
 		if(attacker != victim && victim.stat != DEAD)
 			if(attacker.warfare_faction)
 				if(attacker.warfare_faction == victim.warfare_faction)
-					to_chat(attacker, "<big>[victim] is on my side!</big>")
+//					to_chat(attacker, "<big>[victim] is on my side!</big>") //MODULAR BEARHAMMER / BEARSTATION: THEY FORGOT. friendly fire text / FF text
 					GLOB.ff_incidents++//Dumb round end stat stuff.
 
 	//sometimes bullet_act() will want the projectile to continue flying

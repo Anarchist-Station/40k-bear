@@ -258,15 +258,18 @@
 
 //START NONMODULAR BEARHAMMER / BEARSTATION EDIT - CAN CROWBAR BROKEN DOORS OPEN
 	if(!repairing && isCrowbar(I))
-		if(I.health > 0)
+		if(src.health > 0)
 			to_chat(user,"<span class='notice'>The door is in too good of a condition to break open!</span>")
 			return
-		to_chat(user,"<span class='notice'>You force the broken door open, destroying it in the proccess!</span>")
-		new /obj/item/stack/material/wood(get_turf(src))
-		new /obj/item/material/shrapnel(get_turf(src))
-		new /obj/item/stack/material/wood(get_turf(src))
-		playsound(src.loc, 'sound/items/Crowbar.ogg', 100, 1)
-		qdel(src)
+		else //feels like there should be a better way to do this but there is not
+			if(src.health == 0)
+				if(do_after(user, 40,src))
+					to_chat(user,"<span class='notice'>You force the broken door open, destroying it in the proccess!</span>")
+					new /obj/item/stack/material/wood(get_turf(src))
+					new /obj/item/material/shrapnel(get_turf(src))
+					new /obj/item/stack/material/wood(get_turf(src))
+					playsound(src.loc, 'sound/items/Crowbar.ogg', 100, 1)
+					qdel(src)
 //END NONMODULAR BEARHAMMER / BEARSTATION EDIT
 
 

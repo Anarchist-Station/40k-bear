@@ -4,7 +4,7 @@
 /mob/living/carbon/human/proc/tzeentch()
 	set category = "Ruinous Powers"
 	set name = "The Path of Eurydale"
-	set desc = "Rebirth"
+	set desc = "Rebirth."
 	if(!ishuman(src))
 		to_chat(src, "<span class='notice'>How tf are you seeing this, ping Wel Ard immediately</span>")
 		return
@@ -35,10 +35,10 @@
 			if(X)
 				STAT_LEVEL(int) +=1
 				src.intrigue++
-				to_chat(src, "<font color='#436b47'>...ah-...ahah. This...that brings a smile to my face. Such tiny life. Isn't it so precious?...</font>")
+				to_chat(src, "<font color='#436b47'>...ah-...ahah. This...that brings a smile to my face. Such tiny life. Isn't it so precious?...</font> You feel a wave of bitter sorrow and tender love engulf you. You feel loved.")
 				playsound(usr, 'sound/misc/nymphchirp.ogg', 80, 0, -1)
 			else
-				to_chat(src, "<font color='#436b47'>...why are you still here? I have no more blessings. Why have you awoken me from death?</font>")
+				to_chat(src, "<font color='#436b47'>...why are you still here? I have no more blessings to give. I have no more power to help you or anyone else. Why have you awoken me from death?</font>")
 				return
 		if(2)
 			src.intrigue++
@@ -60,7 +60,10 @@
 			playsound(usr, 'sound/misc/nymphchirp.ogg', 80, 0, -1)
 		if(6)
 			to_chat(src, "...")
+			src.intrigue++
 			return
+		if(7)
+			to_chat(src, "You're cold again.")
 
 
 

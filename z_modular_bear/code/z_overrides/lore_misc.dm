@@ -29,7 +29,6 @@
 	anchored = 1
 	layer = 2
 	random_icon_states = null
-	var/list/existing_dirs = list()
 	blood_DNA = list()
 	appearance_flags = NO_CLIENT_COLOR
 
@@ -44,7 +43,6 @@
 	anchored = 1
 	layer = 2
 	random_icon_states = null
-	var/list/existing_dirs = list()
 	blood_DNA = list()
 	appearance_flags = NO_CLIENT_COLOR
 
@@ -59,7 +57,6 @@
 	anchored = 1
 	layer = 2
 	random_icon_states = null
-	var/list/existing_dirs = list()
 	blood_DNA = list()
 	appearance_flags = NO_CLIENT_COLOR
 
@@ -74,6 +71,5 @@
 	anchored = 1
 	layer = 2
 	random_icon_states = null
-	var/list/existing_dirs = list()
 	blood_DNA = list()
 	appearance_flags = NO_CLIENT_COLOR

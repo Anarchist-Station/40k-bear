@@ -3,7 +3,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////
 /mob/living/carbon/human/proc/slaanesh()
 	set category = "Ruinous Powers"
-	set name = "The Path of Slaanesh"
+	set name = "The Path of Asmodeus"
 	set desc = "Embrace your hunger, your lust, your desire."
 	if(!ishuman(src))
 		to_chat(src, "<span class='notice'>How tf are you seeing this, ping Wel Ard immediately</span>")
@@ -82,9 +82,8 @@
 					to_chat(src, "<font color='#ffb7c5'> Brilliant! That looks marvelous. Darling..I think you will do great. Buut, you will need a toy of sorts, something to entertain my many guests!~</font>")
 					STAT_LEVEL(dex) += 2
 					return
-			else
-				to_chat(src, "If it's a masquerade, I'll need a mask...")
-				return
+			to_chat(src, "If it's a masquerade, I'll need a mask...")
+			return
 		if(7)
 			to_chat(src, "<font color='#ffb7c5'>A lash should spice things up! Get some more tanned skin and a handle. How about an arm? That would certainly be macabre! Perfect for the theme! Wrap that hide around an arm, I'll take care of the rest.</font>")
 			src.lust++

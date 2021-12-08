@@ -22,3 +22,30 @@
 	item_state_slots = list(
 		slot_head_str = "village_garb",
 		)
+
+/obj/item/clothing/under/nobleskirt
+	desc = "A skirt and frilled tunic fit for someone of royal stature."
+	name = "noble's skirt"
+	icon = 'icons/cadia-sprites/mob/uniform.dmi'
+	item_state = "hos_formal_fem_s"
+	icon_state = "hos_formal_fem_s"
+	worn_state = "hos_formal_fem"
+	armor = list(melee = 20, bullet = 10, laser = 40, energy = 50, bomb = 0, bio = 0, rad = 0) //shit be enchanted. todo: make EMPs disable this
+	item_icons = list(slot_w_uniform_str = 'icons/cadia-sprites/mob/uniform.dmi')
+	item_state_slots = list(
+		slot_head_str = "hos_formal_fem"
+		)
+
+
+/obj/item/clothing/under/nobletuxedo
+	desc = "Trousers and a frilled tunic fit for someone of royal stature."
+	name = "noble's tuxedo"
+	icon = 'icons/cadia-sprites/mob/uniform.dmi'
+	item_state = "hos_formal_male_s"
+	icon_state = "hos_formal_male_s"
+	worn_state = "hos_formal_male"
+	armor = list(melee = 20, bullet = 10, laser = 40, energy = 50, bomb = 0, bio = 0, rad = 0) //shit be enchanted. todo: make EMPs disable this
+	item_icons = list(slot_w_uniform_str = 'icons/cadia-sprites/mob/uniform.dmi')
+	item_state_slots = list(
+		slot_head_str = "hos_formal_male"
+		)

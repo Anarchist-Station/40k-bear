@@ -263,8 +263,9 @@
 			return
 		else //feels like there should be a better way to do this but there is not
 			if(src.health == 0)
-				if(do_after(user, 40,src))
-					to_chat(user,"<span class='notice'>You force the broken door open, destroying it in the proccess!</span>")
+				to_chat(user,"<span class='notice'>You begin to force open the door...</span>")
+				if(do_after(user, backwards_skill_scale(user.SKILL_LEVEL(engineering)) * 5))
+					to_chat(user,"<span class='warning'>You force the broken door open, destroying it in the proccess!</span>")
 					new /obj/item/stack/material/wood(get_turf(src))
 					new /obj/item/material/shrapnel(get_turf(src))
 					new /obj/item/stack/material/wood(get_turf(src))

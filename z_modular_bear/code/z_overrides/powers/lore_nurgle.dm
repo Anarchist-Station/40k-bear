@@ -3,8 +3,8 @@
 ///////////////////////////////////////////////////////////////////////////////////////
 /mob/living/carbon/human/proc/nurgle()
 	set category = "Ruinous Powers"
-	set name = "The Path of Nurgle"
-	set desc = "In the embrace of great Nurgle, I am no longer afraid."
+	set name = "The Path of Ester"
+	set desc = "Ester."
 	if(!ishuman(src))
 		to_chat(src, "<span class='notice'>How tf are you seeing this, ping Wel Ard immediately</span>")
 		return

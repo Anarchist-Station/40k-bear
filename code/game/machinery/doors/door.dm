@@ -256,6 +256,24 @@
 		repairing = null
 		return
 
+//START NONMODULAR BEARHAMMER / BEARSTATION EDIT - CAN CROWBAR BROKEN DOORS OPEN
+	if(!repairing && isCrowbar(I))
+		if(src.health > 0)
+			to_chat(user,"<span class='notice'>The door is in too good of a condition to break open!</span>")
+			return
+		else //feels like there should be a better way to do this but there is not
+			if(src.health == 0)
+				to_chat(user,"<span class='notice'>You begin to force open the door...</span>")
+				if(do_after(user, backwards_skill_scale(user.SKILL_LEVEL(engineering)) * 5))
+					to_chat(user,"<span class='warning'>You force the broken door open, destroying it in the proccess!</span>")
+					new /obj/item/stack/material/wood(get_turf(src))
+					new /obj/item/material/shrapnel(get_turf(src))
+					new /obj/item/stack/material/wood(get_turf(src))
+					playsound(src.loc, 'sound/items/Crowbar.ogg', 100, 1)
+					qdel(src)
+//END NONMODULAR BEARHAMMER / BEARSTATION EDIT
+
+
 	//psa to whoever coded this, there are plenty of objects that need to call attack() on doors without bludgeoning them.
 	if(src.density && istype(I, /obj/item) && user.a_intent == I_HURT && !istype(I, /obj/item/card))
 		var/obj/item/W = I

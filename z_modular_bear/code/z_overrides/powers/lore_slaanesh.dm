@@ -3,7 +3,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////
 /mob/living/carbon/human/proc/slaanesh()
 	set category = "Ruinous Powers"
-	set name = "The Path of Slaanesh"
+	set name = "The Path of Asmodeus"
 	set desc = "Embrace your hunger, your lust, your desire."
 	if(!ishuman(src))
 		to_chat(src, "<span class='notice'>How tf are you seeing this, ping Wel Ard immediately</span>")
@@ -71,7 +71,7 @@
 				return
 
 		if(5)
-			to_chat(src, "<font color='#ffb7c5'>Why...what with that winter outside, I've hardly any good food and drink to offer my guests. How awful!</font> Xe purses xer lips at you, smiling coyly. <font color='#ffb7c5'>Do me a favor, won't you, darling? Take my that knife and harvest yourself a mask from a dead body...</font> Xe lets out a soft giggle. <font color='#800080'> Oh, don't worry. I'm not asking you to kill anyone, am I, darling? Do build a tanning rack, you should be able to whittle one out of the logs strewn about this world. When you have the tanned hide, try my knife on it and carve yourself a new face so that the world may never find you...</font> ")
+			to_chat(src, "<font color='#ffb7c5'>Why...what with that winter outside, I've hardly any good food and drink to offer my guests. How awful!</font> Xe purses xer lips at you, smiling coyly. <font color='#ffb7c5'>Do me a favor, won't you, darling? Take my that knife and harvest yourself a mask from a dead body...</font> Xe lets out a soft giggle. <font color='#ffb7c5'> Oh, don't worry. I'm not asking you to kill anyone, am I, darling? ...Though I wouldn't object if you were that dedicated! Do build a tanning rack, you should be able to whittle one out of the logs strewn about this world. When you have the tanned hide, try my knife on it and carve yourself a new face so that the world may never find you...</font> ")
 			src.lust++
 			return
 		if(6)
@@ -82,9 +82,8 @@
 					to_chat(src, "<font color='#ffb7c5'> Brilliant! That looks marvelous. Darling..I think you will do great. Buut, you will need a toy of sorts, something to entertain my many guests!~</font>")
 					STAT_LEVEL(dex) += 2
 					return
-				else
-					to_chat(src, "If it's a masquerade, I'll need a mask...")
-					return
+			to_chat(src, "If it's a masquerade, I'll need a mask...")
+			return
 		if(7)
 			to_chat(src, "<font color='#ffb7c5'>A lash should spice things up! Get some more tanned skin and a handle. How about an arm? That would certainly be macabre! Perfect for the theme! Wrap that hide around an arm, I'll take care of the rest.</font>")
 			src.lust++

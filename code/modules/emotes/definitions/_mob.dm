@@ -126,6 +126,7 @@
 		/decl/emote/audible/hem,
 		/decl/emote/audible/knuckles,
 		/decl/emote/audible/emperor_protects,
+		/decl/emote/audible/weh, //nonmodular bear edit: adds *weh as a recognixzed emote
 	)
 
 /mob/living/silicon/robot

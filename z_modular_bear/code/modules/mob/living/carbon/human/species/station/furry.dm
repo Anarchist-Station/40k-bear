@@ -230,9 +230,10 @@
 
 //	economic_modifier = 7
 
-	blurb = "Hailing from the world of Merelar in the Mecati-Stendarr binary star system. Tajaran are a hardy species of feline-like \
-	bipedal sapients that easily stand below-freezing temperatures and adapt quickly to humid ones. The Tajaran species shares a joint republic \
-	with the Teshari on the far edge of the Orion spur, formally known as the Tajaran-Teshari Alliance."
+	blurb = "Hailing from the kingdom of Merelar from a far-away tundra. Tajaran are a hardy species of feline-like \
+	bipedal sapients that easily stand below-freezing temperatures and adapt quickly to humid ones. The Tajaran are surprisingly \
+	hardy in this new world, and have, if anything, grown in size as they move south towards 'warmer' temperatures, away from the \
+	now-unlivable far north."
 	body_temperature = 293.15	//this actualy fixes itchy fur spam
 
 	cold_level_1 = 200 //Default 260
@@ -294,12 +295,11 @@
 	deform = 'z_modular_bear/icons/mob/human_races/r_def_skrell_vr.dmi'
 	primitive_form = SPECIES_MONKEY_SKRELL
 	unarmed_types = list(/datum/unarmed_attack/punch)
-	blurb = "The Skrell are a race of amphibious, cold-blooded humanoid aliens. They are one of the major players in \
-	galactic politics, and although they are considered relatively on a similar level of political and military power to SolGov,\
-	 their exact capabilities are kept secret and unclear. Their society follows a caste system and generally tries to project the \
-	 Skrell as rational, dependable, and careful. It is their overt caution that borders on paranoia in their interactions, however, \
-	 that most hinders them. A remainder from a harsh period of history and potential bad actors. Skrell are, in short, hard to trust, \
-	 and choose their words and truths carefully."
+	blurb = "The Skrell are a race of amphibious, cold-blooded humanoid aliens. They are one of the most common \
+	races one will find in the Fleet, consisting of half of the available forces. Nobody is quite sure why this is the case. \
+	 It is rumored that the Admiral, if he still lives, would have to be a Skrell for him to still be alive. Their \
+	 now-defunct society is said to have held gender in a remarkably fluid regard. Nobody knows what this means, anymore. \
+	 But...good for them."
 	num_alternate_languages = 4 //Let's give the smart frogs some love
 	secondary_langs = list(LANGUAGE_SKRELLIAN, LANGUAGE_SCHECHI)
 	name_language = LANGUAGE_SKRELLIAN
@@ -386,10 +386,10 @@
 	min_age = 18
 	max_age = 80
 
-	blurb = "Hailing from the arboreal world of Talvis-Epsilon III, or more commonly known as 'Tal'. Sergals are one of two sapient species \
-	that have become a protectorate under Solgov after what was known as the 'Antelope Incident'. Sergals are tall canopy hunters with strong, \
-	balancing tails, prehensile feet and dense muscles. While not strictly carnivores, their culture and bodies favor meat. Sergals are only about two \
-	generations new to star-faring society and struggle to find their place in the galaxy."
+	blurb = "Hailing from the heavily alborereal nation of Talevia, or more commonly known as 'Tal'. Sergals were one of the races most affected \
+	by the Conflict. In the ensuing winter, nearly all the lush forests and thick jungles that Sergals called home withered and died, leaving most of \
+	them to move on or starve. Their tall bodies and dense muscles, with claws on their feet and hands, made for ideal mobility while moving in foliage. \
+	Less so now."
 
 	primitive_form = "Saru"
 

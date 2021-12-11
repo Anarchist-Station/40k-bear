@@ -120,11 +120,10 @@
 
 //	economic_modifier = 7
 
-	blurb = "A reptilian species from the Uuosa-Eso system that speaks the hissing Sinta'Unathi language. \
-	Most Unathi are guided by a complex Ethnoreligion called the Unity,\
-	which stresses honesty, bravery, and the perfection of one's craft. \
-	Discovered a handful of generations ago by the Skrell, they're an independent power with loyal ties to the \
-	Skrellian people."
+	blurb = "A reptilian species locally known as 'Kobolds'. They come in a variety of shapes and sizes \
+	Most Kobolds feverently worship the Allfather, and it is the one thing all of their subspecies share in common.\
+	There are some lizard-like creatures that serve aboard the Fleet, which are seperate and distinct from the Kobolds of Biblio. \
+	(WIP)"
 
 	cold_level_1 = 280 //Default 260 - Lower is better
 	cold_level_2 = 220 //Default 200
@@ -230,9 +229,10 @@
 
 //	economic_modifier = 7
 
-	blurb = "Hailing from the world of Merelar in the Mecati-Stendarr binary star system. Tajaran are a hardy species of feline-like \
-	bipedal sapients that easily stand below-freezing temperatures and adapt quickly to humid ones. The Tajaran species shares a joint republic \
-	with the Teshari on the far edge of the Orion spur, formally known as the Tajaran-Teshari Alliance."
+	blurb = "Hailing from the kingdom of Merelar from a far-away tundra. Tajaran are a hardy species of feline-like \
+	bipedal sapients that easily stand below-freezing temperatures and adapt quickly to humid ones. The Tajaran are surprisingly \
+	hardy in this new world, and have, if anything, grown in size as they move south towards 'warmer' temperatures, away from the \
+	now-unlivable far north."
 	body_temperature = 293.15	//this actualy fixes itchy fur spam
 
 	cold_level_1 = 200 //Default 260
@@ -294,12 +294,11 @@
 	deform = 'z_modular_bear/icons/mob/human_races/r_def_skrell_vr.dmi'
 	primitive_form = SPECIES_MONKEY_SKRELL
 	unarmed_types = list(/datum/unarmed_attack/punch)
-	blurb = "The Skrell are a race of amphibious, cold-blooded humanoid aliens. They are one of the major players in \
-	galactic politics, and although they are considered relatively on a similar level of political and military power to SolGov,\
-	 their exact capabilities are kept secret and unclear. Their society follows a caste system and generally tries to project the \
-	 Skrell as rational, dependable, and careful. It is their overt caution that borders on paranoia in their interactions, however, \
-	 that most hinders them. A remainder from a harsh period of history and potential bad actors. Skrell are, in short, hard to trust, \
-	 and choose their words and truths carefully."
+	blurb = "The Skrell are a race of amphibious, cold-blooded humanoid aliens. They are one of the most common \
+	races one will find in the Fleet, consisting of half of the available forces. Nobody is quite sure why this is the case. \
+	 It is rumored that the Admiral, if he still lives, would have to be a Skrell for him to still be alive. Their \
+	 now-defunct society is said to have held gender in a remarkably fluid regard. Nobody knows what this means, anymore. \
+	 But...good for them?"
 	num_alternate_languages = 4 //Let's give the smart frogs some love
 	secondary_langs = list(LANGUAGE_SKRELLIAN, LANGUAGE_SCHECHI)
 	name_language = LANGUAGE_SKRELLIAN
@@ -386,10 +385,10 @@
 	min_age = 18
 	max_age = 80
 
-	blurb = "Hailing from the arboreal world of Talvis-Epsilon III, or more commonly known as 'Tal'. Sergals are one of two sapient species \
-	that have become a protectorate under Solgov after what was known as the 'Antelope Incident'. Sergals are tall canopy hunters with strong, \
-	balancing tails, prehensile feet and dense muscles. While not strictly carnivores, their culture and bodies favor meat. Sergals are only about two \
-	generations new to star-faring society and struggle to find their place in the galaxy."
+	blurb = "Hailing from the heavily alborereal nation of Talevia, or more commonly known as 'Tal'. Sergals were one of the races most affected \
+	by the Conflict. In the ensuing winter, nearly all the lush forests and thick jungles that Sergals called home withered and died, leaving most of \
+	them to move on or starve. Their tall bodies and dense muscles, with claws on their feet and hands, made for ideal mobility while moving in foliage. \
+	Less so now."
 
 	primitive_form = "Saru"
 
@@ -484,10 +483,10 @@
 	min_age = 18
 	max_age = 80
 
-	blurb = "One of Tal's two sapient species, Nevreans are an avian species that stand nearly a third shorter than most sapient species, known as extremely \
+	blurb = "A generally-nomadic species, Nevreans are an avian species that stand nearly a third shorter than most sapient species, known as extremely \
 	bright and social creatures, they have taken to rapid advancement into the space age better than their neighbors. Nevreans themselves are omnivores with \
 	lithe bodies and flightless, winged arms that work well in groups and have found themselves better in people-facing careers rather than physical due to their \
-	colorful and 'pretty' nature. However this has given them a promiscuous stereotype. "
+	colorful and 'pretty' nature. However this has given them a promiscuous stereotype, and...you know, the world is frozen. "
 
 	primitive_form = "Sparra"
 
@@ -520,13 +519,12 @@
 	min_age = 18
 	max_age = 80
 
-	blurb = "The fox-like Zorren are native to Virgo-Prime, however there are two distinct varieties of Zorren one with large ears and shorter fur, \
+	blurb = "The fox-like Zorren are native to  Biblio, however there are two distinct varieties of Zorren one with large ears and shorter fur, \
 	and the other with longer fur that is a bit more vibrant. The long-eared, short-furred Zorren have come to be known as Flatland Zorren as that \
-	is where most of their settlements are located. The Flatland Zorren are somewhat tribal and shamanistic as they have only recently started to be \
-	hired by the Trans-Stellar Corporations. The other variety of Zorren are known as Highland Zorren as they frequently settle in hilly and/or \
+	is where most of their settlements are located. The Flatland Zorren are somewhat tribal and shamanistic. \
+	The other variety of Zorren are known as Highland Zorren as they frequently settle in roaling, grassy hills, and/or \
 	mountainous areas, they have a differing societal structure than the Flatland Zorren having a more feudal social structure, like the Flatland Zorren, \
-	the Highland Zorren have also only recently been hired by the Trans-Stellar Corporations, but thanks to the different social structure they seem to \
-	have adjusted better to their new lives. Though similar fox-like beings have been seen they are different than the Zorren."
+	Though similar fox-like beings have been seen they are different than the Zorren."
 
 	//primitive_form = "" //We don't have fox-monkey sprites.
 
@@ -559,13 +557,11 @@
 	min_age = 18
 	max_age = 80
 
-	blurb = "The fox-like Zorren are native to Virgo-Prime, however there are two distinct varieties of Zorren one with large ears and shorter fur, \
+	blurb = "The fox-like Zorren are native to Biblio, however there are two distinct varieties of Zorren one with large ears and shorter fur, \
 	and the other with longer fur that is a bit more vibrant. The long-eared, short-furred Zorren have come to be known as Flatland Zorren as that is \
 	where most of their settlements are located. The Flatland Zorren are somewhat tribal and shamanistic as they have only recently started to be \
 	hired by the Trans-Stellar Corporations. The other variety of Zorren are known as Highland Zorren as they frequently settle in hilly and/or \
-	mountainous areas, they have a differing societal structure than the Flatland Zorren having a more feudal social structure, like the Flatland Zorren, \
-	the Highland Zorren have also only recently been hired by the Trans-Stellar Corporations, but thanks to the different social structure they \
-	seem to have adjusted better to their new lives. Though similar fox-like beings have been seen they are different than the Zorren."
+	mountainous areas, they have a differing societal structure than the Flatland Zorren having a more feudal social structure,"
 
 	//primitive_form = "" //We don't have fennec-monkey sprites.
 	spawn_flags = SPECIES_CAN_JOIN
@@ -604,9 +600,8 @@
 	//color_mult = 1
 	//inherent_verbs = list(/mob/living/proc/shred_limb)
 
-	blurb = "Vulpkanin is the Galactic Common name for a species of canine-genus upright humanoids that hail from the Vazzend system, \
-	before contact from the Skrell the Vulpkanin were a heavily industrial pre-FTL species that had colonized and exploited most of their \
-	home system, now a protectorate under the Skrellian Diplomatic Fleets with a corruption-heavy government." //Occulus edit
+	blurb = "Vulpkanin is a name given to any general upright-standing canid race, of which there are a surprising amount, all of them vaguely related. \
+	Most canid races trace their origins back to Eurydale, and it shows- after the nature goddess died, so did her children. Canid (wip)" //Occulus edit
 
 	primitive_form = "Wolpin"
 

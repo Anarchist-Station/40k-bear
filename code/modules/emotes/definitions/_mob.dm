@@ -125,8 +125,9 @@
 		/decl/emote/audible/clearthroat,
 		/decl/emote/audible/hem,
 		/decl/emote/audible/knuckles,
-		/decl/emote/audible/emperor_protects,
-		/decl/emote/audible/weh, //nonmodular bear edit: adds *weh as a recognixzed emote
+//		/decl/emote/audible/emperor_protects, //nonmodular bear edit, removes 40k
+		/decl/emote/audible/weh, //nonmodular bear edit: adds *weh as a recognized emote
+		/decl/emote/audible/bark, //nonmodular bear edit, adds *bark as a recognized emote
 	)
 
 /mob/living/silicon/robot

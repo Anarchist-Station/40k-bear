@@ -35,6 +35,11 @@
 	name = "1st Fleet bio-fatigues"
 	desc = "Brown fatigues of the 1st Fleet. Has a special antimicrobial fiber woven into its construction."
 
+/obj/item/clothing/under/rank/kroot
+	name = "kobold rags"
+	desc = "Rags worn by the Unterratte, crafted from animal hide and scraps of metal and cloth. Not terribly protective on its own, but does well when layered underneath something."
+	armor = list(melee = 15, bullet = 10, laser = 0, energy = 10, bomb = 0, bio = 0, rad = 0)
+
 // ARMOR //
 
 /obj/item/clothing/suit/armor/enforcer

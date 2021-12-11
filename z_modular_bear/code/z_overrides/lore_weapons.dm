@@ -158,19 +158,19 @@
 /obj/item/toy/katana/seolite
 	name = "single-edged blade"
 	color = "grey"
-	desc = "A blade with a razor-sharp edge. This looks like it was made by masters."
+	desc = "A blade with a razor-sharp edge. This looks like it was made by masters. A lack of hilt makes blocking difficult, but the edge looks like it would cut about anything in half."
 	force = 39
 	throwforce = 20
 
 /obj/item/material/sword/cane/seolite
 	block_chance = 40
-	force = 25
+	force = 23
 	name = "house sword"
 	desc = "A sword belonging to the Nobility. This blade is weighted perfectly in your hand. A large hilt allows for easy blocking."
 
 /obj/item/material/hatchet/machete/deluxe/seolite
 	name = "old cutter"
-	desc = "A cumbersome sword used for hacking and slicing."
+	desc = "A cumbersome blade used for hacking and slicing flora and fauna alike. Not the best weapon, though..."
 
 /obj/item/melee/classic_baton/daemonhammer
 	name = "daemonhammer"

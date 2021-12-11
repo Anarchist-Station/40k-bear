@@ -16,5 +16,6 @@
 	amt_dam_brute = -30
 	amt_dam_fire = -30
 	amt_dam_tox = 20
+	//restore_all_organs() figure out how to get this workin?
 
 	message = "You feel a sharp pain in your gut and a wave of weakness as your wounds knit."

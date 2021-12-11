@@ -522,7 +522,7 @@
 	blurb = "The fox-like Zorren are native to  Biblio, however there are two distinct varieties of Zorren one with large ears and shorter fur, \
 	and the other with longer fur that is a bit more vibrant. The long-eared, short-furred Zorren have come to be known as Flatland Zorren as that \
 	is where most of their settlements are located. The Flatland Zorren are somewhat tribal and shamanistic. \
-	The other variety of Zorren are known as Highland Zorren as they frequently settle in hilly and/or \
+	The other variety of Zorren are known as Highland Zorren as they frequently settle in roaling, grassy hills, and/or \
 	mountainous areas, they have a differing societal structure than the Flatland Zorren having a more feudal social structure, like the Flatland Zorren, \
 	Though similar fox-like beings have been seen they are different than the Zorren."
 
@@ -561,9 +561,7 @@
 	and the other with longer fur that is a bit more vibrant. The long-eared, short-furred Zorren have come to be known as Flatland Zorren as that is \
 	where most of their settlements are located. The Flatland Zorren are somewhat tribal and shamanistic as they have only recently started to be \
 	hired by the Trans-Stellar Corporations. The other variety of Zorren are known as Highland Zorren as they frequently settle in hilly and/or \
-	mountainous areas, they have a differing societal structure than the Flatland Zorren having a more feudal social structure, like the Flatland Zorren, \
-	the Highland Zorren have also only recently been hired by the Trans-Stellar Corporations, but thanks to the different social structure they \
-	seem to have adjusted better to their new lives. Though similar fox-like beings have been seen they are different than the Zorren."
+	mountainous areas, they have a differing societal structure than the Flatland Zorren having a more feudal social structure,"
 
 	//primitive_form = "" //We don't have fennec-monkey sprites.
 	spawn_flags = SPECIES_CAN_JOIN
@@ -602,7 +600,8 @@
 	//color_mult = 1
 	//inherent_verbs = list(/mob/living/proc/shred_limb)
 
-	blurb = "Vulpkanin is a name given to any general upright-standing canid race, of which there are a surprising amount. (wip)" //Occulus edit
+	blurb = "Vulpkanin is a name given to any general upright-standing canid race, of which there are a surprising amount, all of them vaguely related. \
+	Most canid races trace their origins back to Eurydale, and it shows- after the nature goddess died, so did her children. Canid (wip)" //Occulus edit
 
 	primitive_form = "Wolpin"
 

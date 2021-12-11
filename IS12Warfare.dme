@@ -2512,6 +2512,7 @@
 #include "z_modular_bear\code\game\objects\items\clothing\uniform.dm"
 #include "z_modular_bear\code\game\objects\items\weapons\cards_ids.dm"
 #include "z_modular_bear\code\game\objects\items\weapons\village.dm"
+#include "z_modular_bear\code\game\objects\items\weapons\storage\backpack.dm"
 #include "z_modular_bear\code\game\objects\structures\signs.dm"
 #include "z_modular_bear\code\game\objects\structures\statue.dm"
 #include "z_modular_bear\code\game\turfs\flooring\flooring.dm"

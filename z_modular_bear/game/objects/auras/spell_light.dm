@@ -24,10 +24,9 @@
 	invocation = "begins to softly glow."
 	school = "conjuration"
 	charge_max = 300
-	cooldown_min = 600
+	cooldown_min = 1500
 	level_max = list(Sp_TOTAL = 0, Sp_SPEED = 0, Sp_POWER = 0)
 	cast_sound = 'sound/effects/snap.ogg'
-	duration = 500
+	duration = 1000
 	hud_state = "gen_immolate"
-
 

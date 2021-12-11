@@ -1,5 +1,6 @@
 /obj/machinery/door/unpowered/inn
 	normalspeed = 1
+	autoclose = 0
 
 /obj/machinery/door/unpowered/inn/interior
 	name = "interior inn door"

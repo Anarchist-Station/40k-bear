@@ -54,7 +54,7 @@ datum/preferences
 					. += "<p style='position: absolute;right: 50px;bottom: 50px;'><a onfocus='this.blur()' href='byond://?src=\ref[user];ready=0' class='active'><b>You are ready.</b></a></p>"
 	else
 		. += "<p style='position: absolute;right: 50px; bottom: 50px;'><a onfocus='this.blur()' href='byond://?src=\ref[user];late_join=1' class='active'><b>Join the Game!</a></p>"
-	
+
 	. += "<b>Name:</b> "
 	. += "<a onfocus ='this.blur()' href='?src=\ref[src];rename=1'><b>[pref.real_name]</b></a> <a onfocus ='this.blur()' href='?src=\ref[src];random_name=1'>&reg;</a><br>"
 	. += "<b>Gender:</b> <a onfocus ='this.blur()' href='?src=\ref[src];gender=1'><b>[gender2text(pref.gender)]</b></a><br>"
@@ -63,7 +63,7 @@ datum/preferences
 		. += "<b>Map Objective:</b><br>"
 		. += "[GLOB.using_map.map_lore]<br>"//Put the map lore here if there is any.
 
-	if(user.client.holder)//it's user not usr Bombany.
+//	if(user.client.holder)//it's user not usr Bombany. -- nonmodular bearstation edit
 		. += "<p style='position: absolute;right: 50px; bottom: 30px;'><a onfocus='this.blur()' href='byond://?src=\ref[user];observe=1' class='active'><b>Observe()</a></p>"
 	. = jointext(.,null)
 

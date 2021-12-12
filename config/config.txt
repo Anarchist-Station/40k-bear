@@ -341,7 +341,7 @@ EVENT_CUSTOM_START_MAJOR 80;100
 #DISABLE_RESPAWN
 
 ## Respawn delay in minutes before one may respawn as a crew member.
-RESPAWN_DELAY 20
+RESPAWN_DELAY 1
 
 ## Strength of ambient star light. Set to 0 or less to turn off. A value of 1 is unlikely to have a noticeable effect in most lighting systems.
 STARLIGHT 0
@@ -403,7 +403,7 @@ RADIATION_LOWER_LIMIT 0.15
 WARFARE_START_TIME 2
 
 ## The time in minutes until someone can respawn in warfare mode.
-WARFARE_RESPAWN_TIME 2
+WARFARE_RESPAWN_TIME 1
 
 ## Number of points required to capture the trench. 150 is the default.
 TRENCH_CAPTURE_POINTS 150

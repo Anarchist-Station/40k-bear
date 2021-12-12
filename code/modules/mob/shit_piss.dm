@@ -173,6 +173,7 @@
 		bladder = 0
 		bowels = 0
 
+/* //START NONMODULAR BEARHAMMER EDIT- removes forced shitting/pissing. temporary solution while i work on more important stuff
 	if(bowels >= 250)
 		switch(bowels)
 			if(250 to 400)
@@ -222,6 +223,7 @@
 					bladder += 35
 			if(550 to INFINITY)
 				handle_piss()
+*/ // END NONMODULAR BEARHAMMER EDIT
 
 //Shitting
 /mob/living/carbon/human/proc/handle_shit()

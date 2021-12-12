@@ -74,9 +74,9 @@
 		if(species.death_sound)
 			playsound(loc, species.death_sound, 80, 1, 1)
 		spawn(50)
-			if(bowels >= 30)
+			if(bowels >= 30000) //nonmodular bearhammer edit- removes shitting and pissing on death. i feel like a butcher, but what am I to do? temporary solution as i focus on more important stuff.
 				handle_shit()
-			if(bladder >= 30)
+			if(bladder >= 30000) //nonmodular bearhammer edit- removes shitting and pissing on death. i feel like a butcher, but what am I to do? temporary solution as i focus on more important stuff.
 				handle_piss()
 	unlock_achievement(new/datum/achievement/dead())
 	sound_to(src, sound(null, repeat = 1, wait = 0, volume = 70, channel = 4))

@@ -1,6 +1,6 @@
 obj/structure/closet/crate/chest1
-	name = "crate"
-	desc = "A rectangular steel crate."
+	name = "chest"
+	desc = "A wooden chest."
 	icon = 'icons/cadia-sprites/migrated2/storage.dmi'
 	icon_state = "cgold"
 	icon_opened = "cgoldopen"
@@ -11,8 +11,8 @@ obj/structure/closet/crate/chest1
 	setup = 0
 
 obj/structure/closet/crate/chest2
-	name = "crate"
-	desc = "A rectangular steel crate."
+	name = "chest"
+	desc = "A wooden chest."
 	icon = 'icons/cadia-sprites/migrated2/storage.dmi'
 	icon_state = "bgold"
 	icon_opened = "bgoldopen"
@@ -23,8 +23,8 @@ obj/structure/closet/crate/chest2
 	setup = 0
 
 obj/structure/closet/crate/chest3
-	name = "crate"
-	desc = "A rectangular steel crate."
+	name = "chest"
+	desc = "A wooden chest."
 	icon = 'icons/cadia-sprites/migrated2/storage.dmi'
 	icon_state = "dgold"
 	icon_opened = "dgoldopen"
@@ -35,8 +35,8 @@ obj/structure/closet/crate/chest3
 	setup = 0
 
 obj/structure/closet/crate/chest4
-	name = "crate"
-	desc = "A rectangular steel crate."
+	name = "chest"
+	desc = "A wooden chest."
 	icon = 'icons/cadia-sprites/migrated2/storage.dmi'
 	icon_state = "gold"
 	icon_opened = "goldopen"

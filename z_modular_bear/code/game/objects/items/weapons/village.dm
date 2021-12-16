@@ -31,24 +31,28 @@
 /obj/item/material/sword/chaosknife/lament
 	name = "blooded knife"
 	desc = "A knife made of solid tears and mourning. Just holding it in your hand makes you feel so heavy, but ready to lash out with rage."
-	icon = 'icons/obj/weapons/melee/misc.dmi'
-	icon_state = "chaos_knife"
-	item_state = "EB-knife"//"knife"
-	attack_verb = list("slashed", "stabbed")
 	force_divisor = 0.6
 	block_chance = 15
 	force = 15
-	w_class = ITEM_SIZE_SMALL
-	grab_sound_is_loud = TRUE
-	grab_sound = 'sound/items/unholster_knife.ogg'
-	equipsound = 'sound/items/holster_knife.ogg'
-	sharpness = TRUE//No cutting peoples heads off with a knife please.
-	weapon_speed_delay = 10
-	drop_sound = 'sound/items/knife_drop.ogg'
-	swing_sound = "blunt_swing"
 
+// next, new weapons 'proper'
 
-
+/obj/item/weapon/javelin
+	name = "wooden javelin"
+	desc = "A wooden javelin that doubles up as a spear. Good for both throwing and stabbing. Not exactly an elegant weapon."
+	icon = 'z_modular_bear/icons/obj/items/weapons/village.dmi'
+	icon_state = "stick"
+	item_icons = list(
+		icon_l_hand = 'z_modular_bear/icons/mob/onmob/lefthand.dmi',
+		icon_r_hand = 'z_modular_bear/icons/mob/onmob/righthand.dmi',
+		)
+	item_icons = list(slot_l_hand_str = 'z_modular_bear/icons/mob/onmob/lefthand.dmi',
+		slot_r_hand_str = 'z_modular_bear/icons/mob/onmob/righthand.dmi'
+		)
+	item_state_slots = list(
+		slot_l_hand_str = "stick",
+		slot_r_hand_str = "stick"
+	) //i actually don't know if this is needed lol
 
 
 

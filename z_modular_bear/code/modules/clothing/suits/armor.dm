@@ -33,10 +33,14 @@
 	str_requirement = 5
 
 /obj/item/clothing/suit/armor/bear/bone
+	name = "bone armor"
+	desc = "A mostly-ceremonial bone armor. Not very protective, but even a weakling could wear it."
 	icon_state = "bone"
 	item_state = "bone"
 	icon = 'z_modular_bear/icons/mob/icons/suit.dmi'
 	icon_override = 'z_modular_bear/icons/mob/suit.dmi'
+	armor = list(melee = 10, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
+	str_requirement = 0
 
 
 /*

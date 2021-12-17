@@ -62,11 +62,10 @@
 
 
 
-/obj/item/material/earthbreaker
+/obj/item/weapon/earthbreaker
 	name = "Earthbreaker"
 	desc = "An incredibly heavy hammer fashioned by the All-Dwellers in the image of the hammer of their god. If you're strong enough to hold it in two hands effectively, it's a devestating weapon."
-	force = 12
-	force_divisor = 0.35 //40-ish damage wielded
+	force = 40
 	sharp = 0
 	edge = 0
 	sharpness = 0

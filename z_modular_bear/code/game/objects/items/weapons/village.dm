@@ -19,7 +19,6 @@
 
 
 /obj/item/material/sword/cane/seolite/practice
-	block_chance = 40
 	force = 5
 	name = "practice sword"
 	desc = "A sword belonging to the Nobility. This blade is weighted perfectly in your hand. A large hilt allows for easy blocking. This one has a blunted edge. Still painful."
@@ -31,26 +30,63 @@
 /obj/item/material/sword/chaosknife/lament
 	name = "blooded knife"
 	desc = "A knife made of solid tears and mourning. Just holding it in your hand makes you feel so heavy, but ready to lash out with rage."
-	icon = 'icons/obj/weapons/melee/misc.dmi'
-	icon_state = "chaos_knife"
-	item_state = "EB-knife"//"knife"
-	attack_verb = list("slashed", "stabbed")
 	force_divisor = 0.6
 	block_chance = 15
 	force = 15
-	w_class = ITEM_SIZE_SMALL
-	grab_sound_is_loud = TRUE
-	grab_sound = 'sound/items/unholster_knife.ogg'
-	equipsound = 'sound/items/holster_knife.ogg'
-	sharpness = TRUE//No cutting peoples heads off with a knife please.
-	weapon_speed_delay = 10
-	drop_sound = 'sound/items/knife_drop.ogg'
-	swing_sound = "blunt_swing"
+
+// next, new weapons 'proper'
+
+/obj/item/weapon/javelin
+	name = "wooden javelin"
+	desc = "A wooden javelin that doubles up as a spear. Good for both throwing and stabbing. Not exactly an elegant weapon."
+	throw_speed = 15
+	throw_range = 15
+	force = 12
+	throwforce = 25
+	sharp = 1
+	icon = 'z_modular_bear/icons/obj/items/weapons/village.dmi'
+	icon_state = "stick"
+	item_icons = list(
+		icon_l_hand = 'z_modular_bear/icons/mob/onmob/lefthand.dmi',
+		icon_r_hand = 'z_modular_bear/icons/mob/onmob/righthand.dmi',
+		)
+	item_icons = list(slot_l_hand_str = 'z_modular_bear/icons/mob/onmob/lefthand.dmi',
+		slot_r_hand_str = 'z_modular_bear/icons/mob/onmob/righthand.dmi'
+		)
+	item_state_slots = list(
+		slot_l_hand_str = "stick",
+		slot_r_hand_str = "stick"
+	) //i actually don't know if the above part is needed lol
 
 
 
 
 
+/obj/item/weapon/earthbreaker
+	name = "Earthbreaker"
+	desc = "An incredibly heavy hammer fashioned by the All-Dwellers in the image of the hammer of their god. If you're strong enough to hold it in two hands effectively, it's a devestating weapon."
+	force = 40
+	sharp = 0
+	edge = 0
+	sharpness = 0
+	str_requirement = 20
+	attack_verb = list("thwacked", "crushed")
+	icon = 'z_modular_bear/icons/obj/items/weapons/village.dmi'
+	icon_state = "earthbreaker"
+	item_icons = list(
+		icon_l_hand = 'z_modular_bear/icons/mob/onmob/lefthand.dmi',
+		icon_r_hand = 'z_modular_bear/icons/mob/onmob/righthand.dmi',
+		)
+	item_icons = list(slot_l_hand_str = 'z_modular_bear/icons/mob/onmob/lefthand.dmi',
+		slot_r_hand_str = 'z_modular_bear/icons/mob/onmob/righthand.dmi'
+		)
+	item_state_slots = list(
+		slot_l_hand_str = "earthbreaker",
+		slot_r_hand_str = "earthbreaker"
+	) //i actually don't know if the above part is needed lol
+
+
+//
 
 /obj/item/shield/buckler/custom
 	name = "custom-made buckler"
@@ -65,7 +101,7 @@
 	edge = 1
 	base_block_chance = 60
 	throw_speed = 10
-	throw_range = 20
+	throw_range = 10
 	w_class = ITEM_SIZE_HUGE
 	origin_tech = list(TECH_MATERIAL = 1)
 	matter = list(DEFAULT_WALL_MATERIAL = 1000, "Wood" = 1000)

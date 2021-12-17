@@ -2506,6 +2506,7 @@
 #include "z_modular_bear\code\game\portals.dm"
 #include "z_modular_bear\code\game\gamemodes\warfare\trenches.dm"
 #include "z_modular_bear\code\game\machinery\doors\unpowered.dm"
+#include "z_modular_bear\code\game\objects\effects\landmarks.dm"
 #include "z_modular_bear\code\game\objects\items\clothing\armor.dm"
 #include "z_modular_bear\code\game\objects\items\clothing\belt.dm"
 #include "z_modular_bear\code\game\objects\items\clothing\helmet.dm"

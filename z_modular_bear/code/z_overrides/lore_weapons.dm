@@ -153,7 +153,7 @@
 
 /obj/item/melee/classic_baton/trench_club
 	name = "war-club"
-	desc = "A truncheon for beating other people. Not the most damaging tool in the shed, but its crushing force makes it brutally effective."
+	desc = "A truncheon for beating other people. Not the most damaging tool in the shed, but its crushing force makes it brutally effective, and it's impossible to mess up with, unless you're a total novice..."
 
 /obj/item/toy/katana/seolite
 	name = "single-edged blade"

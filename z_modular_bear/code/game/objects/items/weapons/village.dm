@@ -61,6 +61,34 @@
 
 
 
+
+/obj/item/material/earthbreaker
+	name = "Earthbreaker"
+	desc = "An incredibly heavy hammer fashioned by the All-Dwellers in the image of the hammer of their god. If you're strong enough to hold it in two hands effectively, it's a devestating weapon."
+	force = 12
+	force_divisor = 0.35 //40-ish damage wielded
+	sharp = 0
+	edge = 0
+	sharpness = 0
+	str_requirement = 20
+	attack_verb = list("thwacked", "crushed")
+	icon = 'z_modular_bear/icons/obj/items/weapons/village.dmi'
+	icon_state = "earthbreaker"
+	item_icons = list(
+		icon_l_hand = 'z_modular_bear/icons/mob/onmob/lefthand.dmi',
+		icon_r_hand = 'z_modular_bear/icons/mob/onmob/righthand.dmi',
+		)
+	item_icons = list(slot_l_hand_str = 'z_modular_bear/icons/mob/onmob/lefthand.dmi',
+		slot_r_hand_str = 'z_modular_bear/icons/mob/onmob/righthand.dmi'
+		)
+	item_state_slots = list(
+		slot_l_hand_str = "earthbreaker",
+		slot_r_hand_str = "earthbreaker"
+	) //i actually don't know if the above part is needed lol
+
+
+//
+
 /obj/item/shield/buckler/custom
 	name = "custom-made buckler"
 	desc = "A buckler with a twist- though it's covered in wood, nearly the entire thing is made out of a surprisingly protective material that's warm to the touch. Has runes on the back-side of it. Also has a razor-sharp edge. For some reason, you feel confident enough to throw it."

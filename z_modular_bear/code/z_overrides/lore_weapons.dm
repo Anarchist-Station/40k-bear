@@ -174,7 +174,7 @@
 
 /obj/item/melee/classic_baton/daemonhammer
 	name = "daemonhammer"
-	desc = "A power weapon of incredible."
+	desc = "How are you seeing this? Tell Bear!"
 	str_requirement = 13
 	force = 44
 	block_chance = 38

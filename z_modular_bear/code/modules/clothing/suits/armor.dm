@@ -23,7 +23,7 @@
 
 /obj/item/clothing/suit/armor/bear/leather
 	name = "leather armor"
-	desc = "Armor made out of animal-hide. Surprisingly protective, and lightweight, though it doesn't stop bullets."
+	desc = "Armor for your chest made out of animal-hide. Surprisingly protective, and lightweight, though it doesn't stop bullets."
 	armor = list(melee = 40, bullet = 15, laser = 15, energy = 5, bomb = 20, bio = 0, rad = 0)
 	icon_state = "leather"
 	item_state = "leather"
@@ -32,7 +32,11 @@
 	body_parts_covered = UPPER_TORSO
 	str_requirement = 5
 
-
+/obj/item/clothing/suit/armor/bear/bone
+	icon_state = "bone"
+	item_state = "bone"
+	icon = 'z_modular_bear/icons/mob/icons/suit.dmi'
+	icon_override = 'z_modular_bear/icons/mob/suit.dmi'
 
 
 /*

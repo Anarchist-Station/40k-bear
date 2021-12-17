@@ -126,7 +126,7 @@
 	recipes += new/datum/stack_recipe("zip gun frame", /obj/item/zipgunframe, 5)
 //	recipes += new/datum/stack_recipe("stick", /obj/item/material/stick, 1) //nonmodular bear edit: literally not used
 	recipes += new/datum/stack_recipe("javelin", /obj/item/weapon/javelin, 2) //nonmodular bear addition
-	recipes += new/datum/stack_recipe("wooden chest", obj/structure/closet/crate/chest1, 10, time = 15, one_per_turf = 1, on_floor = 1) //nonmodular bear addition
+	recipes += new/datum/stack_recipe("wooden chest", /obj/structure/closet/crate/chest1, 10, time = 15, one_per_turf = 1, on_floor = 1) //nonmodular bear addition
 
 /material/cardboard/generate_recipes()
 	..()

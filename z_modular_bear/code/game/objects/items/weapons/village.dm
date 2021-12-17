@@ -19,7 +19,6 @@
 
 
 /obj/item/material/sword/cane/seolite/practice
-	block_chance = 40
 	force = 5
 	name = "practice sword"
 	desc = "A sword belonging to the Nobility. This blade is weighted perfectly in your hand. A large hilt allows for easy blocking. This one has a blunted edge. Still painful."
@@ -40,6 +39,11 @@
 /obj/item/weapon/javelin
 	name = "wooden javelin"
 	desc = "A wooden javelin that doubles up as a spear. Good for both throwing and stabbing. Not exactly an elegant weapon."
+	throw_speed = 15
+	throw_range = 15
+	force = 12
+	throwforce = 25
+	sharp = 1
 	icon = 'z_modular_bear/icons/obj/items/weapons/village.dmi'
 	icon_state = "stick"
 	item_icons = list(
@@ -52,7 +56,8 @@
 	item_state_slots = list(
 		slot_l_hand_str = "stick",
 		slot_r_hand_str = "stick"
-	) //i actually don't know if this is needed lol
+	) //i actually don't know if the above part is needed lol
+
 
 
 
@@ -69,7 +74,7 @@
 	edge = 1
 	base_block_chance = 60
 	throw_speed = 10
-	throw_range = 20
+	throw_range = 10
 	w_class = ITEM_SIZE_HUGE
 	origin_tech = list(TECH_MATERIAL = 1)
 	matter = list(DEFAULT_WALL_MATERIAL = 1000, "Wood" = 1000)

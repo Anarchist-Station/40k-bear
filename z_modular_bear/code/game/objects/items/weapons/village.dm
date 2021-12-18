@@ -25,14 +25,14 @@
 	sharp = 0
 	edge = 0
 
-
-
 /obj/item/material/sword/chaosknife/lament
 	name = "blooded knife"
 	desc = "A knife made of solid tears and mourning. Just holding it in your hand makes you feel so heavy, but ready to lash out with rage."
 	force_divisor = 0.35
 	block_chance = 15
 	force = 15
+
+
 
 // next, new weapons 'proper'
 
@@ -161,12 +161,13 @@
 
 /obj/item/weapon/earthbreaker
 	name = "Earthbreaker"
-	desc = "An incredibly heavy hammer fashioned by the All-Dwellers in the image of the hammer of their god. If you're strong enough to hold it in two hands effectively, it's a devestating weapon."
+	desc = "An incredibly heavy hammer fashioned by the All-Dwellers in the image of the hammer of their god. Due to its heavy weight, it's most commonly used in forging...but the warriors that are strong enough to use it threaten a devestating blow."
 	force = 40
 	sharp = 0
 	edge = 0
 	sharpness = 0
-	str_requirement = 20
+	str_requirement = 25
+	w_class = ITEM_SIZE_HUGE
 	attack_verb = list("thwacked", "crushed")
 	icon = 'z_modular_bear/icons/obj/items/weapons/village.dmi'
 	icon_state = "earthbreaker"
@@ -181,6 +182,19 @@
 		slot_l_hand_str = "earthbreaker",
 		slot_r_hand_str = "earthbreaker"
 	) //i actually don't know if the above part is needed lol
+
+
+/obj/item/weapon/knuckleduster
+	name = "brass knuckles"
+	desc = "A pair of brass knuckles, easily concealable in your pocket, and good for knocking someone's jaw loose."
+	force = 10
+	sharp = 0
+	edge = 0
+	sharpness = 0
+	w_class = ITEM_SIZE_SMALL
+	attack_verb = list("punched", "jabbed", "pummeled")
+	icon = 'icons/obj/weapons/melee/misc.dmi'
+	icon_state = "knuckleduster"
 
 
 //custom stuff with extra code

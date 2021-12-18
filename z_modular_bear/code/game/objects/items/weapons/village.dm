@@ -44,6 +44,7 @@
 	force = 12
 	throwforce = 25
 	sharp = 1
+	attack_verb = list("stabs", "jabs")
 	icon = 'z_modular_bear/icons/obj/items/weapons/village.dmi'
 	icon_state = "stick"
 	item_icons = list(
@@ -57,10 +58,6 @@
 		slot_l_hand_str = "stick",
 		slot_r_hand_str = "stick"
 	) //i actually don't know if the above part is needed lol
-
-
-
-
 
 /obj/item/weapon/earthbreaker
 	name = "Earthbreaker"
@@ -86,7 +83,7 @@
 	) //i actually don't know if the above part is needed lol
 
 
-//
+//custom stuff with extra code
 
 /obj/item/shield/buckler/custom
 	name = "custom-made buckler"

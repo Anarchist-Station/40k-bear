@@ -2,6 +2,12 @@
 	normalspeed = 1
 	autoclose = 0
 
+
+/obj/machinery/door/unpowered/inn/dungeon
+	normalspeed = 0
+	autoclose = 1
+
+
 /obj/machinery/door/unpowered/inn/interior
 	name = "interior inn door"
 	autoclose = 0

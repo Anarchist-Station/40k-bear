@@ -59,6 +59,39 @@
 		slot_r_hand_str = "stick"
 	) //i actually don't know if the above part is needed lol
 
+/obj/structure/flora/ausbushes/sparsegrass
+	var/harvested_rope = 0
+
+/obj/structure/flora/ausbushes/sparsegrass/attackby(mob/user as mob) //attack_generic may be better here
+	if (harvested_rope == 0)
+		new /obj/item/handcuffs/cable/rope(get_turf(src))
+		to_chat(user, "<span class='notice'>You start uprooting tufts of grass and picking out suitable reeds...</span>")
+		harvested_rope++
+		return
+	else if (harvested_rope == 1)
+		to_chat(user, "<span class='notice'>The grass has already been scavenged about....</span>")
+		return
+
+
+
+
+
+/obj/item/handcuffs/cable/rope
+	desc = "A length of rope. Has many uses, most of them for crafting. TODO: rope sprites."
+	name = "rope"
+
+/obj/item/weapon/javelin/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W,/obj/item/handcuffs/cable/rope))
+		qdel(W)
+		qdel(src)
+		to_chat(user, "<span class='notice'>You tie the rope firmly around the edge of the javelin. Now you just need to attach something to the end of it!</span>")
+		new /obj/item/gun/launcher/crossbow(get_turf(src))
+		return
+	return
+
+
+
+
 /obj/item/weapon/earthbreaker
 	name = "Earthbreaker"
 	desc = "An incredibly heavy hammer fashioned by the All-Dwellers in the image of the hammer of their god. If you're strong enough to hold it in two hands effectively, it's a devestating weapon."

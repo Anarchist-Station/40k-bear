@@ -41,7 +41,7 @@
 	desc = "A wooden javelin that doubles up as a spear. Good for both throwing and stabbing. Not exactly an elegant weapon."
 	throw_speed = 15
 	throw_range = 15
-	force = 12
+	force = 10
 	throwforce = 25
 	sharp = 1
 	attack_verb = list("stabs", "jabs")
@@ -83,12 +83,12 @@
 	) //i actually don't know if the above part is needed lol
 
 /obj/item/weapon/spear_crafted
-	name = "scrap spear"
+	name = "metal spear"
 	desc = "A wooden javelin that's had a pointy bit affixed to the end. You made this! A bit worse at tossing than a solely wooden counterpart, but much pointier for stabbing."
 	throw_speed = 15
 	throw_range = 15
 	force = 15
-	throwforce = 25
+	throwforce = 20
 	sharp = 1
 	attack_verb = list("stabs", "jabs")
 	icon = 'z_modular_bear/icons/obj/items/weapons/village.dmi'
@@ -111,19 +111,27 @@
 
 /obj/structure/flora/ausbushes/sparsegrass/attack_hand(mob/user as mob) //attack_generic may be better here
 	if (harvested_rope == 0)
-		new /obj/item/handcuffs/cable/rope(get_turf(src))
 		to_chat(user, "<span class='notice'>You start uprooting tufts of grass and picking out suitable reeds...</span>")
-		harvested_rope++
-		return
+		if(do_after(user, 50, src))
+			if(prob(75))
+				to_chat(user, "<span class='notice'>You finish scavenging, finding nothing useful.</span>")
+				harvested_rope++
+				return
+			else
+				new /obj/item/handcuffs/cable/rope(get_turf(src))
+				harvested_rope++
+				to_chat(user, "<span class='notice'>You finish scavenging.</span>")
+				return
 	else if (harvested_rope == 1)
-		to_chat(user, "<span class='notice'>The grass has already been scavenged about....</span>")
+		to_chat(user, "<span class='notice'>The grass has already been scavenged through...</span>")
 		return
 
 
 /obj/item/handcuffs/cable/rope
-	desc = "A length of rope. Has many uses, most of them for crafting. TODO: rope sprites."
+	desc = "A length of rope. Has many uses, most of them for crafting. Can also tie people up." // TODO: rope sprites, also make it so rope completely restrains someone (no movement)
 	name = "rope"
-
+	icon = 'z_modular_bear/icons/obj/items/miscellaneous.dmi'
+	icon_state = "rope"
 
 // javelin to rope stick
 /obj/item/weapon/javelin/attackby(obj/item/W as obj, mob/user as mob)
@@ -138,6 +146,17 @@
 
 
 
+// rope stick to spear
+
+/obj/item/weapon/javelin_step/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W,/obj/item/ingots/ironingot))
+		to_chat(user, "<span class='notice'>You begin fashioning your new spear...</span>")
+		if(do_after(user, 50, src))
+			to_chat(user, "<span class='notice'>You crafted your new spear!</span>")
+			qdel(W)
+			new /obj/item/weapon/spear_crafted(get_turf(src))
+			qdel(src)
+			return
 
 
 /obj/item/weapon/earthbreaker

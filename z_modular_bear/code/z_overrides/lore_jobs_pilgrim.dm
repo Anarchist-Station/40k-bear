@@ -168,6 +168,7 @@ Pilgrim Fate System
 			equip_to_slot_or_del(new /obj/item/stack/thrones3/twenty, slot_in_backpack)
 			equip_to_slot_or_del(new /obj/item/flame/lighter/zippo, slot_l_store)
 			equip_to_slot_or_del(new /obj/item/torch/self_lit, slot_l_hand)
+			equip_to_slot_or_del(new /obj/item/weapon/knuckleduster, slot_r_hand)
 			to_chat(U,"<span class='notice'><b><font size=3>Always on the run, always moving from scheme to scheme. You'll do whatever it takes for a coin or two. Scamming, gambling, drug dealing...though your businesses have become more lucrative under the Fleet's restrictive new laws and the chaos the Conflict caused.</font></b></span>")
 			U.verbs -= list(/mob/living/carbon/human/proc/penitentclass,)
 			if (prob(100))

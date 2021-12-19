@@ -10,7 +10,7 @@
 	spawn_positions = 1
 	latejoin_at_spawnpoints = TRUE
 	open_when_dead = 1
-	supervisors = "Every Imperial Citizen"
+	supervisors = "nobody"
 	selection_color = "#337C81"
 	access = null
 	minimal_access = null
@@ -107,11 +107,10 @@
 			U.add_spell(new /spell/aoe_turf/knock)
 			U.add_spell(new /spell/targeted/projectile/dumbfire/stuncuff)
 			U.add_spell(new /spell/targeted/swap)
-			equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/scrubs/black, slot_w_uniform)
+			equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/scrubs/black, slot_w_uniform) //placeholder, need fancy wizard robes, ya'll
 			equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/warfare/kroot, slot_back)
 			equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal, slot_shoes)
-			equip_to_slot_or_del(new /obj/item/clothing/suit/storage/toggle/labcoat/alchemist, slot_wear_suit)
-			equip_to_slot_or_del(new /obj/item/clothing/suit/storage/toggle/labcoat/alchemist, slot_w_uniform) //placeholder, need fancy wizard robes, ya'll
+			equip_to_slot_or_del(new /obj/item/clothing/suit/storage/toggle/labcoat/alchemist, slot_wear_suit) //placeholder, need fancy wizard robes, ya'll
 			U.add_skills(rand(0,1),rand(1,2),rand(1,4),rand(1,3),7)
 			U.add_stats(rand(5,7), rand(8,10), rand(8,12), rand(16,20)) //incredibly smart, physically fragile to compensate for her powerful spell abilities
 			to_chat(U, "<span class='notice'><b><font size=3>You are an Arcanist, a warlock, a peak master of wizardry, master of all arcane. Your mastery of spells is unmatched, by natural talent or by years of study. Though you are not the physically strongest person, you more than make up for it with your fearsome arsenal. You are also quite skilled in medicine from your studies, and can stand in for a doctor, should the need arise.</font></b></span>")

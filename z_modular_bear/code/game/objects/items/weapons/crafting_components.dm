@@ -23,8 +23,8 @@
 	force = 0
 
 /obj/item/weapon/bear_crafting/spade_head
-	name = "spade head"
-	desc = "A spade head."
+	name = "iron blade"
+	desc = "An iron head. Good for attaching to short and long sticks of wood"
 	icon_state = "spade_head"
 	force = 0
 

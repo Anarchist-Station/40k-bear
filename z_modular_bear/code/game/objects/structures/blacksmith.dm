@@ -1,6 +1,6 @@
 /obj/structure/anvil
 	name = "anvil"
-	desc = "An anvil for your forge."
+	desc = "An anvil for your forge. Used to work basic iron and steel."
 	icon = 'z_modular_bear/icons/obj/structures/misc.dmi'
 	icon_state = "anvil"
 	density = 1
@@ -11,19 +11,22 @@
 	var/adamantinebar = 0
 	var/silverbar = 0
 	var/steelbar = 0
+	var/disabled = 0
 
 // list of recipes for materials
-	var/ironrecipes = list("Knuckle-Dusters", "Spear-head", "Axe-head", "Spade-head")
-
+	var/ironrecipes = list("Knuckle-Dusters", "Spear-head", "Axe-head", "Spade-head", "Iron Armor")
 
 // these ingot vars are going to be used to determine what ingot is actually on the anvil. kind of shitty i know
 // hopefully there will be no cases where more than 1 of these vars will be true at once. if so, uh...OOPS LOL
+
 
 /obj/structure/anvil/update_icon()
 	if(occupied)
 		icon_state = "anvil_occ"
 	else
 		icon_state = "anvil"
+
+
 
 /obj/structure/anvil/attackby(obj/item/W as obj, mob/user as mob)
 
@@ -46,7 +49,12 @@
 // if W = earthbreaker, WHILE bartype = 1, something like that?
 
 	while(src.occupied == 1)
-		if((istype(W,/obj/item/weapon/earthbreaker)) && (src.ironbar == 1))
+		if(istype(W,/obj/item/ingots/ironingot))
+			to_chat(user, "<span class='notice'>You put an iron bar onto the anvil and ready it for forging.</span>")
+			ironbar++
+			qdel(W)
+			return
+		if((istype(W,/obj/item/weapon/earthbreaker)) && (src.ironbar >= 1))
 			to_chat(user, "<span class='notice'>You heft the impossible weight of the hammer in your hands and begin banging the iron bar into shape...</span>")
 			playsound(usr, 'sound/misc/forgeloop.ogg', 80, 0, -1)
 			if(do_after(user, 50, src))
@@ -58,6 +66,9 @@
 						playsound(usr, 'sound/misc/forgeloop.ogg', 80, 0, -1)
 						if(do_after(user, 50, src))
 							new /obj/item/weapon/knuckleduster(get_turf(src))
+							ironbar--
+							occupied--
+							update_icon()
 							playsound(usr, 'sound/items/metaldrop.ogg', 80, 0, -1)
 							to_chat(user, "<span class='notice'>You've crafted a pair of knuckledusters!</span>")
 							return
@@ -66,16 +77,20 @@
 						playsound(usr, 'sound/misc/forgeloop.ogg', 80, 0, -1)
 						if(do_after(user, 50, src))
 							new /obj/item/weapon/bear_crafting/iron_axe(get_turf(src))
-							playsound(usr, 'sound/misc/forgeloop.ogg', 80, 0, -1)
 							to_chat(user, "<span class='notice'>You've crafted an axe head!</span>")
+							ironbar--
+							occupied--
+							update_icon()
 							return
 					if("Spear-head")
 						to_chat(user, "<span class='notice'>You begin hammering out your weapon...</span>")
 						playsound(usr, 'sound/misc/forgeloop.ogg', 80, 0, -1)
 						if(do_after(user, 50, src))
 							new /obj/item/weapon/bear_crafting/iron_spear(get_turf(src))
-							playsound(usr, 'sound/misc/forgeloop.ogg', 80, 0, -1)
 							to_chat(user, "<span class='notice'>You've crafted a spear head!</span>")
+							ironbar--
+							occupied--
+							update_icon()
 							return
 					if("Spade-head")
 						to_chat(user, "<span class='notice'>You begin hammering out your item...</span>")
@@ -84,5 +99,25 @@
 							new /obj/item/weapon/bear_crafting/spade_head(get_turf(src))
 							playsound(usr, 'sound/misc/forgeloop.ogg', 80, 0, -1)
 							to_chat(user, "<span class='notice'>You've crafted a spade head!</span>")
+							ironbar--
+							occupied--
+							update_icon()
+							return
+					if("Iron Armor")
+						if(ironbar < 5)
+							to_chat(user, "<span class='notice'>You need five iron bars to make this!</span>")
+							return
+						if(ironbar >= 5)
+							to_chat(user, "<span class='notice'>You begin hammering out your item...</span>")
+							playsound(usr, 'sound/misc/forgeloop.ogg', 80, 0, -1)
+							if(do_after(user, 50, src))
+								new /obj/item/weapon/bear_crafting/spade_head(get_turf(src))
+								playsound(usr, 'sound/misc/forgeloop.ogg', 80, 0, -1)
+								to_chat(user, "<span class='notice'>You've crafted an iron chestplate!</span>")
+								(src.ironbar -= 5)
+								occupied--
+								update_icon()
+								return
 							return
 			return
+

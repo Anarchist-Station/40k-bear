@@ -59,6 +59,7 @@
 							new /obj/item/weapon/knuckleduster(get_turf(src))
 							playsound(usr, 'sound/items/metaldrop.ogg', 80, 0, -1)
 							to_chat(user, "<span class='notice'>You've crafted a pair of knuckledusters!</span>")
+							return
 					if("Axe-head")
 						to_chat(user, "<span class='notice'>You begin hammering out your weapon...</span>")
 						playsound(usr, 'sound/misc/forgeloop.ogg', 80, 0, -1)
@@ -66,4 +67,19 @@
 							new /obj/item/weapon/bear_crafting/iron_axe(get_turf(src))
 							playsound(usr, 'sound/misc/forgeloop.ogg', 80, 0, -1)
 							to_chat(user, "<span class='notice'>You've crafted an axe head!</span>")
+							return
+					if("Spear-head")
+						to_chat(user, "<span class='notice'>You begin hammering out your weapon...</span>")
+						playsound(usr, 'sound/misc/forgeloop.ogg', 80, 0, -1)
+						if(do_after(user, 50, src))
+							new /obj/item/weapon/bear_crafting/iron_spear(get_turf(src))
+							playsound(usr, 'sound/misc/forgeloop.ogg', 80, 0, -1)
+							to_chat(user, "<span class='notice'>You've crafted a spear head!</span>")
+					if("Spade-head")
+						to_chat(user, "<span class='notice'>You begin hammering out your item...</span>")
+						playsound(usr, 'sound/misc/forgeloop.ogg', 80, 0, -1)
+						if(do_after(user, 50, src))
+							new /obj/item/shovel/spade(get_turf(src))
+							playsound(usr, 'sound/misc/forgeloop.ogg', 80, 0, -1)
+							to_chat(user, "<span class='notice'>You've crafted a spade head!</span>")
 			return

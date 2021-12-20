@@ -127,6 +127,8 @@
 //	recipes += new/datum/stack_recipe("stick", /obj/item/material/stick, 1) //nonmodular bear edit: literally not used
 	recipes += new/datum/stack_recipe("javelin", /obj/item/weapon/javelin, 2) //nonmodular bear addition
 	recipes += new/datum/stack_recipe("wooden chest", /obj/structure/closet/crate/chest1, 10, time = 15, one_per_turf = 1, on_floor = 1) //nonmodular bear addition
+	recipes += new/datum/stack_recipe("wooden hilt", /obj/item/weapon/bear_crafting/wood_hilt, 10, time = 15)
+
 
 /material/cardboard/generate_recipes()
 	..()

@@ -24,14 +24,7 @@
 		slot_r_hand_str = "earthbreaker"
 	) //i actually don't know if the above part is needed lol
 
-/obj/item/handcuffs/cable/rope
-	desc = "A length of rope. Has many uses, most of them for crafting. Can also tie people up." // TODO: rope sprites, also make it so rope completely restrains someone (no movement)
-	name = "rope"
-	icon = 'z_modular_bear/icons/obj/items/miscellaneous.dmi'
-	icon_state = "rope"
-
 // rope
-
 /obj/structure/flora/ausbushes/sparsegrass
 	var/harvested_rope = 0
 
@@ -139,7 +132,7 @@
 // rope stick to spear
 
 /obj/item/weapon/javelin_step/attackby(obj/item/W as obj, mob/user as mob)
-	if(istype(W,/obj/item/ingots/ironingot))
+	if(istype(W,/obj/item/weapon/bear_crafting/iron_spear))
 		to_chat(user, "<span class='notice'>You begin fashioning your new spear...</span>")
 		if(do_after(user, 50, src))
 			to_chat(user, "<span class='notice'>You crafted your new spear!</span>")

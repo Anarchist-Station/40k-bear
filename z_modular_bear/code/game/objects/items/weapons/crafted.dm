@@ -140,3 +140,6 @@
 			new /obj/item/weapon/spear_crafted(get_turf(src))
 			qdel(src)
 			return
+	else
+		if(!istype(W,/obj/item/weapon/bear_crafting/iron_spear))
+			to_chat(user, "<span class='warning'>That doesn't fit!</warning>")

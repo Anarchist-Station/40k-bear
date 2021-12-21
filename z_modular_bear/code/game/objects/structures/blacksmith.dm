@@ -27,6 +27,13 @@
 		icon_state = "anvil"
 
 
+/obj/structure/anvil/proc/update_occupy()
+	if(src.ironbar == 0)
+		src.occupied = 0
+	if(src.ironbar >= 1)
+		src.occupied = 1
+
+
 
 /obj/structure/anvil/attackby(obj/item/W as obj, mob/user as mob)
 
@@ -41,6 +48,7 @@
 			to_chat(user, "<span class='notice'>You put an iron bar onto the anvil and ready it for forging.</span>")
 			ironbar++
 			occupied++
+			update_occupy()
 			update_icon()
 			return
 
@@ -67,7 +75,7 @@
 						if(do_after(user, 50, src))
 							new /obj/item/weapon/knuckleduster(get_turf(src))
 							ironbar--
-							occupied--
+							update_occupy()
 							update_icon()
 							playsound(usr, 'sound/items/metaldrop.ogg', 80, 0, -1)
 							to_chat(user, "<span class='notice'>You've crafted a pair of knuckledusters!</span>")
@@ -79,7 +87,7 @@
 							new /obj/item/weapon/bear_crafting/iron_axe(get_turf(src))
 							to_chat(user, "<span class='notice'>You've crafted an axe head!</span>")
 							ironbar--
-							occupied--
+							update_occupy()
 							update_icon()
 							return
 					if("Spear-head")
@@ -89,7 +97,7 @@
 							new /obj/item/weapon/bear_crafting/iron_spear(get_turf(src))
 							to_chat(user, "<span class='notice'>You've crafted a spear head!</span>")
 							ironbar--
-							occupied--
+							update_occupy()
 							update_icon()
 							return
 					if("Spade-head")
@@ -100,7 +108,7 @@
 							playsound(usr, 'sound/misc/forgeloop.ogg', 80, 0, -1)
 							to_chat(user, "<span class='notice'>You've crafted a spade head!</span>")
 							ironbar--
-							occupied--
+							update_occupy()
 							update_icon()
 							return
 					if("Iron Armor")
@@ -111,11 +119,11 @@
 							to_chat(user, "<span class='notice'>You begin hammering out your item...</span>")
 							playsound(usr, 'sound/misc/forgeloop.ogg', 80, 0, -1)
 							if(do_after(user, 50, src))
-								new /obj/item/weapon/bear_crafting/spade_head(get_turf(src))
+								new /obj/item/clothing/suit/armor/bear/iron(get_turf(src))
 								playsound(usr, 'sound/misc/forgeloop.ogg', 80, 0, -1)
 								to_chat(user, "<span class='notice'>You've crafted an iron chestplate!</span>")
 								(src.ironbar -= 5)
-								occupied--
+								update_occupy()
 								update_icon()
 								return
 							return

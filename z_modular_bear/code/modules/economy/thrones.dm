@@ -73,7 +73,7 @@
 	var/list/images = src.getMoneyImages()
 
 	for(var/A in images)
-		var/image/coin = image('icons/obj/items.dmi', A)
+		var/image/coin = image('icons/obj/thrones.dmi', A)
 		var/matrix/M = matrix()
 		M.Translate(rand(-6, 6), rand(-4, 8))
 		M.Turn(pick(-45, -27.5, 0, 0, 0, 0, 0, 0, 0, 27.5, 45))
@@ -120,66 +120,56 @@
 /obj/item/thrones/bundle/t2
 	name = "2 Throne Gelts"
 	icon_state = "throne2"
-	desc = "Two 10 throne coins."
 	worth = 2
 
 
 /obj/item/thrones/bundle/t3
 	name = "3 Throne Gelts"
 	icon_state = "throne3"
-	desc = "Three 10 throne coins."
 	worth = 3
 
 /obj/item/thrones/bundle/t4
 	name = "4 Throne Gelts"
 	icon_state = "throne4"
-	desc = "Four 10 throne coins."
 	worth = 4
 
 /obj/item/thrones/bundle/t5
 	name = "5 Throne Gelts"
 	icon_state = "throne5"
-	desc = "Five 10 throne coins."
 	worth = 5
 
 /obj/item/thrones/bundle/t6
 	name = "6 Throne Gelts"
 	icon_state = "throne6"
-	desc = "Six 10 throne coins."
 	worth = 6
 
 
 /obj/item/thrones/bundle/t7
 	name = "7 Throne Gelts"
 	icon_state = "throne7"
-	desc = "Seven 10 throne coins."
 	worth = 7
 
 /obj/item/thrones/bundle/t8
 	name = "8 Throne Gelts"
 	icon_state = "throne8"
-	desc = "Eight 10 throne coins."
 	worth = 8
 
 
 /obj/item/thrones/bundle/t9
 	name = "9 Throne Gelts"
 	icon_state = "throne9"
-	desc = "Nine 10 throne coins."
 	worth = 9
 
 
 /obj/item/thrones/bundle/t10
 	name = "10 Throne Gelts"
 	icon_state = "throne10"
-	desc = "Ten 10 throne coins."
 	worth = 10
 
 
 /obj/item/thrones/bundle/t11
 	name = "11 Throne Gelts"
 	icon_state = "throne11"
-	desc = "Eleven 10 throne coins."
 	worth = 11
 
 
@@ -193,42 +183,36 @@
 /obj/item/thrones/bundle/t13
 	name = "13 Throne Gelts"
 	icon_state = "throne13"
-	desc = "Thirteen 10 throne coins."
 	worth = 13
 
 
 /obj/item/thrones/bundle/t14
 	name = "14 Throne Gelts"
 	icon_state = "throne14"
-	desc = "Fourteen 10 throne coins."
 	worth = 14
 
 
 /obj/item/thrones/bundle/t15
 	name = "15 Throne Gelts"
 	icon_state = "throne15"
-	desc = "Fifteen 10 throne coins."
 	worth = 15
 
 
 /obj/item/thrones/bundle/t16
 	name = "16 Throne Gelts"
 	icon_state = "throne16"
-	desc = "Sixteen 10 throne coins."
 	worth = 16
 
 
 /obj/item/thrones/bundle/t17
 	name = "17 Throne Gelts"
 	icon_state = "throne17"
-	desc = "Seventeen 10 throne coins."
 	worth = 17
 
 
 /obj/item/thrones/bundle/t18
 	name = "18 Stamps"
 	icon_state = "throne18"
-	desc = "Eighteen 10 throne coins."
 	worth = 18
 
 /obj/item/thrones/bundle/t19
@@ -240,7 +224,6 @@
 /obj/item/thrones/bundle/t20
 	name = "20 Throne Gelts"
 	icon_state = "throne20"
-	desc = "Twenty 10 throne coins."
 	worth = 20
 
 /obj/item/thrones/ewallet

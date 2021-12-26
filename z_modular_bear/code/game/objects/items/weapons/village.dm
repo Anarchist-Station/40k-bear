@@ -48,6 +48,15 @@
 	icon = 'icons/obj/weapons/melee/misc.dmi'
 	icon_state = "knuckleduster"
 
+/obj/item/weapon/canopener
+	name = "can opener"
+	desc = "A tiny wedge of metal meant for opening cans. Basically useless for anything besides cutting things, and even then, it does it...poorly. Basically useless as a weapon, but...you could? I guess?"
+	force = 1
+	edge = 1
+	sharpness = 1
+	icon = 'z_modular_bear/icons/obj/items/weapons/village.dmi'
+	icon_state = "can_opener"
+
 //custom stuff with extra code
 
 /obj/item/shield/buckler/custom

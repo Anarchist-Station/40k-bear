@@ -80,7 +80,7 @@ Pilgrim Fate System
 			equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/warfare, slot_back)
 			equip_to_slot_or_del(new /obj/item/device/flashlight/lantern, slot_belt)
 			equip_to_slot_or_del(new /obj/item/torch/self_lit, slot_l_hand)
-			equip_to_slot_or_del(new /obj/item/stack/thrones3/twenty, slot_in_backpack)
+			equip_to_slot_or_del(new /obj/item/thrones/bundle/t6, slot_in_backpack)
 			to_chat(U,"<span class='notice'>You were a laborer before the Conflict. You were, and still are, one of the lucky ones- after your old government's defeat, you were re-employed by the House Nobility, the small rag-tag power that survived the invasion. You didn't get the land the Fleet stole back, but...at least you can, theoretically, get paid.<b><font size=3>")
 			U.verbs -= list(/mob/living/carbon/human/proc/penitentclass,
 			)
@@ -88,7 +88,7 @@ Pilgrim Fate System
 			equip_to_slot_or_del(new /obj/item/clothing/suit/raggedrobe, slot_wear_suit)
 			equip_to_slot_or_del(new /obj/item/clothing/head/plebhood, slot_head)
 			equip_to_slot_or_del(new /obj/item/torch/self_lit, slot_l_hand)
-			equip_to_slot_or_del(new /obj/item/stack/thrones3/ten, slot_r_store)
+			equip_to_slot_or_del(new /obj/item/thrones/bundle/t5, slot_r_store)
 			to_chat(U, "<span class='notice'><b><font size=3>You are a penitent, under watch of the Fleet. Before the Conflict, you were a worshipper of the old Gods, and fought against the Fleet's cultural control. Now, after the death of the nature goddess Eurydale, the world is covered in ash and snow, the very land weeping at her demise.</font></b></span>")
 			U.verbs -= list(/mob/living/carbon/human/proc/penitentclass,
 			)
@@ -103,7 +103,7 @@ Pilgrim Fate System
 			equip_to_slot_or_del(new /obj/item/cell/lasgun, slot_in_backpack)
 			equip_to_slot_or_del(new /obj/item/handcuffs, slot_in_backpack)
 			equip_to_slot_or_del(new /obj/item/torch/self_lit, slot_r_hand)
-			equip_to_slot_or_del(new /obj/item/stack/thrones3/twenty, slot_in_backpack)
+			equip_to_slot_or_del(new /obj/item/thrones/bundle/t2, slot_in_backpack)
 			to_chat(U,"<span class='notice'><b><font size=3>You're one of the few crazy enough to toe the line between civillian and criminal in the Fleet's eyes. Your entire life is a tightrope act; you need to put food on the table by cashing in bounties with the Fleet or Nobility, but you need to make sure nobody quite sees how you do it, lest they charge you for disturbing the peace, .</font></b></span>")
 			U.verbs -= list(/mob/living/carbon/human/proc/penitentclass,)
 		if("Merchant")
@@ -111,9 +111,9 @@ Pilgrim Fate System
 			equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/warfare, slot_back)
 			equip_to_slot_or_del(new /obj/item/clothing/suit/merchant, slot_wear_suit)
 			equip_to_slot_or_del(new /obj/item/torch/self_lit, slot_l_hand)
-			equip_to_slot_or_del(new /obj/item/stack/thrones/five, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones2/ten, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones3/twenty, slot_in_backpack)
+			equip_to_slot_or_del(new /obj/item/thrones/bundle/t6, slot_in_backpack)
+			equip_to_slot_or_del(new /obj/item/thrones/bundle/t10, slot_in_backpack)
+			equip_to_slot_or_del(new /obj/item/thrones/ewallet/meal, slot_in_backpack)
 			to_chat(U,"<span class='notice'>You're a merchant under the employ of the House Nobility, and it's not the type of employment you can exactly quit. Stuck between being extorted by the House, and taxed by the Fleet, you've struggled to make ends meet. Work with the village and the outpost to organize trade and enrich yourself.<b><font size=3>")
 			U.verbs -= list(/mob/living/carbon/human/proc/penitentclass,
 			)
@@ -123,7 +123,7 @@ Pilgrim Fate System
 			equip_to_slot_or_del(new /obj/item/clothing/head/musichat, slot_head)
 			equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/warfare, slot_back)
 			equip_to_slot_or_del(new /obj/item/torch/self_lit, slot_r_hand)
-			equip_to_slot_or_del(new /obj/item/stack/thrones3/twenty, slot_in_backpack)
+			equip_to_slot_or_del(new /obj/item/thrones/bundle/t6, slot_in_backpack)
 
 			to_chat(U,"<span class='notice'><b><font size=3>A wandering bard, you find yourself moving from tavern to tavern entertaining the masses for a few coins a time. ...Good luck with that one, buddy. </font></b></span>")
 			U.verbs -= list(/mob/living/carbon/human/proc/penitentclass,)
@@ -135,7 +135,7 @@ Pilgrim Fate System
 			equip_to_slot_or_del(new /obj/item/pickaxe/newpick, slot_l_hand)
 			equip_to_slot_or_del(new /obj/item/clothing/suit/miner, slot_wear_suit)
 			equip_to_slot_or_del(new /obj/item/torch/self_lit, slot_l_hand)
-			equip_to_slot_or_del(new /obj/item/stack/thrones3/twenty, slot_in_backpack)
+			equip_to_slot_or_del(new /obj/item/thrones/bundle/t5, slot_in_backpack)
 			to_chat(U,"<span class='notice'><b><font size=3>You're a laborer directly employed by the House Nobility. You get access to their outpost at the northwest corner of the town. It's dangerous work, but...hey, at least you can cook whatever's trying to kill you down there, right...?.</font></b></span>")
 			U.verbs -= list(/mob/living/carbon/human/proc/penitentclass,)
 
@@ -148,7 +148,7 @@ Pilgrim Fate System
 			equip_to_slot_or_del(new /obj/item/gun/projectile/shotgun/pump/boltaction/shitty, slot_r_hand)
 			equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/brifle_handful, slot_in_backpack)
 			equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/brifle_handful, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones3/twenty, slot_in_backpack)
+			equip_to_slot_or_del(new /obj/item/thrones/bundle/t6, slot_in_backpack)
 			equip_to_slot_or_del(new /obj/item/clothing/head/pillbox, slot_head)
 			equip_to_slot_or_del(new /obj/item/torch/self_lit, slot_l_hand)
 			to_chat(U,"<span class='notice'><b><font size=3>You're a hunter that captures or kills game, and either brings it back to town to sell or use it to feed yourself.</font></b></span>")
@@ -165,13 +165,13 @@ Pilgrim Fate System
 			equip_to_slot_or_del(new /obj/item/storage/pill_bottle/happy, slot_in_backpack)
 			equip_to_slot_or_del(new /obj/item/storage/pill_bottle/happy, slot_in_backpack)
 			equip_to_slot_or_del(new /obj/item/storage/pill_bottle/zoom, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones3/twenty, slot_in_backpack)
+			equip_to_slot_or_del(new /obj/item/thrones/bundle/t10, slot_in_backpack)
 			equip_to_slot_or_del(new /obj/item/flame/lighter/zippo, slot_l_store)
 			equip_to_slot_or_del(new /obj/item/torch/self_lit, slot_l_hand)
 			equip_to_slot_or_del(new /obj/item/weapon/knuckleduster, slot_r_hand)
 			to_chat(U,"<span class='notice'><b><font size=3>Always on the run, always moving from scheme to scheme. You'll do whatever it takes for a coin or two. Scamming, gambling, drug dealing...though your businesses have become more lucrative under the Fleet's restrictive new laws and the chaos the Conflict caused.</font></b></span>")
 			U.verbs -= list(/mob/living/carbon/human/proc/penitentclass,)
-			if (prob(100))
+			if (prob(20))
 				to_chat(U,"<span class='notice'><b><font size=2>Additionally...you've come across a lucky windfall, recently. Through theft, or your connections, or maybe even dumb luck, you found a key to the nobility's mansion and vault. All you need is a plan, maybe a crew or a disguise, and you'll be set to pull off the greatest heist of your life... (Your key should be in your backpack. If it isn't, tell Bear!)</font></b></span>")
 				var/obj/item/card/id/nobility/IN = new
 				equip_to_slot_or_del(IN, slot_r_store)
@@ -321,10 +321,8 @@ Pilgrim Fate System
 	backpack_contents = list(
 	/obj/item/ammo_magazine/handful/shotgun/shotgun_handful = 2,
 	/obj/item/storage/box/beanbags = 1,
-	/obj/item/stack/thrones = 1,
-	/obj/item/stack/thrones2 = 1,
-	/obj/item/stack/thrones3/five = 1,
-)
+	/obj/item/thrones/bundle/t14 = 1,
+	)
 
 /decl/hierarchy/outfit/job/merchant
 	name = OUTFIT_JOB_NAME("House Noble")
@@ -339,10 +337,9 @@ Pilgrim Fate System
 	shoes = /obj/item/clothing/shoes/laceup
 	suit_store = null
 	backpack_contents = list(
-	/obj/item/stack/thrones = 1,
-	/obj/item/stack/thrones2 = 1,
-	/obj/item/stack/thrones3/five = 1,
-)
+	/obj/item/thrones/bundle/t10 = 1,
+	/obj/item/thrones/bundle/t6 = 2,
+	)
 
 
 //Administrator
@@ -359,10 +356,7 @@ Pilgrim Fate System
 	belt = /obj/item/device/flashlight/lantern
 	pda_slot = null
 	backpack_contents = list(
-	/obj/item/stack/thrones = 2,
-	/obj/item/stack/thrones2/five = 1,
-	/obj/item/stack/thrones3/twenty = 1,
-
+	/obj/item/thrones/bundle/t5 = 1
 	)
 	flags = OUTFIT_NO_BACKPACK|OUTFIT_NO_SURVIVAL_GEAR
 

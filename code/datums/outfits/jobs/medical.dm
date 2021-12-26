@@ -9,7 +9,7 @@
 	BACKPACK_OVERRIDE_MEDICAL
 
 /decl/hierarchy/outfit/job/medical/cmo
-	name = OUTFIT_JOB_NAME("Sister Superior")
+	name = OUTFIT_JOB_NAME("Priest Aide") //nonmodular bear
 	l_ear  = /obj/item/device/radio/headset/red_team/medicae
 	uniform = /obj/item/clothing/under/rank/medical
 	neck = /obj/item/reagent_containers/food/drinks/canteen
@@ -23,9 +23,7 @@
 	head = /obj/item/clothing/head/hospitallerhelm
 	backpack_contents = list(
 		/obj/item/reagent_containers/food/snacks/warfare/rat = 1,
-		/obj/item/stack/thrones/five = 1,
-		/obj/item/stack/thrones2/five = 1,
-		/obj/item/stack/thrones3/five = 1,)
+		/obj/item/thrones/bundle/t5 = 1) //nonmodular bear
 
 /decl/hierarchy/outfit/job/medical/doctor
 	name = OUTFIT_JOB_NAME("Sister Hospitellar")

@@ -31,8 +31,6 @@
 	equip(var/mob/living/carbon/human/H)
 		H.warfare_language_shit(LANGUAGE_LOW_GOTHIC)
 		H.warfare_faction = IMPERIUM
-		H.bladder = -INFINITY
-		H.bowels = -INFINITY
 		to_chat(H, "<span class='notice'><b><font size=3>You are a witch, one of the few in the world who still remember the old ways of magic. You are... (pick your flavor in the 'witch' tab!).</font></b></span>")
 
 
@@ -95,7 +93,7 @@
 			equip_to_slot_or_del(new /obj/item/clothing/suit/storage/toggle/labcoat/alchemist, slot_wear_suit)
 			equip_to_slot_or_del(new /obj/item/device/flashlight/lantern, slot_r_store)
 			equip_to_slot_or_del(new /obj/item/clothing/under/villagegarb, slot_w_uniform)
-			U.add_skills(rand(4,7),rand(1,2),rand(4,7),rand(1,3),6)
+			U.add_skills(rand(4,7),rand(4,6),rand(4,7),rand(1,3),6)
 			U.add_stats(rand(6,8),rand(8,10),rand(12,18),rand(14,17))
 			to_chat(U, "<span class='notice'><b><font size=3>You are an alchemist, and what one might consider a...'doctor', of sorts. Although you are not explicitly trained in opening people up, you use your magic to mix potions and create plants that are advantageous to creating draughts of healing. You are well-versed in using your crossbow to defend yourself.</font></b></span>")
 		if("Arcanist")
@@ -146,8 +144,6 @@
 		H.add_skills(rand(1,3),rand(1,3),0,0,0)
 		H.assign_random_quirk()
 		H.warfare_language_shit(LANGUAGE_LOW_GOTHIC)
-		H.bladder = -INFINITY // jank bearstation way of removing bathroom stuff
-		H.bowels = -INFINITY// jank bearstation way of removing bathroom stuff
 		H.warfare_faction = IMPERIUM
 		H.verbs += list(
 		/mob/living/carbon/human/proc/khorne,
@@ -196,8 +192,6 @@
 		H.add_stats(rand(13,15), rand(10,13), rand(12,15), rand(8,13))
 		H.assign_random_quirk()
 		H.warfare_language_shit(LANGUAGE_LOW_GOTHIC)
-		H.bladder = -INFINITY // jank bearstation way of removing bathroom stuff
-		H.bowels = -INFINITY// jank bearstation way of removing bathroom stuff
 		H.warfare_faction = IMPERIUM
 		H.verbs += list(
 		/mob/living/carbon/human/proc/khorne,
@@ -270,7 +264,5 @@
 	belt = /obj/item/device/flashlight/lantern
 	pda_slot = null
 	backpack_contents = list(
-	/obj/item/stack/thrones = 2,
-	/obj/item/stack/thrones2/five = 1,
-	/obj/item/stack/thrones3/twenty = 1,
+	/obj/item/thrones/bundle/t2 = 1
 	)

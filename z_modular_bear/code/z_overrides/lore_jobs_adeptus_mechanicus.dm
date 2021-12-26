@@ -187,7 +187,7 @@
 	id = null
 	id_slot = null
 	pda_slot = null
-	backpack_contents = list(/obj/item/reagent_containers/food/snacks/warfare/rat = 1,)
+	backpack_contents = list(/obj/item/thrones/bundle/t3 = 1,)
 
 
 /*

@@ -338,9 +338,7 @@
 			equip_to_slot_or_del(new /obj/item/cell/lasgun, slot_in_backpack)
 			equip_to_slot_or_del(new /obj/item/cell/lasgun, slot_in_backpack)
 			equip_to_slot_or_del(new /obj/item/reagent_containers/food/snacks/warfare/rat, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones2, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones3/five, slot_in_backpack)
+			equip_to_slot_or_del(new /obj/item/thrones/ewallet/meal, slot_in_backpack)
 			U.verbs -= list(
 			/mob/living/carbon/human/proc/regimentselection,)
 
@@ -369,9 +367,7 @@
 			equip_to_slot_or_del(new /obj/item/cell/lasgun, slot_in_backpack)
 			equip_to_slot_or_del(new /obj/item/cell/lasgun, slot_in_backpack)
 			equip_to_slot_or_del(new /obj/item/reagent_containers/food/snacks/warfare/rat, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones2, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones3/five, slot_in_backpack)
+			equip_to_slot_or_del(new /obj/item/thrones/ewallet/meal, slot_in_backpack)
 
 			U.verbs -= list(/mob/living/carbon/human/proc/regimentselection,)
 
@@ -427,10 +423,8 @@
 			equip_to_slot_or_del(new /obj/item/clothing/gloves/combat/cadian, slot_gloves)
 			equip_to_slot_or_del(new /obj/item/cell/lasgun, slot_in_backpack)
 			equip_to_slot_or_del(new /obj/item/cell/lasgun, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/reagent_containers/food/snacks/warfare/rat, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones2, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones3/five, slot_in_backpack)
+			equip_to_slot_or_del(new /obj/item/thrones/ewallet/meal, slot_in_backpack)
+			equip_to_slot_or_del(new /obj/item/thrones/bundle/t7, slot_in_backpack)
 			to_chat(H, "<span class='notice'><b><font size=3>You are a Biblio native that struggled from Conscript up to Recruit. You have thick clothing that helps against the freezing weather, and a knowledge of local customs. You may be the best candidate to defuse problems with the House Nobility, should they arise. Though...many look at you as a traitor, now. And maybe for good reason.</font></b></span>")
 			U.verbs -= list(/mob/living/carbon/human/proc/regimentselection,)
 
@@ -481,9 +475,7 @@
 			equip_to_slot_or_del(new /obj/item/ammo_magazine/box/a556/mg08, slot_in_backpack)
 			equip_to_slot_or_del(new /obj/item/ammo_magazine/box/a556/mg08, slot_in_backpack)
 			equip_to_slot_or_del(new /obj/item/reagent_containers/food/snacks/warfare/rat, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones2, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones3/five, slot_in_backpack)
+			equip_to_slot_or_del(new /obj/item/thrones/ewallet/meal, slot_in_backpack)
 			U.verbs -= list(
 			/mob/living/carbon/human/proc/sergeantselection,)
 
@@ -511,10 +503,7 @@
 			equip_to_slot_or_del(new /obj/item/gun/projectile/automatic/stubber, slot_l_hand)
 			equip_to_slot_or_del(new /obj/item/ammo_magazine/box/a556/mg08, slot_in_backpack)
 			equip_to_slot_or_del(new /obj/item/ammo_magazine/box/a556/mg08, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/reagent_containers/food/snacks/warfare/rat, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones2, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones3/five, slot_in_backpack)
+			equip_to_slot_or_del(new /obj/item/thrones/ewallet/meal, slot_in_backpack)
 			U.verbs -= list(/mob/living/carbon/human/proc/sergeantselection,)
 
 			var/obj/item/card/id/dog_tag/guardsman/W = new
@@ -568,9 +557,7 @@
 //			equip_to_slot_or_del(new /obj/item/ammo_magazine/box/a556/mg08, slot_in_backpack)
 //			equip_to_slot_or_del(new /obj/item/ammo_magazine/box/a556/mg08, slot_in_backpack)
 			equip_to_slot_or_del(new /obj/item/reagent_containers/food/snacks/warfare/rat, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones2, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones3/five, slot_in_backpack)
+			equip_to_slot_or_del(new /obj/item/thrones/bundle/t7, slot_in_backpack)
 			U.verbs -= list(/mob/living/carbon/human/proc/sergeantselection,)
 
 			var/obj/item/card/id/dog_tag/guardsman/W = new
@@ -706,26 +693,24 @@
 	to_chat(src, "<i>...[message]</i>")
 
 GLOBAL_LIST_INIT(lone_thoughts, list(
-		"Why are we still here, just to suffer?",
-		"We fight to win, and that's all that matters.",
-		"Why we don't get any more reinforcements?",
-		"We have not gotten any orders from central command in months...",
-		"Did something happened while we were fighting in trenches?",
-		"Is there any reason to keep fighting?",
+		"Why are we still here...? There's nothing left.",
+		"We keep moving forwards. That's all that matters.",
+		"Where are we really going...?",
+		"We haven't gotten any orders from Command in months...",
+		"What happened to the Second Fleet?",
+		"Is there any reason to keep going? Where is the Admirality taking us?",
 		"Did anyone notice when ash started to fall?",
 		"It's middle of summer. Why it's so cold?",
-		"Greg died last night.",
+		"She died last night.",
 		"I do not want to die.",
 		"I miss my loved ones.",
-		"There is no hope... anymore...",
-		"Is there actually a central command?",
+		"There is no hope... not anymore...",
+		"Is there actually an Admiral?",
 		"Is any of this real?",
 		"My teeth hurt.",
 		"I am not ready to die.",
-		"Who keeps dropping the artillery?",
-		"I don't remember joining the military...",
-		"Does the Emperor truly protect?",
-		"I hope the Inquisitor doesn't find my Eldar milf fan-fiction",))
+		"Magic stirs here, still.",
+		"I want to go home. What was home like?",))
 
 /mob/living/proc/assign_random_quirk()
 	if(prob(75))//75% of not choosing a quirk at all.
@@ -834,7 +819,7 @@ GLOBAL_LIST_INIT(lone_thoughts, list(
 		return
 
 	if(findtext(announcement, config.ic_filter_regex))
-		var/warning_message = "<span class='warning'>Bro you just tried to announce cringe! You're going to loose subscribers! Check the server rules!</br>The bolded terms are disallowed: &quot;"
+		var/warning_message = "<span class='warning'>Bro you just tried to announce cringe! You're going to lose subscribers! Check the server rules!</br>The bolded terms are disallowed: &quot;"
 		var/list/words = splittext(announcement, " ")
 		var/cringe = ""
 		for (var/word in words)

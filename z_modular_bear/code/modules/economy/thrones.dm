@@ -239,3 +239,9 @@
 
 
 
+/obj/item/thrones/ewallet/meal
+	name = "meal card"
+	icon_state = "munitorium_efundcard"
+	desc = "A card that holds the equivalent of ten coins, provided for free to all Fleet personel."
+	worth = 10
+

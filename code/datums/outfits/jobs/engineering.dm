@@ -40,11 +40,7 @@
 	pda_slot = null
 	back = /obj/item/storage/backpack/satchel/warfare/techpriest
 	backpack_contents = list(
-		/obj/item/reagent_containers/food/snacks/warfare/rat = 1,
-		/obj/item/stack/thrones = 1,
-		/obj/item/stack/thrones2 = 1,
-		/obj/item/stack/thrones3/five = 1,
-)
+		/obj/item/reagent_containers/food/snacks/warfare/rat = 1,)
 
 /decl/hierarchy/outfit/job/engineering/engineer/void
 	name = OUTFIT_JOB_NAME("Engineer - Voidsuit")

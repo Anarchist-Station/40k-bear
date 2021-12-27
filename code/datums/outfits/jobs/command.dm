@@ -14,11 +14,9 @@
 	pda_slot = null
 	backpack_contents = list(
 	/obj/item/storage/box/ids = 1,
-	/obj/item/stack/thrones/twenty = 1,
-	/obj/item/stack/thrones2/twenty = 1,
-	/obj/item/stack/thrones3/twenty = 1,
-	/obj/item/reagent_containers/food/snacks/warfare/rat = 1,
-)
+	/obj/item/thrones/bundle/t20 = 2,
+	/obj/item/reagent_containers/food/snacks/warfare/rat = 1
+	)
 
 /decl/hierarchy/outfit/job/captain/post_equip(var/mob/living/carbon/human/H)
 	..()
@@ -48,8 +46,7 @@
 	pda_slot = null
 	backpack_contents = list(/obj/item/storage/box/ids = 1,
 	/obj/item/ammo_magazine/c45m = 2,
-	 /obj/item/reagent_containers/food/snacks/warfare/rat = 1,
-	/obj/item/stack/thrones/five = 1,
-	/obj/item/stack/thrones2/ten = 1,
-	/obj/item/stack/thrones3/twenty = 1,
+	/obj/item/reagent_containers/food/snacks/warfare/rat = 1,
+	/obj/item/thrones/bundle/t20 = 1 //bear nonmodular
+	/obj/item/thrones/bundle/t5 = 1 //bear nonmodular
 	 )

@@ -37,8 +37,6 @@
 		H.assign_random_quirk()
 		H.witchblood()
 		H.warfare_language_shit(LANGUAGE_LOW_GOTHIC )
-		H.bladder = -INFINITY // jank bearstation way of removing bathroom stuff
-		H.bowels = -INFINITY// jank bearstation way of removing bathroom stuff
 		H.warfare_faction = IMPERIUM
 		H.get_idcard()?.access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers, access_all_personal_lockers, access_maint_tunnels,)
 		H.verbs += list(
@@ -69,9 +67,7 @@
 	backpack_contents = list(,,
 	/obj/item/handcuffs = 2,
 	/obj/item/reagent_containers/food/snacks/warfare/rat = 1,
-	/obj/item/stack/thrones = 1,
-	/obj/item/stack/thrones2 = 1,
-	/obj/item/stack/thrones3/five = 1,
+	/obj/item/thrones/ewallet/meal = 1,
 	)
 
 	flags = OUTFIT_NO_BACKPACK|OUTFIT_NO_SURVIVAL_GEAR

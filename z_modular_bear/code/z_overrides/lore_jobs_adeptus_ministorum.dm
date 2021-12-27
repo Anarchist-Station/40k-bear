@@ -39,8 +39,6 @@
 		H.add_stats(rand(10,13), rand(10,13), rand(10,12), rand(12,16)) //frail and holy
 		H.get_idcard()?.access = list(access_heads, access_security, access_sec_doors, access_brig, access_forensics_lockers, access_all_personal_lockers, access_maint_tunnels, access_sob,)
 		H.warfare_language_shit(LANGUAGE_HIGH_GOTHIC)
-		H.bladder = -INFINITY // jank bearstation way of removing bathroom stuff
-		H.bowels = -INFINITY// jank bearstation way of removing bathroom stuff
 		H.warfare_faction = IMPERIUM
 		H.gender = FEMALE
 		H.add_spell(new /spell/radiant_aura/light)
@@ -226,10 +224,8 @@
 	r_hand = /obj/item/melee/whip/censer
 	backpack_contents = list(
 	/obj/item/reagent_containers/food/snacks/warfare/rat = 1,
-	/obj/item/stack/thrones = 1,
-	/obj/item/stack/thrones2/five = 1,
-	/obj/item/stack/thrones3/ten = 1
-		)
+	/obj/item/thrones/bundle/t12 = 1,
+	)
 
 
 
@@ -267,15 +263,13 @@
 		var/current_name = H.real_name
 		..()
 		H.set_trait(new/datum/trait/death_tolerant)
-		H.set_quirk(new/datum/quirk/dead_inside) // the only thing the sisters of the orders millitant feel is the god emperor's light.
+		H.set_quirk(new/datum/quirk/dead_inside) // stand proud, battle-friend..
 		H.add_stats(rand(14,18), rand(12,16), rand(12,18), rand(8,12))
 		H.get_idcard()?.access = get_all_accesses()
 		H.get_equipped_item(slot_s_store)
 		H.warfare_faction = IMPERIUM
 //		H.gender = FEMALE
 		H.warfare_language_shit(LANGUAGE_LOW_GOTHIC)
-		H.bladder = -INFINITY // jank bearstation way of removing bathroom stuff
-		H.bowels = -INFINITY// jank bearstation way of removing bathroom stuff
 		H.f_style = "shaved"
 		to_chat(H, "<span class='notice'><b><font size=3>You are a Knight that responds to and works for the House Nobility. You have the keys to the stockades and your barracks. You were alive during the bloody Conflict, barely able to fight against the lasers that descended from the sky and shattered your world, covering it in dakrness and snow. One of the few survivors, you continue your 'fight' against the Fleet, wherever it may be. You aren't just a person-at-arms- you're also expected to carry out whatever duties are expected of you, including subterfuge or espionage. Though the House Nobiltiy squabble amongst themselves, your orders are clear- you must keep them safe and take their orders.</font></b></span>")
 		if (H.gender == FEMALE)
@@ -320,7 +314,7 @@
 // Almoness Advance
 
 /datum/job/cmo  // aaaa I DON'T KNOW WHAT TO DOOOOOOOOOOO!!!!!
-	title = "Priestess Aide"
+	title = "Priest Aide"
 	head_position = 1
 	department = list("Ministorum", "Medical")
 	department_flag = COM|MED
@@ -363,8 +357,6 @@
 		H.set_trait(new/datum/trait/death_tolerant())
 		H.add_stats(rand(11,15), rand(11,15), rand(11,15), rand(12,16))
 		H.get_idcard()?.access = get_all_accesses()
-		H.bladder = -INFINITY // jank bearstation way of removing bathroom stuff
-		H.bowels = -INFINITY// jank bearstation way of removing bathroom stuff
 		H.get_equipped_item(slot_s_store)
 		H.warfare_faction = IMPERIUM
 		H.gender = FEMALE
@@ -375,7 +367,7 @@
 //		H.f_style = "shaved"
 //		H.h_style = "Bob"
 
-		to_chat(H, "<span class='notice'><b><font size=3>You are a Priestess Aide- a doctor, and priestess or close enough to one. You operate the healing center in the church.</font></b></span>")
+		to_chat(H, "<span class='notice'><b><font size=3>You are a Priestess' Aide- a doctor, and priest. You operate the sickbay in the church, as well as help the Head Priestess in her duties..</font></b></span>")
 
 // Hospitaller Advance
 

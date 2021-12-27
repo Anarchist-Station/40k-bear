@@ -201,9 +201,10 @@
 	set category = "Emotes"
 
 	emote("clearthroat",1)
-
+/*
 /mob/living/carbon/human/verb/emoteemperorprotects()
 	set name = "Emperor Protects"
 	set category = "Emotes"
 
 	emote("emperor",1)
+*/ //nonmodular bearhammer - 40k removal lol

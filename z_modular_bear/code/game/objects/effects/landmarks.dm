@@ -10,7 +10,8 @@
 				/obj/item/weapon/javelin = 5,
 				/obj/item/storage/belt/medical/alchemist = 3,
 				/obj/item/arrow = 3,
-				/obj/item/material/sword/commissword/sabre = 1
+				/obj/item/material/sword/commissword/sabre = 1,
+				/obj/item/thrones/bundle/t3 = 1
 				)
 
 /obj/random/loot/fantasygear_armor

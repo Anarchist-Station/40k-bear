@@ -67,7 +67,7 @@
 	backpack_contents = list(,,
 	/obj/item/handcuffs = 2,
 	/obj/item/reagent_containers/food/snacks/warfare/rat = 1,
-	/obj/item/thrones/bundle/t6 = 1,
+	/obj/item/thrones/ewallet/meal = 1,
 	)
 
 	flags = OUTFIT_NO_BACKPACK|OUTFIT_NO_SURVIVAL_GEAR

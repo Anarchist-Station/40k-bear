@@ -213,7 +213,7 @@ Pilgrim Fate System
 	open_when_dead = 1
 	supervisors = "Money"
 	selection_color = "#848484"
-	access = list(access_bar,)
+	access = list(access_bar)
 	minimal_access = list(access_bar)
 	outfit_type = /decl/hierarchy/outfit/job/innkeeper
 	latejoin_at_spawnpoints = TRUE

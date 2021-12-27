@@ -10,6 +10,7 @@
 	#include "bear/warhammer-3.dmm"
 	#include "bear/warhammer-4.dmm"
 	#include "bear/warhammer-5.dmm"
+	#include "bear/warhammer-6.dmm"
 
 	#include "../../code/modules/lobby_music/generic_songs.dm"
 

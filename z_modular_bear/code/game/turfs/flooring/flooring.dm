@@ -1,5 +1,25 @@
 #define ATMOSTANK_PHORON_BEAR      101
 
+// medical floor
+/turf/simulated/floor/tiled/medical
+	name = "steel floor"
+	icon_state = "white1"
+	initial_flooring = /decl/flooring/tiling/medical
+
+/decl/flooring/tiling/medical
+	name = "steel floor"
+	desc = "A floor."
+	icon = 'icons/turf/flooring/tiles.dmi'
+	icon_base = "white1"
+	build_type = null
+
+//steel floor
+/turf/simulated/floor/tiled/dark/steel
+	icon_state = "steel_dirty"
+	initial_flooring = /decl/flooring/tiling/dark/steel
+
+/decl/flooring/tiling/dark/steel
+	icon_base = "steel_dirty"
 
 
 /turf/simulated/floor/dirty/sewers //use exclusively for the sewers on warhammer-1.dm

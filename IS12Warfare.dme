@@ -2481,6 +2481,7 @@
 #include "maps\delta\warhammer_define.dm"
 #include "maps\delta\warhammer_shuttles.dm"
 #include "maps\delta\warhammer_unit_testing.dm"
+#include "maps\delta\bear\bear_areas.dm"
 #include "maps\delta\outfits\astartes.dm"
 #include "maps\delta\outfits\guardsmen.dm"
 #include "maps\delta\outfits\inquisition.dm"

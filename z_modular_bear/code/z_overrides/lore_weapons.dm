@@ -115,6 +115,12 @@
 	name = "1stFleet 'Firestarter' R9-02"
 	desc = "The standard weapon of Fleet forces. This one is the sharpshooter version. meant to accept stripper-clips and individual rounds, and accurate at longer ranges. Both this an the R9-01 were designed off of now-lost blueprints from Sol. They're the last pieces of home Humanity has left."
 
+/obj/item/gun/projectile/automatic/m22/warmonger/m14/battlerifle
+	name = "1stFleet 'Firestarter' R9-03"
+	unloaded_icon = "battlerifle_unloaded"
+	loaded_icon = "battlerifle"
+
+
 /obj/item/gun/projectile/shotgun/pump/boltaction/shitty/bayonet
 	name = "\improper FTF 'Reliable' Rifle"
 	desc = "A civillian version of the R9-platform. Bolt action, but firing the same ammunition, and with a lighter frame that's generally more innacurate. This one has a bayonet."

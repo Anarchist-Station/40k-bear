@@ -19,7 +19,10 @@
 	total_positions = 0
 	spawn_positions = 0
 
-
 /datum/job/doctor //idk what to do with them
+	total_positions = 0
+	spawn_positions = 0
+
+/datum/job/hydro //less fleet ppl
 	total_positions = 0
 	spawn_positions = 0

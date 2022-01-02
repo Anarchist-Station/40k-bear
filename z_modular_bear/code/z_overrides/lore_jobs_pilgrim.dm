@@ -331,6 +331,7 @@ Pilgrim Fate System
 	back = /obj/item/storage/backpack/satchel/warfare
 	neck = /obj/item/reagent_containers/food/drinks/canteen
 	head = /obj/item/clothing/head/smokingcap
+	id_type = /obj/item/card/id/ring/nobility
 	l_ear = null
 	r_ear = /obj/item/device/radio/headset/red_team
 	pda_slot = null
@@ -339,6 +340,8 @@ Pilgrim Fate System
 	backpack_contents = list(
 	/obj/item/thrones/bundle/t10 = 1,
 	/obj/item/thrones/bundle/t6 = 2,
+	/obj/item/card/id/stockades = 1,
+	/obj/item/card/id/nobility = 1
 	)
 
 

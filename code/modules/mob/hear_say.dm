@@ -14,13 +14,15 @@
 	if(!(ending in PUNCTUATION))
 		message = "[message]."
 
-	message = replacetext(message, "/", "")//None of this.
-	message = replacetext(message, "~", "")//Or this.
+// bearhammer bearsword nonmodular edit
+//	message = replacetext(message, "/", "")//None of this.
+//	message = replacetext(message, "~", "")//Or this.
 	message = replacetext(message, "@", "")//I keep doing this and it annoys me.
 	message = replacetext(message, " i ", " I ")//FUCKING USE CAPITAL LETTERS JAMES YOU FUCK!
-	message = replacetext(message, " ive ", " I've ")//I'M SO FUCKING SICK OF SEEING IVE YOU FUCKS
-	message = replacetext(message, " im ", " I'm ")//AND IM TOO! STOP THAT YOU FUCKS!
-	message = replacetext(message, " u ", " you ")//STOP USING FUCKING U YOU SICK FUCKS!
+//	message = replacetext(message, " ive ", " I've ")//I'M SO FUCKING SICK OF SEEING IVE YOU FUCKS
+//	message = replacetext(message, " im ", " I'm ")//AND IM TOO! STOP THAT YOU FUCKS!
+//	message = replacetext(message, " u ", " you ")//STOP USING FUCKING U YOU SICK FUCKS!
+//end nonmodular bearhammer bearsword edit
 
 	message = add_shout_append(capitalize(message))//So that if they end in an ! it gets bolded
 
@@ -221,13 +223,13 @@
 	var/formatted
 	if((copytext(message,-1) != "!") && (copytext(message,-1) != ".") && (copytext(message,-1) != "?") && (copytext(message,-1) != "-")) //nonmodular bearhammer / bearstation edit. now counts - as a valid end of sentence thing.
 		message = "[message]."
-	message = replacetext(message, "/", "")//None of this.
+//	message = replacetext(message, "/", "")//None of this.
 //	message = replacetext(message, "~", "")//Or this. //modular bearhammer edit: lol
 	message = replacetext(message, "@", "")//I keep doing this and it annoys me.
 	message = replacetext(message, " i ", " I ")//FUCKING USE CAPITAL LETTERS JAMES YOU FUCK!
-	message = replacetext(message, " ive ", " I've ")//I'M SO FUCKING SICK OF SEEING IVE YOU FUCKS
-	message = replacetext(message, " im ", " I'm ")//AND IM TOO! STOP THAT YOU FUCKS!
-	message = replacetext(message, " u ", " you ")//STOP USING FUCKING U YOU SICK FUCKS!
+//	message = replacetext(message, " ive ", " I've ")//I'M SO FUCKING SICK OF SEEING IVE YOU FUCKS
+//	message = replacetext(message, " im ", " I'm ")//AND IM TOO! STOP THAT YOU FUCKS!
+//	message = replacetext(message, " u ", " you ")//STOP USING FUCKING U YOU SICK FUCKS!
 	message = add_shout_append(capitalize(message))//So that if they end in an ! it gets bolded
 	if(language)
 		formatted = language.format_message_radio(message, verb)
@@ -287,7 +289,7 @@
 /mob/proc/hear_sleep(var/message)
 	var/heard = ""
 	if(prob(15))
-		var/list/punctuation = list(",", "!", ".", ";", "?")
+		var/list/punctuation = list(",", "!", ".", ";", "?", "-", "--") //nonmodular bearhammer
 		var/list/messages = splittext(message, " ")
 		var/R = rand(1, messages.len)
 		var/heardword = messages[R]

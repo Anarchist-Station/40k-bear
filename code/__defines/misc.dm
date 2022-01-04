@@ -310,6 +310,6 @@
     locate(min(CENTER.x+(RADIUS),world.maxx), min(CENTER.y+(RADIUS),world.maxy), CENTER.z) \
   )
 
-#define PUNCTUATION list("!", ".", "\"", ")", "'", ",", "?", ":", ";")
+#define PUNCTUATION list("!", ".", "\"", ")", "'", ",", "?", ":", ";", "-") //nonmodular bearhammer: added dashes
 
 #define CLIENT_FROM_VAR(I) (ismob(I) ? I:client : (istype(I, /client) ? I : (istype(I, /datum/mind) ? I:current?:client : null)))

@@ -289,7 +289,7 @@
 /mob/proc/hear_sleep(var/message)
 	var/heard = ""
 	if(prob(15))
-		var/list/punctuation = list(",", "!", ".", ";", "?", "-", "--") //nonmodular bearhammer
+		var/list/punctuation = list(",", "!", ".", ";", "?", "-") //nonmodular bearhammer
 		var/list/messages = splittext(message, " ")
 		var/R = rand(1, messages.len)
 		var/heardword = messages[R]

@@ -79,6 +79,9 @@
 /obj/structure/flora/tree/attackby(var/obj/item/O, var/mob/user)
 
 	if(log_type)	//if the tree has logs
+		if (istype(O, /obj/item/weapon/javelin)) //fuck you - nonmodular bear edit
+			visible_message("<span class='notice'>[user] jabs [src] with \the [O].</span>")
+			return
 		if((O.sharp) || istype(O, /obj/item/material/knife/butch) || istype(O, /obj/item/material/sword))//what items can cut down trees
 			if(!cutdown)
 				to_chat(user, "<span='bnotice'[user] begins to cut down \the [src]!</span>" )

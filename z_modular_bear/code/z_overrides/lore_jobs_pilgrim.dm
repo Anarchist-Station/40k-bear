@@ -324,6 +324,10 @@ Pilgrim Fate System
 	/obj/item/thrones/bundle/t14 = 1,
 	)
 
+/obj/item/card/id/pilgrim/innkeeper
+	job_access_type = /datum/job/bartender
+	access = list(access_inn1, access_inn2, access_inn3, access_bar) //k.
+
 /decl/hierarchy/outfit/job/merchant
 	name = OUTFIT_JOB_NAME("House Noble")
 	suit = /obj/item/clothing/suit/merchant

@@ -324,6 +324,10 @@ Pilgrim Fate System
 	/obj/item/thrones/bundle/t14 = 1,
 	)
 
+/obj/item/card/id/pilgrim/innkeeper
+	job_access_type = /datum/job/bartender
+	access = list(access_inn1, access_inn2, access_inn3, access_bar) //k.
+
 /decl/hierarchy/outfit/job/merchant
 	name = OUTFIT_JOB_NAME("House Noble")
 	suit = /obj/item/clothing/suit/merchant
@@ -331,6 +335,7 @@ Pilgrim Fate System
 	back = /obj/item/storage/backpack/satchel/warfare
 	neck = /obj/item/reagent_containers/food/drinks/canteen
 	head = /obj/item/clothing/head/smokingcap
+	id_type = /obj/item/card/id/ring/nobility
 	l_ear = null
 	r_ear = /obj/item/device/radio/headset/red_team
 	pda_slot = null
@@ -339,6 +344,8 @@ Pilgrim Fate System
 	backpack_contents = list(
 	/obj/item/thrones/bundle/t10 = 1,
 	/obj/item/thrones/bundle/t6 = 2,
+	/obj/item/card/id/stockades = 1,
+	/obj/item/card/id/nobility = 1
 	)
 
 

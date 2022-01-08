@@ -40,7 +40,7 @@
 /obj/structure/sign/bear
 	icon = 'z_modular_bear/icons/obj/decals.dmi'
 
-/obj/structure/sign/art/lordgovernor
+/obj/structure/sign/art/lordgovenor
 	name = "Royal Portrait"
 	desc = "A portrait of a lord or noble of some kind. He looks important."
 

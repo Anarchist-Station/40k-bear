@@ -2522,6 +2522,7 @@
 #include "z_modular_bear\code\game\objects\structures\fence.dm"
 #include "z_modular_bear\code\game\objects\structures\signs.dm"
 #include "z_modular_bear\code\game\objects\structures\statue.dm"
+#include "z_modular_bear\code\game\objects\structures\village_misc.dm"
 #include "z_modular_bear\code\game\turfs\flooring\flooring.dm"
 #include "z_modular_bear\code\maps\bear_areas.dm"
 #include "z_modular_bear\code\maps\warhammer_define.dm"

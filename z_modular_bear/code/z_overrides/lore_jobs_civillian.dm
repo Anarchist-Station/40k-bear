@@ -157,21 +157,21 @@
 			to_chat(H, "<span class='notice'><b><font size=3>You managed to smuggle in a trinket to remind you of home. It's extremely valuable to you. Keep it safe. (You'll find it on the ground underneath you, sorry.)</font></b></span>")
 			new /obj/item/coin/iron(H.loc)
 
-// Farmer
+// merchant. i'm sorry.
 
 /datum/job/hydro
-	title = "Hydroponics Associate"
+	title = "Merchant"
 	department = "Service"
 	department_flag = CIV
-	total_positions = 2
+	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Attendant, cruel entropy"
+	supervisors = "your own greed"
 	selection_color = "#848484"
 	latejoin_at_spawnpoints = TRUE
 	access = list(access_hydroponics, access_bar, access_kitchen,access_maint_tunnels, access_grox)
 	minimal_access = list(access_hydroponics, access_maint_tunnels, access_kitchen, access_grox)
 //	alt_titles = list("Hydroponicist")
-	outfit_type = /decl/hierarchy/outfit/job/service/gardener
+	outfit_type = /decl/hierarchy/outfit/job/townmerchant
 	announced = FALSE
 	auto_rifle_skill = 3
 	semi_rifle_skill = 3
@@ -198,9 +198,26 @@
 		/mob/living/carbon/human/proc/nurgle,
 		/mob/living/carbon/human/proc/slaanesh,
 		/mob/living/carbon/human/proc/tzeentch)
-		to_chat(H, "<span class='notice'><b><font size=3>The most important job in the outpost. You are tasked with growing food on a planet that has not seen a clear sky in seven years. Try your best to do...anything, with what you're given, not that you want to be here, anyway.</font></b></span>")
+		to_chat(H,"<span class='notice'>You're a merchant under your own employ. It's been...difficult making ends meet, lately, but you've managed to get by. Even after the world ends, the wheel of commerce continues turning. Import and export goods, buy and sell, make your profits.<b><font size=3>")
 
-/decl/hierarchy/outfit/job/service/gardener
+/decl/hierarchy/outfit/job/townmerchant
+	name = OUTFIT_JOB_NAME("Merchant")
+	suit = /obj/item/clothing/suit/merchant
+	uniform = /obj/item/clothing/under/rank/consort/adept
+	pda_type = /obj/item/device/pda/penitent
+	back = /obj/item/storage/backpack/satchel/warfare
+	neck = /obj/item/reagent_containers/food/drinks/canteen
+	head = /obj/item/clothing/head/smokingcap
+	id_type = null
+	l_ear = null
+	r_ear = /obj/item/device/radio/headset/red_team
+	pda_slot = null
+	shoes = /obj/item/clothing/shoes/laceup
+	suit_store = null
+	backpack_contents = list(
+	/obj/item/thrones/bundle/t10 = 1,
+	/obj/item/card/id/shop = 1
+	)
 
 
 // Janitor Servitor

@@ -2,7 +2,7 @@
 	normalspeed = 1
 	autoclose = 0
 
-/obj/machinery/door/unpowered/inn
+/obj/machinery/door/unpowered/inn/merchant
 	normalspeed = 1
 	autoclose = 0
 	req_access = list(213)

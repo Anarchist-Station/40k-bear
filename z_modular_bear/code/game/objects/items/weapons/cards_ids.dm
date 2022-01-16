@@ -32,3 +32,9 @@
 	icon_state = "admin_ring"
 	access = list(access_stockades, access_nobility)
 	desc = "An ornate ring forged by jewlers. Glows faintly upon approaching a door or lock."
+
+/obj/item/card/id/shop
+	name = "merchant's key"
+	grab_sound = 'sound/items/keyring_up.ogg'
+	icon_state = "key3"
+	access = list(213)

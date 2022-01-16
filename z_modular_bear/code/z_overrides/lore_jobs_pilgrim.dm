@@ -63,7 +63,7 @@ Pilgrim Fate System
 	var/mob/living/carbon/human/U = src
 	var/fates = list() //lists all possible fates
 
-	fates += list("Merchant","Bounty Hunter","Penitent","Laborer","Musician","Stalker","Scum","Miner") //adds a fate randomly to essentially give rng pick
+	fates += list("Bounty Hunter","Penitent","Laborer","Musician","Stalker","Scum","Miner") //adds a fate randomly to essentially give rng pick
 	fates += pick("Laborer","Musician","Witch",) //adds a fate randomly to essentially give rng pick
 	fates += pick("Stalker","Scum","Miner",) //adds a fate randomly to essentially give rng pick
 
@@ -106,17 +106,6 @@ Pilgrim Fate System
 			equip_to_slot_or_del(new /obj/item/thrones/bundle/t2, slot_in_backpack)
 			to_chat(U,"<span class='notice'><b><font size=3>You're one of the few crazy enough to toe the line between civillian and criminal in the Fleet's eyes. Your entire life is a tightrope act; you need to put food on the table by cashing in bounties with the Fleet or Nobility, but you need to make sure nobody quite sees how you do it, lest they charge you for disturbing the peace, .</font></b></span>")
 			U.verbs -= list(/mob/living/carbon/human/proc/penitentclass,)
-		if("Merchant")
-			equip_to_slot_or_del(new /obj/item/clothing/head/smokingcap, slot_head)
-			equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/warfare, slot_back)
-			equip_to_slot_or_del(new /obj/item/clothing/suit/merchant, slot_wear_suit)
-			equip_to_slot_or_del(new /obj/item/torch/self_lit, slot_l_hand)
-			equip_to_slot_or_del(new /obj/item/thrones/bundle/t6, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/thrones/bundle/t10, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/thrones/ewallet/meal, slot_in_backpack)
-			to_chat(U,"<span class='notice'>You're a merchant under the employ of the House Nobility, and it's not the type of employment you can exactly quit. Stuck between being extorted by the House, and taxed by the Fleet, you've struggled to make ends meet. Work with the village and the outpost to organize trade and enrich yourself.<b><font size=3>")
-			U.verbs -= list(/mob/living/carbon/human/proc/penitentclass,
-			)
 		if("Musician")
 			equip_to_slot_or_del(new /obj/item/device/violin, slot_l_hand)
 			equip_to_slot_or_del(new /obj/item/clothing/suit/musician, slot_wear_suit)
@@ -171,37 +160,10 @@ Pilgrim Fate System
 			equip_to_slot_or_del(new /obj/item/weapon/knuckleduster, slot_r_hand)
 			to_chat(U,"<span class='notice'><b><font size=3>Always on the run, always moving from scheme to scheme. You'll do whatever it takes for a coin or two. Scamming, gambling, drug dealing...though your businesses have become more lucrative under the Fleet's restrictive new laws and the chaos the Conflict caused.</font></b></span>")
 			U.verbs -= list(/mob/living/carbon/human/proc/penitentclass,)
-			if (prob(20))
+			if (prob(15))
 				to_chat(U,"<span class='notice'><b><font size=2>Additionally...you've come across a lucky windfall, recently. Through theft, or your connections, or maybe even dumb luck, you found a key to the nobility's mansion and vault. All you need is a plan, maybe a crew or a disguise, and you'll be set to pull off the greatest heist of your life... (Your key should be in your backpack. If it isn't, tell Bear!)</font></b></span>")
 				var/obj/item/card/id/nobility/IN = new
 				equip_to_slot_or_del(IN, slot_r_store)
-
-/*
-		if("Witch") //oh shit what do i do with this now??
-			U.add_skills(0,0,rand(5,9),0,rand(5,9))
-			equip_to_slot_or_del(new /obj/item/clothing/mask/gas/prac_mask, slot_wear_mask)
-			equip_to_slot_or_del(new /obj/item/clothing/suit/prac_arpon, slot_wear_suit)
-			equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/warfare, slot_back)
-			equip_to_slot_or_del(new /obj/item/storage/firstaid/adv, slot_l_hand)
-			equip_to_slot_or_del(new /obj/item/storage/belt/medical/full, slot_belt)
-			equip_to_slot_or_del(new /obj/item/clothing/gloves/prac_gloves, slot_gloves)
-			equip_to_slot_or_del(new /obj/item/torch/self_lit, slot_l_hand)
-			equip_to_slot_or_del(new /obj/item/stack/thrones3/twenty, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/stack/thrones, slot_in_backpack)
-			equip_to_slot_or_del(new /obj/item/spellbook)
-			U.add_spell(new /spell/radiant_aura/light)
-			U.add_spell(new /spell/noclothes)
-			to_chat(U,"<span class='notice'><b><font size=3>You are an unchained Arcanist. ..literally. After the Conflict, those in the great House Arcane were arrested and taken away, somewhere, for study. They simply vanished, one day, almost without a trace. Though the majority of those who carry a true magical spark are gone, you are one of the few that remain. You must keep your magic secret, however. The Fleet may not take too kindly to you...</font></b></span>")
-			var/obj/item/card/id/ring/disgracedmedicae/W = new
-
-			W.icon_state = "medicae_ring"
-			W.assignment = "Scholar"
-			W.registered_name = real_name
-			W.update_label()
-			equip_to_slot_or_del(W, slot_wear_id)
-			U.verbs -= list(/mob/living/carbon/human/proc/penitentclass,)
-*/
 
 
 /datum/job/innkeeper
@@ -312,7 +274,7 @@ Pilgrim Fate System
 	pda_type = /obj/item/device/pda/penitent
 	back = /obj/item/storage/backpack/satchel/warfare
 	neck = /obj/item/reagent_containers/food/drinks/canteen
-	head = /obj/item/clothing/head/bardhat
+	head = null
 	l_ear = null
 	r_ear = null
 	pda_slot = null

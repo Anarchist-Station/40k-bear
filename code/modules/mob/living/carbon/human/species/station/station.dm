@@ -31,7 +31,7 @@
 	if(!firstspace)	//we need a surname
 		sanitized_name += " [pick(GLOB.last_names)]"
 
-	return sanitized_name 
+	return sanitized_name
 
 /datum/species/human/handle_npc(var/mob/living/carbon/human/H)
 	if(H.stat != CONSCIOUS)
@@ -82,12 +82,15 @@
 		return "staring blankly, not reacting to your presence"
 	return ..()
 
-
+// start nonmodular bear edit- just replacing these guys /w kobobs
 /datum/species/human/skinless
 	name = "Skinless"
 	name_plural = "Skinless"
-	icobase = 'icons/mob/human_races/subhuman.dmi'
-	deform = 'icons/mob/human_races/subhuman.dmi'
+//	icobase = 'icons/mob/human_races/subhuman.dmi'
+//	deform = 'icons/mob/human_races/subhuman.dmi'
+	icobase = 'z_modular_bear/icons/mob/human_races/r_lizard_vr.dmi'        //Eclipse edit.
+	deform = 'z_modular_bear/icons/mob/human_races/r_def_lizard_vr.dmi'        //Eclipse edit.
+	tail = "sogtail"
 	appearance_flags = 0
 	spawn_flags = SPECIES_IS_RESTRICTED
 	species_flags = SPECIES_FLAG_NO_PAIN

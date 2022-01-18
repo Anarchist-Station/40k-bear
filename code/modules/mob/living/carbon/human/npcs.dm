@@ -344,7 +344,7 @@
 
 //Hostile NPCs.
 
-//SKINLESS
+//SKINLESS - nonmodular bear edits the whole way down
 /datum/species/human/skinless/handle_npc(var/mob/living/carbon/human/H)//DON'T SPAWN TOO MANY OF THESE PLEASE!
 	H.process()
 
@@ -365,7 +365,9 @@
 	var/weapon = pick(/obj/item/crowbar, /obj/item/melee/classic_baton/trench_club, /obj/item/melee/classic_baton)
 	put_in_hands(new weapon)//Give them a weapon.
 	combat_mode = 1//Put them in combat mode.
-	STAT_LEVEL(dex) = 1
+	STAT_LEVEL(dex) = 14 // YIP YIP YIP YIP YIP
+	STAT_LEVEL(str) = 9
+	resize(0.70)
 
 /datum/species/human/lackey/handle_npc(var/mob/living/carbon/human/H)
 	H.process()

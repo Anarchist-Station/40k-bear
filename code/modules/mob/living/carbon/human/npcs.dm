@@ -362,12 +362,15 @@
 
 	is_npc = 1//Make sure their an NPC so they don't attack each other.
 	hand = 0//Make sure one of their hands is active.
-	var/weapon = pick(/obj/item/crowbar, /obj/item/melee/classic_baton/trench_club, /obj/item/melee/classic_baton)
+	var/weapon = pick(/obj/item/weapon/spear_crafted, /obj/item/melee/classic_baton/trench_club, /obj/item/weapon/javelin)
 	put_in_hands(new weapon)//Give them a weapon.
 	combat_mode = 1//Put them in combat mode.
-	STAT_LEVEL(dex) = 14 // YIP YIP YIP YIP YIP
-	STAT_LEVEL(str) = 9
+	STAT_LEVEL(dex) = 13 // YIP YIP YIP YIP YIP
+	STAT_LEVEL(str) = 8
 	resize(0.70)
+
+	var/decl/hierarchy/outfit/outfit = outfit_by_type(/decl/hierarchy/outfit/kobold)
+	outfit.equip(src)
 
 /datum/species/human/lackey/handle_npc(var/mob/living/carbon/human/H)
 	H.process()
@@ -394,3 +397,10 @@
 	name = "Lackey"
 	uniform = /obj/item/clothing/under/color/grey
 	shoes = /obj/item/clothing/shoes/black
+
+
+/decl/hierarchy/outfit/kobold
+	name = "Kobold"
+	uniform = /obj/item/clothing/under/rank/kroot
+	shoes = /obj/item/clothing/shoes/sandal
+	flags = OUTFIT_NO_BACKPACK|OUTFIT_NO_SURVIVAL_GEAR

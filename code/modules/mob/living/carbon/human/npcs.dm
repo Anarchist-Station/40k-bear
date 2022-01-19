@@ -156,7 +156,7 @@
 			var/last_health = INFINITY
 			var/last_dist = INFINITY
 
-			for (var/mob/living/carbon/human/C in orange(viewrange-2,src.loc))
+			for (var/mob/living/carbon/human/C in orange(viewrange+2,src.loc)) //nonmodular bear edit: this makes them feel a lot 'smarter'
 				var/dist = get_dist(src, C)
 
 				// if the npc can't directly see the human, they're
@@ -368,11 +368,13 @@
 	STAT_LEVEL(dex) = 13 // YIP YIP YIP YIP YIP
 	STAT_LEVEL(str) = 8
 	resize(0.72)
+	add_skills(rand(8,10),rand(5,8),0,0,0)
 
 	var/decl/hierarchy/outfit/outfit = outfit_by_type(/decl/hierarchy/outfit/kobold)
 	outfit.equip(src)
 	fuzzy = TRUE //pretty sure this might not work
 	appearance_flags += fuzzy //ditto
+
 
 /datum/species/human/lackey/handle_npc(var/mob/living/carbon/human/H)
 	H.process()

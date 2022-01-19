@@ -98,6 +98,10 @@
 	brute_mod = 0.8 //balance, just in case
 	burn_mod = 0.6 //lasers are way too good vs these guys
 	slowdown = -1 //YIP YIP YIP YIP YIP!!
+	base_color = "#066000"
+	flesh_color = "#34AF10"
+	blood_color = "#f24b2e"
+	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
 
 /datum/species/human/skinless/get_ssd(var/mob/living/carbon/human/H)

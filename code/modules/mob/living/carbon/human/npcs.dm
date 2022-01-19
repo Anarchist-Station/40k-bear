@@ -367,14 +367,19 @@
 	combat_mode = 1//Put them in combat mode.
 	STAT_LEVEL(dex) = 13 // YIP YIP YIP YIP YIP
 	STAT_LEVEL(str) = 8
-	resize(0.72)
+	resize(0.73)
 	add_skills(rand(8,10),rand(5,8),0,0,0)
 
-	var/decl/hierarchy/outfit/outfit = outfit_by_type(/decl/hierarchy/outfit/kobold)
+	var/decl/hierarchy/outfit/outfit = outfit_by_type(pick(/decl/hierarchy/outfit/kobold,/decl/hierarchy/outfit/kobold/badass))
 	outfit.equip(src)
 	fuzzy = TRUE //pretty sure this might not work
 	appearance_flags += fuzzy //ditto
 
+	r_skin = rand(1, 255)
+	g_skin = rand(1, 255)
+	b_skin = rand(1, 255)
+	force_update_limbs()
+	update_body()
 
 /datum/species/human/lackey/handle_npc(var/mob/living/carbon/human/H)
 	H.process()
@@ -404,6 +409,18 @@
 
 
 /decl/hierarchy/outfit/kobold
+	name = "Kobold"
+	uniform = /obj/item/clothing/under/rank/kroot
+	shoes = /obj/item/clothing/shoes/sandal
+	flags = OUTFIT_NO_BACKPACK|OUTFIT_NO_SURVIVAL_GEAR
+
+/decl/hierarchy/outfit/kobold/badass
+	name = "Kobold"
+	uniform = /obj/item/clothing/under/rank/krieg_uniform
+	shoes = /obj/item/clothing/shoes/sandal
+	flags = OUTFIT_NO_BACKPACK|OUTFIT_NO_SURVIVAL_GEAR
+
+/decl/hierarchy/outfit/kobold/scrap
 	name = "Kobold"
 	uniform = /obj/item/clothing/under/rank/kroot
 	shoes = /obj/item/clothing/shoes/sandal

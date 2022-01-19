@@ -93,7 +93,12 @@
 	tail = "sogtail"
 	appearance_flags = 0
 	spawn_flags = SPECIES_IS_RESTRICTED
-	species_flags = SPECIES_FLAG_NO_PAIN
+//	species_flags = SPECIES_FLAG_NO_PAIN
+//	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
+	brute_mod = 0.8 //balance, just in case
+	burn_mod = 0.6 //lasers are way too good vs these guys
+	slowdown = -1 //YIP YIP YIP YIP YIP!!
+
 
 /datum/species/human/skinless/get_ssd(var/mob/living/carbon/human/H)
 	return

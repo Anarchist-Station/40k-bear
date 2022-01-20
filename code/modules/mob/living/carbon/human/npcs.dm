@@ -358,7 +358,7 @@
 	zone_sel.selecting = pick("chest", "head")
 	warfare_faction = RED_TEAM
 	a_intent = I_HURT
-	npc_attack_sound = list('sound/voice/emotes/skinless1.ogg','sound/voice/emotes/skinless2.ogg','sound/voice/emotes/skinless3.ogg','sound/voice/emotes/skinless4.ogg','sound/voice/emotes/skinless5.ogg',)
+	npc_attack_sound = list('sound/voice/emotes/kobold1.ogg','sound/voice/emotes/kobold2.ogg','sound/voice/emotes/kobold3.ogg','sound/voice/emotes/kobold4.ogg','sound/voice/emotes/kobold5.ogg',)
 
 	is_npc = 1//Make sure their an NPC so they don't attack each other.
 	hand = 0//Make sure one of their hands is active.
@@ -384,7 +384,7 @@
 	g_skin = rand(1, 255)
 	b_skin = rand(1, 255)
 
-//DO NOT PUT ANYTHING AFTER THIS
+//DO NOT PUT ANYTHING AFTER THIS -- applies appearance. doesn't look like it needs update_icon()
 	force_update_limbs()
 	update_body()
 

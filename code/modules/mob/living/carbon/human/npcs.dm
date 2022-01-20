@@ -367,17 +367,24 @@
 	combat_mode = 1//Put them in combat mode.
 	STAT_LEVEL(dex) = 13 // YIP YIP YIP YIP YIP
 	STAT_LEVEL(str) = 8
-	resize(0.73)
+	resize(0.77)
 	add_skills(rand(8,10),rand(5,8),0,0,0)
 
 	var/decl/hierarchy/outfit/outfit = outfit_by_type(pick(/decl/hierarchy/outfit/kobold,/decl/hierarchy/outfit/kobold/badass))
 	outfit.equip(src)
+
+	// aesthetic
+	tail_style = /datum/sprite_accessory/tail/special/unathi
 	fuzzy = TRUE //pretty sure this might not work
 	appearance_flags += fuzzy //ditto
-
+	g_eyes = 255
+	r_eyes = 255
+	b_eyes = 0
 	r_skin = rand(1, 255)
 	g_skin = rand(1, 255)
 	b_skin = rand(1, 255)
+
+//DO NOT PUT ANYTHING AFTER THIS
 	force_update_limbs()
 	update_body()
 
@@ -409,19 +416,24 @@
 
 
 /decl/hierarchy/outfit/kobold
-	name = "Kobold"
+	name = "Kobold Base"
 	uniform = /obj/item/clothing/under/rank/kroot
 	shoes = /obj/item/clothing/shoes/sandal
+	head = /obj/item/clothing/head/helmet/armingcap
 	flags = OUTFIT_NO_BACKPACK|OUTFIT_NO_SURVIVAL_GEAR
 
 /decl/hierarchy/outfit/kobold/badass
-	name = "Kobold"
+	name = "Kobold Badass"
 	uniform = /obj/item/clothing/under/rank/krieg_uniform
 	shoes = /obj/item/clothing/shoes/sandal
+	head = /obj/item/clothing/head/helmet/hauberkhood
+	shoes = /obj/item/clothing/shoes/prac_boots
+	suit = /obj/item/clothing/suit/armor/bear/iron
 	flags = OUTFIT_NO_BACKPACK|OUTFIT_NO_SURVIVAL_GEAR
 
 /decl/hierarchy/outfit/kobold/scrap
-	name = "Kobold"
+	name = "Kobold Scrap"
 	uniform = /obj/item/clothing/under/rank/kroot
 	shoes = /obj/item/clothing/shoes/sandal
 	flags = OUTFIT_NO_BACKPACK|OUTFIT_NO_SURVIVAL_GEAR
+	suit = /obj/item/clothing/suit/armor/bear/leather

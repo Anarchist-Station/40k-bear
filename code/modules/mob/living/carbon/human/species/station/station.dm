@@ -90,7 +90,7 @@
 //	deform = 'icons/mob/human_races/subhuman.dmi'
 	icobase = 'z_modular_bear/icons/mob/human_races/r_lizard_vr.dmi'        //Eclipse edit.
 	deform = 'z_modular_bear/icons/mob/human_races/r_def_lizard_vr.dmi'        //Eclipse edit.
-	tail = "sogtail"
+//	tail = "sogtail_s"
 	appearance_flags = 0
 	spawn_flags = SPECIES_IS_RESTRICTED
 //	species_flags = SPECIES_FLAG_NO_PAIN

@@ -64,7 +64,7 @@ Pilgrim Fate System
 	var/fates = list() //lists all possible fates
 
 	fates += list("Bounty Hunter","Penitent","Laborer","Musician","Stalker","Scum","Miner") //adds a fate randomly to essentially give rng pick
-	fates += pick("Laborer","Musician","Witch",) //adds a fate randomly to essentially give rng pick
+	fates += pick("Laborer","Musician",) //adds a fate randomly to essentially give rng pick
 	fates += pick("Stalker","Scum","Miner",) //adds a fate randomly to essentially give rng pick
 
 	mind.store_memory("[fates]") //should stop people from closing client and rerolling fates

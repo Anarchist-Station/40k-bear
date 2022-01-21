@@ -31,7 +31,7 @@
 	if(!firstspace)	//we need a surname
 		sanitized_name += " [pick(GLOB.last_names)]"
 
-	return sanitized_name 
+	return sanitized_name
 
 /datum/species/human/handle_npc(var/mob/living/carbon/human/H)
 	if(H.stat != CONSCIOUS)
@@ -82,15 +82,27 @@
 		return "staring blankly, not reacting to your presence"
 	return ..()
 
-
+// start nonmodular bear edit- just replacing these guys /w kobobs
 /datum/species/human/skinless
 	name = "Skinless"
 	name_plural = "Skinless"
-	icobase = 'icons/mob/human_races/subhuman.dmi'
-	deform = 'icons/mob/human_races/subhuman.dmi'
+//	icobase = 'icons/mob/human_races/subhuman.dmi'
+//	deform = 'icons/mob/human_races/subhuman.dmi'
+	icobase = 'z_modular_bear/icons/mob/human_races/r_lizard_vr.dmi'        //Eclipse edit.
+	deform = 'z_modular_bear/icons/mob/human_races/r_def_lizard_vr.dmi'        //Eclipse edit.
+//	tail = "sogtail_s"
 	appearance_flags = 0
 	spawn_flags = SPECIES_IS_RESTRICTED
-	species_flags = SPECIES_FLAG_NO_PAIN
+//	species_flags = SPECIES_FLAG_NO_PAIN
+//	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
+	brute_mod = 0.8 //balance, just in case
+	burn_mod = 0.6 //lasers are way too good vs these guys
+	slowdown = -1 //YIP YIP YIP YIP YIP!!
+	base_color = "#066000"
+	flesh_color = "#34AF10"
+	blood_color = "#f24b2e"
+	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
+
 
 /datum/species/human/skinless/get_ssd(var/mob/living/carbon/human/H)
 	return

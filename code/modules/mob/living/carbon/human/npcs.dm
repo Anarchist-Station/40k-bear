@@ -156,7 +156,7 @@
 			var/last_health = INFINITY
 			var/last_dist = INFINITY
 
-			for (var/mob/living/carbon/human/C in orange(viewrange-2,src.loc))
+			for (var/mob/living/carbon/human/C in orange(viewrange+2,src.loc)) //nonmodular bear edit: this makes them feel a lot 'smarter'
 				var/dist = get_dist(src, C)
 
 				// if the npc can't directly see the human, they're
@@ -344,7 +344,7 @@
 
 //Hostile NPCs.
 
-//SKINLESS
+//SKINLESS - nonmodular bear edits the whole way down
 /datum/species/human/skinless/handle_npc(var/mob/living/carbon/human/H)//DON'T SPAWN TOO MANY OF THESE PLEASE!
 	H.process()
 
@@ -358,14 +358,35 @@
 	zone_sel.selecting = pick("chest", "head")
 	warfare_faction = RED_TEAM
 	a_intent = I_HURT
-	npc_attack_sound = list('sound/voice/emotes/skinless1.ogg','sound/voice/emotes/skinless2.ogg','sound/voice/emotes/skinless3.ogg','sound/voice/emotes/skinless4.ogg','sound/voice/emotes/skinless5.ogg',)
+	npc_attack_sound = list('sound/voice/emotes/kobold1.ogg','sound/voice/emotes/kobold2.ogg','sound/voice/emotes/kobold3.ogg','sound/voice/emotes/kobold4.ogg','sound/voice/emotes/kobold5.ogg',)
 
 	is_npc = 1//Make sure their an NPC so they don't attack each other.
 	hand = 0//Make sure one of their hands is active.
-	var/weapon = pick(/obj/item/crowbar, /obj/item/melee/classic_baton/trench_club, /obj/item/melee/classic_baton)
+	var/weapon = pick(/obj/item/weapon/spear_crafted, /obj/item/melee/classic_baton/trench_club, /obj/item/weapon/javelin)
 	put_in_hands(new weapon)//Give them a weapon.
 	combat_mode = 1//Put them in combat mode.
-	STAT_LEVEL(dex) = 1
+	STAT_LEVEL(dex) = 13 // YIP YIP YIP YIP YIP
+	STAT_LEVEL(str) = 8
+	resize(0.77)
+	add_skills(10,10,10,10,10)
+
+	var/decl/hierarchy/outfit/outfit = outfit_by_type(pick(/decl/hierarchy/outfit/kobold,/decl/hierarchy/outfit/kobold/badass))
+	outfit.equip(src)
+
+	// aesthetic
+	tail_style = /datum/sprite_accessory/tail/special/unathi
+	fuzzy = TRUE //pretty sure this might not work
+	appearance_flags += fuzzy //ditto
+	g_eyes = 255
+	r_eyes = 255
+	b_eyes = 0
+	r_skin = rand(1, 255)
+	g_skin = rand(1, 255)
+	b_skin = rand(1, 255)
+
+//DO NOT PUT ANYTHING AFTER THIS -- applies appearance. doesn't look like it needs update_icon()
+	force_update_limbs()
+	update_body()
 
 /datum/species/human/lackey/handle_npc(var/mob/living/carbon/human/H)
 	H.process()
@@ -392,3 +413,27 @@
 	name = "Lackey"
 	uniform = /obj/item/clothing/under/color/grey
 	shoes = /obj/item/clothing/shoes/black
+
+
+/decl/hierarchy/outfit/kobold
+	name = "Kobold Base"
+	uniform = /obj/item/clothing/under/rank/kroot
+	shoes = /obj/item/clothing/shoes/sandal
+	head = /obj/item/clothing/head/helmet/armingcap
+	flags = OUTFIT_NO_BACKPACK|OUTFIT_NO_SURVIVAL_GEAR
+
+/decl/hierarchy/outfit/kobold/badass
+	name = "Kobold Badass"
+	uniform = /obj/item/clothing/under/rank/krieg_uniform
+	shoes = /obj/item/clothing/shoes/sandal
+	head = /obj/item/clothing/head/helmet/hauberkhood
+	shoes = /obj/item/clothing/shoes/prac_boots
+	suit = /obj/item/clothing/suit/armor/bear/iron
+	flags = OUTFIT_NO_BACKPACK|OUTFIT_NO_SURVIVAL_GEAR
+
+/decl/hierarchy/outfit/kobold/scrap
+	name = "Kobold Scrap"
+	uniform = /obj/item/clothing/under/rank/kroot
+	shoes = /obj/item/clothing/shoes/sandal
+	flags = OUTFIT_NO_BACKPACK|OUTFIT_NO_SURVIVAL_GEAR
+	suit = /obj/item/clothing/suit/armor/bear/leather

@@ -48,7 +48,7 @@
 	flags_inv = BLOCKHEADHAIR
 	siemens_coefficient = 1
 	w_class = ITEM_SIZE_NORMAL
-	str_requirement = 12
+	str_requirement = 4
 	item_icons = list(slot_head_str = 'icons/cadia-sprites/obj/clothing/hats.dmi')
 
 /obj/item/clothing/head/helmet/zealot

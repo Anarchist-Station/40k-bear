@@ -4,8 +4,8 @@
 	desc = "It's worth debug Thrones."
 	gender = PLURAL
 	icon = 'icons/obj/thrones.dmi'
-	item_state = "coin1"
-	icon_state = "coin1"
+	item_state = "throne1"
+	icon_state = "throne1"
 	opacity = 0
 	density = 0
 	anchored = 0.0
@@ -110,8 +110,8 @@
 		bundle.worth = amount
 		bundle.update_icon()
 		usr.put_in_hands(bundle)
-		bundle.desc = "They are worth [worth] Thrones." //lol
-		src.desc = "They are worth [worth] Thrones." //lmao
+		bundle.desc = "They are worth [bundle.worth] Thrones." //lol
+		src.desc = "They are worth [src.worth] Thrones." //lmao
 	if(!worth)
 		qdel(src)
 

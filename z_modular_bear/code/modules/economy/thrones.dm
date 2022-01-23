@@ -1,10 +1,11 @@
 /obj/item/thrones
 	name = "0 Throne Coin"
-	desc = "It's worth 0 Thrones."
-	gender = PLURAL //did you just assume my thrones gender?
+	var/worth = 0
+	desc = "It's worth debug Thrones."
+	gender = PLURAL
 	icon = 'icons/obj/thrones.dmi'
-	item_state = "coin0"
-	icon_state = "coin0" // it's item, you actual fucking moron
+	item_state = "throne1"
+	icon_state = "throne1"
 	opacity = 0
 	density = 0
 	anchored = 0.0
@@ -15,7 +16,6 @@
 	w_class = ITEM_SIZE_TINY
 	var/access = list()
 	access = access_crate_cash
-	var/worth = 0
 	var/global/denominations = list(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
 
 /obj/item/thrones/attackby(obj/item/W as obj, mob/user as mob)
@@ -104,11 +104,14 @@
 		var/cashtype = text2path("/obj/item/thrones/bundle/t[amount]")
 		var/obj/cash = new cashtype (usr.loc)
 		usr.put_in_hands(cash)
+		src.desc = "They are worth [worth] Thrones."
 	else
 		var/obj/item/thrones/bundle/bundle = new (usr.loc)
 		bundle.worth = amount
 		bundle.update_icon()
 		usr.put_in_hands(bundle)
+		bundle.desc = "They are worth [bundle.worth] Thrones." //lol
+		src.desc = "They are worth [src.worth] Thrones." //lmao
 	if(!worth)
 		qdel(src)
 
@@ -121,110 +124,123 @@
 	name = "2 Throne Gelts"
 	icon_state = "throne2"
 	worth = 2
-
+	desc = "It's worth 2 Thrones."
 
 /obj/item/thrones/bundle/t3
 	name = "3 Throne Gelts"
 	icon_state = "throne3"
 	worth = 3
+	desc = "It's worth 3 Thrones."
 
 /obj/item/thrones/bundle/t4
 	name = "4 Throne Gelts"
 	icon_state = "throne4"
 	worth = 4
+	desc = "It's worth 4 Thrones."
 
 /obj/item/thrones/bundle/t5
 	name = "5 Throne Gelts"
 	icon_state = "throne5"
 	worth = 5
+	desc = "It's worth 5 Thrones."
 
 /obj/item/thrones/bundle/t6
 	name = "6 Throne Gelts"
 	icon_state = "throne6"
 	worth = 6
+	desc = "It's worth 6 Thrones."
 
 
 /obj/item/thrones/bundle/t7
 	name = "7 Throne Gelts"
 	icon_state = "throne7"
 	worth = 7
+	desc = "It's worth 7 Thrones."
 
 /obj/item/thrones/bundle/t8
 	name = "8 Throne Gelts"
 	icon_state = "throne8"
 	worth = 8
+	desc = "It's worth 8 Thrones."
 
 
 /obj/item/thrones/bundle/t9
 	name = "9 Throne Gelts"
 	icon_state = "throne9"
 	worth = 9
+	desc = "It's worth 9 Thrones."
 
 
 /obj/item/thrones/bundle/t10
 	name = "10 Throne Gelts"
 	icon_state = "throne10"
 	worth = 10
-
+	desc = "It's worth 10 Thrones."
 
 /obj/item/thrones/bundle/t11
 	name = "11 Throne Gelts"
 	icon_state = "throne11"
 	worth = 11
-
+	desc = "It's worth 11 Thrones."
 
 /obj/item/thrones/bundle/t12
 	name = "12 Throne Gelts"
 	icon_state = "throne12"
-	desc = "Twelve 10 throne coins."
 	worth = 12
+	desc = "It's worth 12 Thrones."
 
 
 /obj/item/thrones/bundle/t13
 	name = "13 Throne Gelts"
 	icon_state = "throne13"
 	worth = 13
-
+	desc = "It's worth 13 Thrones."
 
 /obj/item/thrones/bundle/t14
 	name = "14 Throne Gelts"
 	icon_state = "throne14"
 	worth = 14
+	desc = "It's worth 14 Thrones."
 
 
 /obj/item/thrones/bundle/t15
 	name = "15 Throne Gelts"
 	icon_state = "throne15"
 	worth = 15
+	desc = "It's worth 15 Thrones."
 
 
 /obj/item/thrones/bundle/t16
 	name = "16 Throne Gelts"
 	icon_state = "throne16"
 	worth = 16
+	desc = "It's worth 16 Thrones."
 
 
 /obj/item/thrones/bundle/t17
 	name = "17 Throne Gelts"
 	icon_state = "throne17"
 	worth = 17
-
+	desc = "It's worth 17 Thrones."
 
 /obj/item/thrones/bundle/t18
 	name = "18 Stamps"
 	icon_state = "throne18"
 	worth = 18
+	desc = "It's worth 18 Thrones."
 
 /obj/item/thrones/bundle/t19
 	name = "19 Stamps"
 	icon_state = "throne19"
 	worth = 19
+	desc = "It's worth 19 Thrones."
 
 
 /obj/item/thrones/bundle/t20
 	name = "20 Throne Gelts"
 	icon_state = "throne20"
 	worth = 20
+	desc = "It's worth 20 Thrones."
 
 /obj/item/thrones/ewallet
 	name = "Charge card"

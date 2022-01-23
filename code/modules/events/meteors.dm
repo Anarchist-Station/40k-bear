@@ -22,7 +22,7 @@
 		if(EVENT_LEVEL_MAJOR)
 			GLOB.using_map.meteors_detected_announcement()
 		else
-			threat_announcement.Announce("The [station_name()] is now in a meteor shower.", "[station_name()] Sensor Array")
+			threat_announcement.Announce("WEATHER UPDATE: FLEET-SANCTIONED METEOR DEORBIT IN PROGRESS. All personel stationed in [station_name()] are advised to stay inside until the end of the event.", "[station_name()] Sensor Array") //nonmodular bear
 
 /datum/event/meteor_wave/tick()
 	// Begin sending the alarm signals to shield diffusers so the field is already regenerated (if it exists) by the time actual meteors start flying around.

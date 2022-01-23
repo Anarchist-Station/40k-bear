@@ -37,6 +37,7 @@
 
 /obj/structure/anvil/attackby(obj/item/W as obj, mob/user as mob)
 
+
 	while(src.occupied == 0)
 		if(istype(W,/obj/item/weapon/earthbreaker))
 			to_chat(user, "<span class='notice'>You need to put a bar on the anvil to hammer anything into shape!</span>")
@@ -51,12 +52,15 @@
 			update_occupy()
 			update_icon()
 			return
+		else
+			return
 
 
 // maybe while() the vars for the bars so we don't have to 'if' this the entire time? something like
 // if W = earthbreaker, WHILE bartype = 1, something like that?
 
 	while(src.occupied == 1)
+
 		if(istype(W,/obj/item/ingots/ironingot))
 			to_chat(user, "<span class='notice'>You put an iron bar onto the anvil and ready it for forging.</span>")
 			ironbar++
@@ -127,5 +131,7 @@
 								update_icon()
 								return
 							return
+		else
 			return
+		return
 

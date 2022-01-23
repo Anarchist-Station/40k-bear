@@ -368,7 +368,7 @@
 	STAT_LEVEL(dex) = 13 // YIP YIP YIP YIP YIP
 	STAT_LEVEL(str) = 8
 	resize(0.77)
-	add_skills(10,10,10,10,10)
+	src.add_skills(7,7,7,7,7) //this is objectively stupid and shouldn't make a difference, but for some reason, it is the only way to get it to work
 
 	var/decl/hierarchy/outfit/outfit = outfit_by_type(pick(/decl/hierarchy/outfit/kobold,/decl/hierarchy/outfit/kobold/badass))
 	outfit.equip(src)

@@ -13,10 +13,11 @@
 	var/grid_restored_message = "Station power to the %STATION_NAME% will be restored at this time. We apologize for the inconvenience."
 	var/grid_restored_sound
 
-	var/meteor_detected_message = "Meteors have been detected on a collision course with the %STATION_NAME%."
+	var/	meteor_detected_message = "WEATHER UPDATE: MAJOR KEPLER-PREVENTION DE-ORBIT IN PROGRESS. ALL RESIDENTS OF %STATION_NAME% ARE ORDERED TO BRACE FOR IMPACT AT THIS TIME. STAY INDOORS AND AWAY FROM ALL EXTERIORS UNTIL THE ALL-CLEAR SIGNAL HAS PASSED.." //bear
+
 	var/meteor_detected_sound
 
-	var/radiation_detected_message = "High levels of radiation has been detected in proximity of the %STATION_NAME%. Please report to the medical bay if any strange symptoms occur."
+	var/radiation_detected_message = "WEATHER UPDATE: Fleet satelites are performing a scheduled high-power gamma-ray based surveillance of %STATION_NAME%. For your own safety, please head to your nearest underground shelter."
 	var/radiation_detected_sound
 
 	var/space_time_anomaly_sound

@@ -42,12 +42,13 @@
 /datum/event_container/mundane
 	available_events = list(
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mortars1",/datum/event/mortar,100),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Appendecitis",/datum/event/spontaneous_appendicitis,25)
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Appendecitis",/datum/event/spontaneous_appendicitis,25),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "MeteorLight",/datum/event/meteor_wave,10),
 		)
 
 /datum/event_container/moderate
 	available_events = list(
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mortars1",/datum/event/mortar,100),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "MeteorMedium",/datum/event/meteor_wave,100),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mortars2",/datum/event/mortar,100),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mortars3",/datum/event/mortar,100),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mortars4",/datum/event/mortar,100)
@@ -55,7 +56,7 @@
 
 /datum/event_container/major
 	available_events = list(
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mortars1",/datum/event/mortar,100),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "MeteorHeavy",/datum/event/meteor_wave,100),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mortars2",/datum/event/mortar,100),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mortars3",/datum/event/mortar,100),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Mortars4",/datum/event/mortar,100)

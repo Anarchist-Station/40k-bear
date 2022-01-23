@@ -2478,7 +2478,6 @@
 #include "maps\away\mining\mining_areas.dm"
 #include "maps\delta\warhammer.dm"
 #include "maps\delta\warhammer_areas.dm"
-#include "maps\delta\warhammer_define.dm"
 #include "maps\delta\warhammer_shuttles.dm"
 #include "maps\delta\warhammer_unit_testing.dm"
 #include "maps\delta\bear\bear_areas.dm"

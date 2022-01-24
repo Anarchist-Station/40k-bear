@@ -109,6 +109,7 @@
 	if(!Adjacent(target_mob))
 		return
 	custom_emote(1, pick( list("chomps on [target_mob]", "gnaws [target_mob]") ) )
+	playsound(src, 'sound/weapons/bite.ogg', 70, 0, 1)
 
 	var/damage = rand(12,15)
 

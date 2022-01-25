@@ -24,6 +24,7 @@ Pilgrim Fate System
 	outfit_type = /decl/hierarchy/outfit/job/penitent
 	latejoin_at_spawnpoints = TRUE
 	announced = FALSE
+	melee_skill = 4
 
 
 	equip(var/mob/living/carbon/human/H)
@@ -94,7 +95,7 @@ Pilgrim Fate System
 			)
 		if("Bounty Hunter")
 			U.add_stats(rand(10,14), rand(10,14), rand(10,14), rand (8,12)) //veteran hunter
-			U.add_skills(rand(5,8),rand(5,8),rand(1,3),0,0)
+			U.add_skills(rand(5,8),rand(5,8),rand(1,3),1,0)
 			equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/warfare, slot_back)
 			equip_to_slot_or_del(new /obj/item/clothing/suit/armor/bountyhunter2, slot_wear_suit)
 			equip_to_slot_or_del(new /obj/item/clothing/head/bountyhead, slot_head)
@@ -118,6 +119,7 @@ Pilgrim Fate System
 			U.verbs -= list(/mob/living/carbon/human/proc/penitentclass,)
 		if("Miner")
 			U.add_stats(rand(10,13),rand(8,12),rand(10,12),8)
+			U.add_skills(rand(4,8),rand(2,4),rand(1,3),4,2)
 			equip_to_slot_or_del(new /obj/item/clothing/gloves/thick, slot_gloves)
 			equip_to_slot_or_del(new /obj/item/storage/newore, slot_belt)
 			equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/satchel_eng, slot_back)
@@ -209,6 +211,7 @@ Pilgrim Fate System
 	outfit_type = /decl/hierarchy/outfit/job/merchant
 	latejoin_at_spawnpoints = TRUE
 	announced = FALSE
+	melee_skill = 4
 
 	equip(var/mob/living/carbon/human/H)
 		H.warfare_faction = IMPERIUM

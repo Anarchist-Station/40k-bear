@@ -41,7 +41,7 @@
 		H.warfare_language_shit(LANGUAGE_HIGH_GOTHIC)
 		H.warfare_faction = IMPERIUM
 		H.gender = FEMALE
-		H.add_spell(new /spell/radiant_aura/light)
+		H.add_spell(new /spell/radiant_aura)
 		H.add_spell(new /spell/targeted/heal_target)
 		H.add_spell(new /spell/targeted/heal_target/sacrifice)
 		H.add_spell(new /spell/noclothes)
@@ -298,13 +298,11 @@
 	belt = /obj/item/melee/classic_baton/trench_club
 	shoes = /obj/item/clothing/shoes/sisterofbattle
 	id_type = /obj/item/card/id/dog_tag
-	l_pocket = /obj/item/storage/box/ifak
+	l_pocket = /obj/item/storage/wallet/pouch
 	suit_store = /obj/item/melee/trench_axe
 	backpack_contents = list(
 	/obj/item/reagent_containers/food/snacks/warfare = 2,
-	/obj/item/stack/thrones/ten = 1,
-	/obj/item/stack/thrones2/ten = 1,
-	/obj/item/stack/thrones3/ten = 2,
+	/obj/item/thrones/bundle/t10 = 1,
 	/obj/item/card/id/stockades = 1,
 	/obj/item/card/id/nobility = 1,
 	)
@@ -457,7 +455,7 @@
 
 	equip(var/mob/living/carbon/human/H)
 		..()
-		H.add_stats(rand(9,13), rand(9,13), rand(9,13), rand(10,13))
+		H.add_stats(rand(8,14), rand(9,13), rand(9,13), rand(11,15))
 		H.warfare_language_shit(LANGUAGE_LOW_GOTHIC )
 		H.bladder = -INFINITY // jank bearstation way of removing bathroom stuff
 		H.bowels = -INFINITY// jank bearstation way of removing bathroom stuff
@@ -468,3 +466,19 @@
 		/mob/living/carbon/human/proc/slaanesh,
 		/mob/living/carbon/human/proc/tzeentch)
 		to_chat(H, "<span class='notice'><b><font size=3>You are the village doctor, a medicine-person for wounded townsfolk when the Church is full or the Fleet does not care. Getting advanced medical supplies has been difficult, especially since you are not seen as a 'real' doctor by the Fleet and are not part of the Church. Mix your concoctions and do your best...!.</font></b></span>")
+
+/decl/hierarchy/outfit/job/medical/chemist
+	name = OUTFIT_JOB_NAME("Alchemist")
+	uniform = /obj/item/clothing/under/rank/medical/scrubs/black
+	suit = /obj/item/clothing/suit/storage/toggle/labcoat/alchemist
+	id_type = /obj/item/card/id/medical/chemist
+	pda_type = /obj/item/device/pda/chemist
+	belt = /obj/item/storage/belt/medical/alchemist
+	neck = /obj/item/reagent_containers/food/drinks/canteen
+	back = /obj/item/storage/backpack/satchel/warfare
+	l_ear = /obj/item/device/radio/headset/red_team
+	r_ear = null
+	backpack_contents = list(
+		/obj/item/reagent_containers/food/snacks/warfare/rat = 1,
+		/obj/item/thrones/bundle/t5 = 1,
+		)

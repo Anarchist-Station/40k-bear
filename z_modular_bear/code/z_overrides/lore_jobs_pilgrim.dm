@@ -29,7 +29,7 @@ Pilgrim Fate System
 	equip(var/mob/living/carbon/human/H)
 		H.warfare_faction = IMPERIUM
 		..()
-		H.add_stats(rand(6,11), rand(7,12), rand(8,12), rand (8,11)) //they suck and are supposed to suck
+		H.add_stats(rand(8,12), rand(8,14), rand(10,14), rand (10,15)) //ideally will be able to pick their stats better in the future
 		H.warfare_language_shit(LANGUAGE_LOW_GOTHIC)
 		H.bladder = -INFINITY // jank bearstation way of removing bathroom stuff
 		H.bowels = -INFINITY// jank bearstation way of removing bathroom stuff
@@ -129,7 +129,7 @@ Pilgrim Fate System
 			U.verbs -= list(/mob/living/carbon/human/proc/penitentclass,)
 
 		if("Stalker")
-			U.add_skills(rand(1,3),rand(5,8),0,0,0)
+			U.add_skills(rand(4,6),rand(5,8),0,0,0)
 			equip_to_slot_or_del(new /obj/item/storage/belt/stalker, slot_belt)
 			equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/warfare, slot_back)
 			equip_to_slot_or_del(new /obj/item/material/knife/butch, slot_in_backpack)

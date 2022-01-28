@@ -55,6 +55,7 @@
 	force = 10
 	throwforce = 25
 	sharp = 1
+	var/roped = 0
 	attack_verb = list("stabs", "jabs")
 	icon = 'z_modular_bear/icons/obj/items/weapons/village.dmi'
 	icon_state = "stick"
@@ -70,28 +71,41 @@
 		slot_r_hand_str = "stick"
 	) //i actually don't know if the above part is needed lol
 
-/obj/item/weapon/javelin_step
-	name = "wooden javelin"
-	desc = "A wooden javelin that doubles up as a spear. Good for both throwing and stabbing. Not exactly an elegant weapon. Has a piece of rope on the end waiting to affix something."
-	throw_speed = 15
-	throw_range = 15
-	force = 12
-	throwforce = 25
-	sharp = 1
-	attack_verb = list("stabs", "jabs")
-	icon = 'z_modular_bear/icons/obj/items/weapons/village.dmi'
-	icon_state = "stick_rope"
-	item_icons = list(
-		icon_l_hand = 'z_modular_bear/icons/mob/onmob/lefthand.dmi',
-		icon_r_hand = 'z_modular_bear/icons/mob/onmob/righthand.dmi',
-		)
-	item_icons = list(slot_l_hand_str = 'z_modular_bear/icons/mob/onmob/lefthand.dmi',
-		slot_r_hand_str = 'z_modular_bear/icons/mob/onmob/righthand.dmi'
-		)
-	item_state_slots = list(
-		slot_l_hand_str = "stick",
-		slot_r_hand_str = "stick"
-	) //i actually don't know if the above part is needed lol
+/obj/item/weapon/javelin/update_icon()
+	if(roped)
+		icon_state = "stick_rope"
+	else
+		icon_state = "stick"
+
+// javelin to rope stick
+/obj/item/weapon/javelin/attackby(obj/item/W as obj, mob/user as mob)
+	while(src.roped == 0)
+		if(istype(W,/obj/item/handcuffs/cable/rope))
+			to_chat(user, "<span class='notice'>You tie the rope firmly around the edge of the javelin. Now you just need to attach something to the end of it!</span>")
+			if(do_after(user, 50, src))
+				qdel(W)
+				src.roped++
+				update_icon()
+			return
+		if(!istype(W,/obj/item/handcuffs/cable/rope))
+			to_chat(user, "<span class='notice'>You can't attach this to the end of the javelin! Get some rope!</span>")
+		return
+	while(src.roped == 1)
+		if(istype(W,/obj/item/weapon/bear_crafting/iron_spear))
+			to_chat(user, "<span class='notice'>You begin fashioning your new spear...</span>")
+			if(do_after(user, 50, src))
+				to_chat(user, "<span class='notice'>You crafted your new spear!</span>")
+				qdel(W)
+				new /obj/item/weapon/spear_crafted(get_turf(src))
+				qdel(src)
+			return
+		else
+			if(!istype(W,/obj/item/weapon/bear_crafting/iron_spear))
+				to_chat(user, "<span class='warning'>That doesn't fit!</warning>")
+				return
+			return
+		return
+	return
 
 /obj/item/weapon/spear_crafted
 	name = "metal spear"
@@ -116,30 +130,3 @@
 		slot_r_hand_str = "finish_stick"
 	) //i actually don't know if the above part is needed lol
 
-// javelin to rope stick
-/obj/item/weapon/javelin/attackby(obj/item/W as obj, mob/user as mob)
-	if(istype(W,/obj/item/handcuffs/cable/rope))
-		to_chat(user, "<span class='notice'>You tie the rope firmly around the edge of the javelin. Now you just need to attach something to the end of it!</span>")
-		if(do_after(user, 50, src))
-			qdel(W)
-			new /obj/item/weapon/javelin_step(get_turf(src))
-			qdel(src)
-			return
-		return
-
-
-
-// rope stick to spear
-
-/obj/item/weapon/javelin_step/attackby(obj/item/W as obj, mob/user as mob)
-	if(istype(W,/obj/item/weapon/bear_crafting/iron_spear))
-		to_chat(user, "<span class='notice'>You begin fashioning your new spear...</span>")
-		if(do_after(user, 50, src))
-			to_chat(user, "<span class='notice'>You crafted your new spear!</span>")
-			qdel(W)
-			new /obj/item/weapon/spear_crafted(get_turf(src))
-			qdel(src)
-			return
-	else
-		if(!istype(W,/obj/item/weapon/bear_crafting/iron_spear))
-			to_chat(user, "<span class='warning'>That doesn't fit!</warning>")

@@ -141,7 +141,7 @@
 		..()
 		H.fully_replace_character_name("Conscript. [current_name]")
 		H.add_stats(rand(8,12), rand(10,12), rand(10,12), rand(8,11)) //highly trained and skilled
-		H.add_skills(rand(1,3),rand(1,3),0,0,0)
+		H.add_skills(rand(4,6),rand(1,3),0,0,0)
 		H.assign_random_quirk()
 		H.warfare_language_shit(LANGUAGE_LOW_GOTHIC)
 		H.warfare_faction = IMPERIUM
@@ -150,8 +150,6 @@
 		/mob/living/carbon/human/proc/nurgle,
 		/mob/living/carbon/human/proc/slaanesh,
 		/mob/living/carbon/human/proc/tzeentch)
-		H.add_spell(new /spell/radiant_aura/light)
-		H.add_spell(new /spell/noclothes)
 		to_chat(H, "<span class='notice'><b><font size=3>You are a newly recruited Conscript, your training recently complete you were assigned kitchen duties. You are safer and warmer inside than the other Conscripts in the village serving as a policing force, but your job is no easier- you have to feed an army that bombed your home into an ash-filled, year-round winter..</font></b></span>")
 		if (prob(10))
 			to_chat(H, "<span class='notice'><b><font size=3>You managed to smuggle in a trinket to remind you of home. It's extremely valuable to you. Keep it safe. (You'll find it on the ground underneath you, sorry.)</font></b></span>")
@@ -190,6 +188,7 @@
 		..()
 		H.fully_replace_character_name("[current_name]")
 		H.add_stats(rand(13,15), rand(10,13), rand(12,15), rand(8,13))
+		H.add_skills(rand(4,6),rand(1,3),rand(1,3),rand(1,3),rand(1,3))
 		H.assign_random_quirk()
 		H.warfare_language_shit(LANGUAGE_LOW_GOTHIC)
 		H.warfare_faction = IMPERIUM
@@ -209,13 +208,14 @@
 	neck = /obj/item/reagent_containers/food/drinks/canteen
 	head = /obj/item/clothing/head/smokingcap
 	id_type = null
+	l_pocket = /obj/item/storage/box/ifak
 	l_ear = null
 	r_ear = /obj/item/device/radio/headset/red_team
 	pda_slot = null
 	shoes = /obj/item/clothing/shoes/laceup
 	suit_store = null
 	backpack_contents = list(
-	/obj/item/thrones/bundle/t10 = 1,
+	/obj/item/thrones/bundle/t10 = 2,
 	/obj/item/card/id/shop = 1
 	)
 

@@ -93,3 +93,30 @@
 
 /obj/structure/fireplacebl/br/New()
 	set_light(5, 7, "#E38F46")
+
+
+/obj/item/paper/pamphlet/fleet
+	name = "pamphlet"
+	icon_state = "pamphlet"
+	info = "<b>Welcome to the Fleet!</b><br>\
+			Greetings, native! Whether you are a newly-hired recruit, or considering a career \
+			with the Fleet, this pamphlet will share some of the many signing benefits with you!  \
+			If you're prepared to serve your community and progress your species to the new age, read on!<br> \
+			<b>TRADE AND MEDICAL BENEFITS</b><br>\
+			By signing with the Fleet, you gain an immesurable amount of bonuses! All Fleet \
+			soldiers are trained in useful life or trade skills, and work in safe enviroments with fair pay! \
+			Even if you get injured in an accident, our top-of-the-line medical coverage will cover the \
+			costs of injury, and provide restitution to your family in the event of brain-death or \
+			severe injury. What's a couple of bruises when you have some good old FLEET ELBOW GREASE? <br>\
+			<b>PERSONAL BENEFITS</b><br>\
+			All Fleet personnel are fed filling, naturally-sourced meals free of charge, and can even \
+			spend some of their salary for extra rations! The menu options are nearly endless- and tasty!. \
+			You'll see some classic home-planet chow like Leaf Delight or Ripper Meat, but you'll also get \
+			to enjoy foreign delicacies like meat from a Mus musculus, or beans grown in zero-gravity.\
+			 .<br>\
+			<br><b>What are YOU waiting for?</b><br>\
+			A sense of purpose, a warm bed, security and standing strong with your brothers and sisters. \
+			What's not to love? Join the Fleet today!"
+
+/obj/item/paper/pamphlet/fleet/update_icon()
+	return

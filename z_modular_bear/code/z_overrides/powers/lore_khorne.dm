@@ -17,16 +17,16 @@
 		to_chat(src, "<span class='notice'>You can't choose a path when you're dead.</span>")
 		return
 	if(!src.canmove || src.stat || src.restrained())
-		to_chat(src, "You cannot call upon Khorne while restrained!")	//user is tied up
+		to_chat(src, "You cannot call upon the Allfather while restrained!")	//user is tied up
 		return
 	if(decay > 0)
-		to_chat(src, "You are already sworn to Nurgle!")	//usr has already selected another path!
+		to_chat(src, "You are already sworn to Ester!")	//usr has already selected another path!
 		return
 	if(lust > 0)
-		to_chat(src, "You are already sworn to Slaanesh!")	//usr has already selected another path!
+		to_chat(src, "You are already sworn to Asmodeush!")	//usr has already selected another path!
 		return
 	if(intrigue > 0)
-		to_chat(src, "You are already sworn to Tzeentch!")	//usr has already selected another path!
+		to_chat(src, "You are already sworn to nobody.")	//usr has already selected another path!
 		return
 	switch(src.rage)
 		if(0)

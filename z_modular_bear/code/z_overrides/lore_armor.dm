@@ -1,4 +1,4 @@
-//command
+//under
 
 /obj/item/clothing/under/rank/roguetrader
 	desc = "It's a distinguished suit with a marvelous sash denoting the rank of \"governor\"."
@@ -15,8 +15,6 @@
 /obj/item/clothing/under/rank/seneschal
 	desc = "It's a jumpsuit worn by someone who works in the position of \"Attendant\", the right-hand of the Governorr."
 	name = "attendant's jumpsuit"
-
-//under
 
 /obj/item/clothing/under/cadian_uniform
 	name = "!st Fleet tan fatigues"
@@ -39,6 +37,10 @@
 	name = "kobold rags"
 	desc = "Rags worn by the Unterratte, crafted from animal hide and scraps of metal and cloth. Not terribly protective on its own, but does well when layered underneath something."
 	armor = list(melee = 15, bullet = 10, laser = 0, energy = 10, bomb = 0, bio = 0, rad = 0)
+
+/obj/item/clothing/under/guard/uniform/sisterofbattle
+	name = "beige bodysuit"
+	desc = "A soft beige bodysuit. Nothing remarkable."
 
 // ARMOR //
 

@@ -66,7 +66,7 @@
 				src.rage++
 				playsound(usr, 'sound/effects/updated.ogg', 80, 0, -1)
 				to_chat(src, "This... is it. That symbol. Just the sight of it quickens your heart and pumps adrenaline through your veins. <font color='#720202'>You can hear His voice more clearly now. He is displeased with how...basic it is, but it will do. He has a task for you.</font>")
-				src.verbs += /mob/living/carbon/human/proc/bludforbludguy
+				src.verbs += list(/mob/living/carbon/human/proc/bludforbludguy, /mob/living/carbon/human/proc/sacrificemind)
 			else
 				to_chat(src, "I must draw his symbol and stand upon it!")
 				return
@@ -111,7 +111,7 @@
 			return
 
 /mob/living/carbon/human/proc/bludforbludguy()
-	set name = "This is NOTHING!"
+	set name = "Battlecry: Shed Wounds"
 	set category = "Ruinous Powers"
 	set desc = "Ignore your wounds! Fight on! Ow, your skull! Owie!"
 
@@ -127,10 +127,10 @@
 
 	if(src.khorne_cd == 0)
 		src.say("El'nath Allfather at'meunto!")
-		to_chat(src, "<span class='notice'>You feel your wounds knitting and a dull pain in your head.</span>")
-		src.adjustBruteLoss(-30)
-		src.adjustFireLoss(-30)
-		src.adjustToxLoss(-30)
+		to_chat(src, "<span class='notice'>You feel your wounds knitting, toxins being purged, and a dull pain in your head.</span>")
+		src.adjustBruteLoss(-100)
+		src.adjustFireLoss(-100)
+		src.adjustToxLoss(-100)
 		src.adjustBrainLoss(15)
 		src.khorne_cd = 1
 		sleep(500)
@@ -139,8 +139,30 @@
 		to_chat(src, "You cannot yell again so soon!")
 		return
 
+/mob/living/carbon/human/proc/sacrificemind()
+	set name = "Sacrifice: Offer Mind"
+	set category = "Ruinous Powers"
+	set desc = "Offer your mind to the Allfather for skill and power."
+	if(!ishuman(src))
+		to_chat(src, "<span class='notice'>How are you seeing this?! Ping Bear immediately!!</span>")
+		return
+	if(src.sacrifice_cd == 0)
+		qdel(usr.l_hand)
+		to_chat(src, "A part of your concious mind and memories slough away...but they're quickly replaced with memories of battle, foreign to you. You feel stronger.")
+		src.add_skills(rand(6,8),rand(5,8),rand(1,3),1,0)
+		STAT_LEVEL(str)+=1
+		src.sacrifice_cd = 1
+		sleep(100)
+		src.sacrifice_cd = 0
+		return
+	if(src.sacrifice_cd == 1)
+		to_chat(src, "Can't do that so soon.")
+		return
+	return
+
+
 /mob/living/carbon/human/proc/rageout()
-	set name = "Meat to Brawn"
+	set name = "Sacrifice: Meat to Brawn"
 	set category = "Ruinous Powers"
 	set desc = "Slightly increase your strength, consuming a delicious slab o' meat."
 	if(!ishuman(src))
@@ -169,3 +191,5 @@
 			sleep(100)
 			src.sacrifice_cd = 0
 			return
+		return
+	return

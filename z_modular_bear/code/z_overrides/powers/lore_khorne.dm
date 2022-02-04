@@ -110,6 +110,30 @@
 			src.rage++
 			return
 
+
+
+
+
+
+
+/*
+   ___
+  / _ \_____      _____ _ __ ___
+ / /_)/ _ \ \ /\ / / _ \ '__/ __|
+/ ___/ (_) \ V  V /  __/ |  \__ \
+\/    \___/ \_/\_/ \___|_|  |___/
+*/
+
+
+/*
+| |         | | | | | |              (_)
+| |__   __ _| |_| |_| | ___  ___ _ __ _  ___  ___
+| '_ \ / _` | __| __| |/ _ \/ __| '__| |/ _ \/ __|
+| |_) | (_| | |_| |_| |  __/ (__| |  | |  __/\__ \
+|_.__/ \__,_|\__|\__|_|\___|\___|_|  |_|\___||___/
+*/
+
+
 /mob/living/carbon/human/proc/bludforbludguy()
 	set name = "Battlecry: Shed Wounds"
 	set category = "Ruinous Powers"
@@ -142,6 +166,55 @@
 		to_chat(src, "You cannot yell again so soon!")
 		return
 
+
+
+/mob/living/carbon/human/proc/strengthcry()
+	set name = "Battlecry: Ultimate Strength"
+	set category = "Ruinous Powers"
+	set desc = "Gain an immense amount of strength, and then collapse from exhaustion."
+
+//boring part
+	if(!ishuman(src))
+		to_chat(src, "<span class='notice'>How tf are you seeing this, ping Bear immediately</span>")
+		return
+	if(src.stat == DEAD)
+		to_chat(src, "<span class='notice'>You can't use this while dead.</span>")
+		return
+	if(!src.canmove || src.stat || src.restrained())
+		to_chat(src, "You can't use this while tied!")	//user is tied up
+		return
+
+//fun part
+	if(src.khorne_cd == 0)
+		src.say("Allfather at'meunto serratis!")
+		to_chat(src, "<span class='danger'><font size=3>KILL! MAIM! DESTROY!</span></font>")
+		src.adjustStaminaLoss(-20)
+		STAT_LEVEL(str)+=10
+		src.emote("roars, their muscles bulging grotesquely!")
+		playsound(src, 'sound/voice/emotes/skinless1.ogg', 80, 0, -1)
+		src.khorne_cd = 1
+		sleep(250)
+		to_chat(src, "<span class='notice'>Your rage wanes, leaving you exhausted...</span>")
+		src.adjustStaminaLoss(200)
+		STAT_LEVEL(str)-=10
+		sleep(500)
+		src.khorne_cd = 0
+	else
+		to_chat(src, "You cannot yell again so soon!")
+		return
+
+
+
+
+
+/*
+                    (_)/ _(_)
+ ___  __ _  ___ _ __ _| |_ _  ___ ___  ___
+/ __|/ _` |/ __| '__| |  _| |/ __/ _ \/ __|
+\__ \ (_| | (__| |  | | | | | (_|  __/\__ \
+|___/\__,_|\___|_|  |_|_| |_|\___\___||___/
+*/
+
 /mob/living/carbon/human/proc/sacrificemind()
 	set name = "Sacrifice: Offer Mind"
 	set category = "Ruinous Powers"
@@ -154,8 +227,9 @@
 		to_chat(src, "A part of your concious mind and memories slough away...but they're quickly replaced with memories of battle, foreign to you. You feel stronger.")
 		src.add_skills(rand(6,8),rand(5,8),rand(1,3),1,0)
 		STAT_LEVEL(str)+=1
+		STAT_LEVEL(int)-=2
 		src.sacrifice_cd = 1
-		sleep(100)
+		sleep(1000)
 		src.sacrifice_cd = 0
 		return
 	if(src.sacrifice_cd == 1)
@@ -196,4 +270,3 @@
 			return
 		return
 	return
-

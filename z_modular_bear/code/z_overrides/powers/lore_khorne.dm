@@ -132,6 +132,9 @@
 		src.adjustFireLoss(-100)
 		src.adjustToxLoss(-100)
 		src.adjustBrainLoss(15)
+		var/amount = min(10, src.species.blood_volume - src.vessel.total_volume)
+		if(amount > 0)
+			src.vessel.add_reagent(/datum/reagent/blood, amount)
 		src.khorne_cd = 1
 		sleep(500)
 		src.khorne_cd = 0
@@ -193,3 +196,4 @@
 			return
 		return
 	return
+

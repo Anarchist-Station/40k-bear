@@ -89,7 +89,7 @@
 				playsound(src, 'sound/effects/khorne.ogg', 50, 0, -1)
 				src.update_inv_l_hand()
 				src.rage++
-				STAT_LEVEL(str)+=1
+				STAT_LEVEL(str)+=4
 				src.verbs+= /mob/living/carbon/human/proc/rageout
 
 			else if(istype(src.r_hand, /obj/item/reagent_containers/food/snacks/khornemeat))
@@ -99,7 +99,7 @@
 				src.update_inv_r_hand()
 				src.rage++
 				STAT_LEVEL(str)+=1
-				src.verbs+= /mob/living/carbon/human/proc/rageout
+				src.verbs+=  /mob/living/carbon/human/proc/strengthcry
 
 			else
 				to_chat(src, "<font color='#cf3441'>What a good warrior you may prove to be, yet. Here is your next task: kill and consume the flesh of one of my weaker children. You will learn an important skill from this that will help you in your tasks ahead, little warrior. My second gift.</font>" )
@@ -110,6 +110,7 @@
 			src.rage++
 			return
 
+		if(7)
 
 
 
@@ -161,6 +162,7 @@
 			src.vessel.add_reagent(/datum/reagent/blood, amount)
 		src.khorne_cd = 1
 		sleep(500)
+		to_chat(src, "You can batlecry again.")
 		src.khorne_cd = 0
 	else
 		to_chat(src, "You cannot yell again so soon!")
@@ -189,15 +191,16 @@
 		src.say("Allfather at'meunto serratis!")
 		to_chat(src, "<span class='danger'><font size=3>KILL! MAIM! DESTROY!</span></font>")
 		src.adjustStaminaLoss(-20)
-		STAT_LEVEL(str)+=10
+		STAT_LEVEL(str)*= 2
 		src.emote("roars, their muscles bulging grotesquely!")
 		playsound(src, 'sound/voice/emotes/skinless1.ogg', 80, 0, -1)
 		src.khorne_cd = 1
 		sleep(250)
 		to_chat(src, "<span class='notice'>Your rage wanes, leaving you exhausted...</span>")
 		src.adjustStaminaLoss(200)
-		STAT_LEVEL(str)-=10
+		STAT_LEVEL(str)/= 2
 		sleep(500)
+		to_chat(src, "You can battlecry again.")
 		src.khorne_cd = 0
 	else
 		to_chat(src, "You cannot yell again so soon!")
@@ -230,6 +233,7 @@
 		STAT_LEVEL(int)-=2
 		src.sacrifice_cd = 1
 		sleep(1000)
+		to_chat(src, "You can sacrifice again.")
 		src.sacrifice_cd = 0
 		return
 	if(src.sacrifice_cd == 1)
@@ -267,6 +271,7 @@
 			src.sacrifice_cd = 1
 			sleep(100)
 			src.sacrifice_cd = 0
+			to_chat(src, "You can sacrifice again.")
 			return
 		return
 	return

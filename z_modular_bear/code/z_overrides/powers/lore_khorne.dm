@@ -106,14 +106,21 @@
 			return
 
 		if(6) // empty stage to sort of reset because this is an important obj
-			to_chat(src, "<font color='#cf3441'>Good, good...you are ready for my third and final lesson. Bring unto my rune a concious, tied-up creature. This will be your most difficult lesson yet, but I trust that you will do this for your Father.</font>" )
+			to_chat(src, "<font color='#cf3441'>Good, good...you are ready for my third and final lesson. Bring unto my rune...a heart. From a creature you have killed, honorably. This will be your most difficult lesson yet, but I trust that you will do this for your Father.</font>" )
 			src.rage++
 			return
 
+/*
 		if(7)
+			var/obj/effect/decal/cleanable/khorne/T = locate() in src.loc
+			var/obj/item/organ/internal/heart/Y = locate() in T.loc
+
+			if(T && Y)
 
 
-
+			else
+				to_chat(src, "<font color='#cf3441'>Kill a living being in equal combat, and bring their heart onto my rune.</font>" )
+*/
 
 
 

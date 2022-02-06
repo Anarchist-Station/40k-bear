@@ -295,6 +295,7 @@ Pilgrim Fate System
 
 /decl/hierarchy/outfit/job/merchant
 	name = OUTFIT_JOB_NAME("House Noble")
+	uniform = /obj/item/clothing/under/nobletuxedo
 	suit = /obj/item/clothing/suit/merchant
 	pda_type = /obj/item/device/pda/penitent
 	back = /obj/item/storage/backpack/satchel/warfare

@@ -123,11 +123,13 @@
 
 /obj/item/clothing/suit/storage/hazardvest/magos/
 	name = "Nullmind robes"
-	desc = "These robes hide a mess of chrome and wires, grotesque misshapen flesh, secrets. Who was the person underneath this?"
+	desc = "These robes hide a mess of chrome and wires, grotesque misshapen flesh, secrets. Do you remember who you were?"
+	armor = list(melee = 35, bullet = 35, laser = 25, energy = 0, bomb = 30, bio = 50, rad = 100)
 
 /obj/item/clothing/suit/storage/hazardvest/magos/techpriest
 	name = "Nullbody robes"
-	desc = "These robes hide a mess of chrome and wires, grotesque misshapen flesh, secrets. Who was the person underneath this?"
+	desc = "These robes hide a mess of chrome and wires, grotesque misshapen flesh, secrets. Your mind is there, but your body is not. Do you remember who you were?"
+	armor = list(melee = 35, bullet = 35, laser = 25, energy = 0, bomb = 30, bio = 50, rad = 100)
 
 
 

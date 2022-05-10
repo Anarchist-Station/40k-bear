@@ -31,3 +31,23 @@
 	music = 'sound/music/gymnopedie03.ogg'
 	dynamic_lighting = 1
 	requires_power = 0
+
+/obj/screen/fullscreen/fallout
+	alpha = 100
+
+/area/cadiaoutpost/oa/wasteland
+	name = "Wasteland"
+	icon_state = "forest"
+	requires_power = FALSE
+	dynamic_lighting = 1
+	music = 'sound/newmusic/Caves_Terror.ogg'
+
+/area/cadiaoutpost/oa/wasteland/Entered(mob/living/L,  atom/A)
+	. = ..()
+	if(istype(L) && !istype(A, /area/cadiaoutpost/oa/wasteland))//Doesn't work but this does stop the lag.
+		L.overlay_fullscreen("fallout", /obj/screen/fullscreen/fallout)
+
+/area/cadiaoutpost/oa/wasteland/Exited(mob/living/L, area/A)
+	. = ..()
+	if(istype(L) && !istype(A, /area/cadiaoutpost/oa/wasteland))
+		L.clear_fullscreen("fallout")
